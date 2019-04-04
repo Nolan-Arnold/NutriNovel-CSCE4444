@@ -1,0 +1,14 @@
+.topnav {
+  background-color: grey;
+  overflow: hidden;
+  box-shadow: 1px 1px 8px #888888;
+}
+
+.mat-button.mat-small {
+  min-width: 1%;
+}
+
+.menu-c button,
+.menu-c a {
+  margin-right: 20px;
+}
