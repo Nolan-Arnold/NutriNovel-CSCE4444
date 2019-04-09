@@ -1,9 +1,12 @@
+
 /*
 .topnav {
   background-color: white;
   overflow: hidden;
+  color: red;
   box-shadow: 1px 1px 8px #888888;
 }
+
 
 .mat-button.mat-small {
   min-width: 1%;
@@ -48,10 +51,14 @@ li a {
   text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
 li a:hover {
   background-color: rgb(233, 233, 233);
   color: rgb(13, 100, 27);
+}
+
+li a:active {
+  background-color: rgb(167, 194, 70);
+  color: white;
 }
 
 .active {
