@@ -1,0 +1,15 @@
+table {
+  width: 100%;
+  margin: auto;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+tr:hover {
+  background-color: rgb(255, 255, 228);
+}
