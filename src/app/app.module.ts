@@ -9,13 +9,17 @@ import { AppComponent } from './app.component';
 import { ListPlaygroundComponent } from './list-playground/list-playground.component';
 import { HoverMenuComponent } from './hover-menu/hover-menu.component';
 import { AboutComponent } from './about/about.component';
+import { PlateComponent } from './plate/plate.component';
+import { CompareComponent } from './compare/compare.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListPlaygroundComponent,
     HoverMenuComponent,
-    AboutComponent
+    AboutComponent,
+    PlateComponent,
+    CompareComponent
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,13 @@ table {
   width: 100%;
 }
 
+/*
+th {
+  position: fixed;
+  top: 0;
+}
+*/
+
 tr:nth-child(even) {background-color: #f2f2f2;}
 
 tr:hover {

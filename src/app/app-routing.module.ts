@@ -1,3 +1,5 @@
+import { PlateComponent } from './plate/plate.component';
+import { CompareComponent } from './compare/compare.component';
 import { HoverMenuComponent } from './hover-menu/hover-menu.component';
 import { ListPlaygroundComponent } from './list-playground/list-playground.component';
 import { NgModule } from '@angular/core';
@@ -8,8 +10,8 @@ const routes: Routes = [
   { path: '', redirectTo: '/about', pathMatch: 'full' },
   { path: 'about', component: AboutComponent },
   { path: 'full-menu', component: ListPlaygroundComponent },
-  { path: 'compare', component: ListPlaygroundComponent },
-  { path: 'plate', component: ListPlaygroundComponent },
+  { path: 'compare', component: CompareComponent },
+  { path: 'plate', component: PlateComponent },
   { path: 'search', component: ListPlaygroundComponent }
 ];
 
