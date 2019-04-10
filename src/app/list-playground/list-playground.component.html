@@ -4,7 +4,8 @@
   <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
 </mat-form-field>
 
-<table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+<div matSort class="mat-elevation-z8">
+ <table mat-table [dataSource]="dataSource"> <!--matSort class="mat-elevation-z8"-->
 
   <!-- Checkbox Column -->
   <ng-container matColumnDef="select">
@@ -44,11 +45,12 @@
     <td mat-cell *matCellDef="let element"> {{element.type}} </td>
   </ng-container>
 
-  <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr> <!--sticky: true-->
+  <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: false"></tr> <!--sticky: true-->
   <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selection.toggle(row)">
     <!--Added by selection column-->
   </tr>
 </table>
 
-
+<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>
 <br><br><br><br>
