@@ -1,0 +1,28 @@
+table {
+  width: 100%;
+  margin: auto;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+/*
+issue here in th: need to fix header so doesn't go over hover menu
+changed height to cover menu for now, but the irregular thickness is
+at odds with the thickness of the other rows
+*/
+/*
+th {
+  overflow-y: scroll;
+  height: 70px;
+  z-index: 11;
+}
+*/
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+tr:hover {
+  background-color: rgb(255, 255, 228);
+}
