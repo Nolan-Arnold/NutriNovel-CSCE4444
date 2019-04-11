@@ -1,0 +1,39 @@
+img {
+    width: 100%;
+    height: auto;
+    opacity: 0.65;
+    z-index: 7;
+}
+
+.container {
+  position: relative;
+}
+
+.first {
+  position: absolute;
+  left: 0;
+  top: 300px;
+  width: 100%;
+  text-align: center;
+  font-size: 64px;
+  font-weight: bolder;
+
+  color: white;
+  text-rendering: optimizeLegibility;
+  z-index: 8;
+}
+
+.second {
+  position: absolute;
+  left: 0;
+  top: 1000px;
+  width: 100%;
+  text-align: center;
+  height: 100px;
+  font-size: 64px;
+  font-weight: bolder;
+
+  color: white;
+  text-rendering: optimizeLegibility;
+  z-index: 8;
+}
