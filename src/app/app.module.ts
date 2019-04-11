@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatSortModule, MatFormFieldModule, MatInputModule, MatCheckboxModule, MatTableModule } from '@angular/material'; //required for using mat related stuff within module
+import { MatSortModule, MatFormFieldModule,
+  MatInputModule, MatCheckboxModule, MatTableModule } from '@angular/material'; //required for using mat related stuff within module
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatMenuModule } from '@angular/material/menu';
 import { NgModule } from '@angular/core';
@@ -14,6 +15,7 @@ import { HoverMenuComponent } from './hover-menu/hover-menu.component';
 import { AboutComponent } from './about/about.component';
 import { PlateComponent } from './plate/plate.component';
 import { CompareComponent } from './compare/compare.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { CompareComponent } from './compare/compare.component';
     HoverMenuComponent,
     AboutComponent,
     PlateComponent,
-    CompareComponent
+    CompareComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
@@ -33,12 +36,12 @@ import { CompareComponent } from './compare/compare.component';
     MatFormFieldModule,
     MatInputModule,
     MatCheckboxModule,
-    MatMenuModule, //menu
-    MatButtonModule, //ripple buttons
+    MatMenuModule, // menu
+    MatButtonModule, // ripple buttons
     MatPaginatorModule
   ],
   providers: [],
-  bootstrap: [AppComponent] //remove other bootstrap components
+  bootstrap: [AppComponent] // remove other bootstrap components
 })
 export class AppModule { }
 

@@ -39,6 +39,24 @@
     <td mat-cell *matCellDef="let element"> {{element.calories}} </td>
   </ng-container>
 
+  <!-- Carbs Column -->
+  <ng-container matColumnDef="carbs">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Carbs </th>
+    <td mat-cell *matCellDef="let element"> {{element.carbs}} </td>
+  </ng-container>
+
+  <!-- Protein Column -->
+  <ng-container matColumnDef="protein">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Protein </th>
+    <td mat-cell *matCellDef="let element"> {{element.protein}} </td>
+  </ng-container>
+  
+  <!-- Total Fat Column -->
+  <ng-container matColumnDef="total fat">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Total Fat </th>
+    <td mat-cell *matCellDef="let element"> {{element.totalFat}} </td>
+  </ng-container>
+  
   <!-- Type Column -->
   <ng-container matColumnDef="type">
     <th mat-header-cell *matHeaderCellDef mat-sort-header> Type </th>
