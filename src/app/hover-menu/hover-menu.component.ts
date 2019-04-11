@@ -5,7 +5,7 @@ import { CanDisableRipple } from '@angular/material';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 @Component({
-  selector: 'hover-menu',
+  selector: 'app-hover-menu',
   templateUrl: './hover-menu.component.html',
   styleUrls: ['./hover-menu.component.css']
 })

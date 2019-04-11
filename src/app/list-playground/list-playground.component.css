@@ -3,24 +3,33 @@ table {
   margin: auto;
 }
 
-.mat-form-field {
+.mat-form-field { /*the search bar*/
   font-size: 14px;
-  width: 100%;
+  width: 65%;
+  position: fixed;
+  top: 80px;
+  z-index: 3;
+}
+.mat-elevation-z8
+{
+  position: relative;
+  margin-top : 75px;
+  height: auto;
+  max-height: 600px;
+  top: 55px;
+  overflow: auto;
+}
+.mat-paginator
+{
+  position:fixed;
+  top: 80px;
+  width: 99%;
+  margin: auto;
+  z-index: 2;
 }
 
 /*
-issue here in th: need to fix header so doesn't go over hover menu
-changed height to cover menu for now, but the irregular thickness is
-at odds with the thickness of the other rows
+2 minor bugs:
+- table shifts partially up once hit 20 items and keep scrolling if in smaller window
+- in smaller window, paginator covers up last menu item that can be seen in larger window
 */
-th {
-  overflow-y: scroll;
-  height: 70px;
-  z-index: 11;
-}
-
-tr:nth-child(even) {background-color: #f2f2f2;}
-
-tr:hover {
-  background-color: rgb(255, 255, 228);
-}

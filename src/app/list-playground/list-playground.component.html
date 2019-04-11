@@ -1,10 +1,13 @@
-<br><br><br><br>
-
 <mat-form-field>
   <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
 </mat-form-field>
 
-<table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+<br><mat-paginator [pageSizeOptions]="[20, 15, 10, 5]" showFirstLastButtons></mat-paginator>
+
+
+
+<div matSort class="mat-elevation-z8">
+ <table mat-table [dataSource]="dataSource"> <!--matSort class="mat-elevation-z8"-->
 
   <!-- Checkbox Column -->
   <ng-container matColumnDef="select">
@@ -45,10 +48,7 @@
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr> <!--sticky: true-->
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selection.toggle(row)">
-    <!--Added by selection column-->
-  </tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selection.toggle(row)"> <!--Added by selection column--></tr>
 </table>
 
-
-<br><br><br><br>
+</div>
