@@ -59,13 +59,6 @@ li a:active {
   color: white;
 }
 
-/*
-.active {
-  background-color: rgb(167, 194, 70);
-  color: white;
-}
-*/
-
 nav a.active{
   background-color: rgb(167, 194, 70);
   color: white;
