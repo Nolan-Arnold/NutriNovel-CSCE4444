@@ -5,8 +5,11 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatMenuModule } from '@angular/material/menu';
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+
 
 import { AppRoutingModule } from './app-routing.module';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { ListPlaygroundComponent } from './list-playground/list-playground.component';
@@ -35,7 +38,11 @@ import { CompareComponent } from './compare/compare.component';
     MatCheckboxModule,
     MatMenuModule, //menu
     MatButtonModule, //ripple buttons
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatToolbarModule,
+    RouterModule
+
+    
   ],
   providers: [],
   bootstrap: [AppComponent] //remove other bootstrap components

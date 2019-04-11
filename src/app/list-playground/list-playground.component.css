@@ -3,26 +3,22 @@ table {
   margin: auto;
 }
 
-.mat-form-field {
+.mat-form-field { /*the search bar*/
   font-size: 14px;
   width: 100%;
+  position: fixed;
+  top: 55px;
 }
-
-/*
-issue here in th: need to fix header so doesn't go over hover menu
-changed height to cover menu for now, but the irregular thickness is
-at odds with the thickness of the other rows
-*/
-/*
-th {
-  overflow-y: scroll;
-  height: 70px;
-  z-index: 11;
+.mat-elevation-z8
+{
+  position: relative;
+  margin-top : 100px;
+  height: 400px;
+  overflow: auto;
 }
-*/
-
-tr:nth-child(even) {background-color: #f2f2f2;}
-
-tr:hover {
-  background-color: rgb(255, 255, 228);
+.mat-paginator
+{
+  position:fixed;
+  bottom: 0px;
+  width: 95%;
 }

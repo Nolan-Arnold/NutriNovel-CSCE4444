@@ -15,17 +15,17 @@
 */
 img {
   z-index: 10;
-    position: fixed;
+    position: 10%;
     right: 0;
     top: -5;
-    height: 50px;
-    width: 50px;
+    height: 10%;
+    width: 10%;
 }
 
 ul {
   z-index: 9;
   position: fixed;
-  font-size: 27px;
+  font-size: 90%;
   top: 0;
   width: 99%;
   list-style-type: none;
@@ -57,7 +57,13 @@ li a:active {
   color: white;
 }
 
+/*
 .active {
   background-color: rgb(167, 194, 70);
   color: white;
+}
+*/
+
+nav a.active{
+  color:black;
 }
