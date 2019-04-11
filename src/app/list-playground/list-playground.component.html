@@ -1,0 +1,74 @@
+<br><br><br><br>
+
+<mat-form-field>
+  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+</mat-form-field>
+
+<div matSort class="mat-elevation-z8">
+ <table mat-table [dataSource]="dataSource"> <!--matSort class="mat-elevation-z8"-->
+
+  <!-- Checkbox Column -->
+  <ng-container matColumnDef="select">
+    <th mat-header-cell *matHeaderCellDef>
+      <mat-checkbox (change)="$event ? masterToggle() : null" [checked]="selection.hasValue() && isAllSelected()"
+        [indeterminate]="selection.hasValue() && !isAllSelected()">
+      </mat-checkbox>
+    </th>
+    <td mat-cell *matCellDef="let row">
+      <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null"
+        [checked]="selection.isSelected(row)">
+      </mat-checkbox>
+    </td>
+  </ng-container>
+
+  <!-- Restaurant Column -->
+  <ng-container matColumnDef="restname">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Restaurant </th>
+    <td mat-cell *matCellDef="let element"> {{element.restname}} </td>
+  </ng-container>
+
+  <!-- Item Column -->
+  <ng-container matColumnDef="item">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Item </th>
+    <td mat-cell *matCellDef="let element"> {{element.item}} </td>
+  </ng-container>
+
+  <!-- Calories Column -->
+  <ng-container matColumnDef="calories">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Calories </th>
+    <td mat-cell *matCellDef="let element"> {{element.calories}} </td>
+  </ng-container>
+
+  <!-- Carbs Column -->
+  <ng-container matColumnDef="carbs">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Carbs </th>
+    <td mat-cell *matCellDef="let element"> {{element.carbs}} </td>
+  </ng-container>
+
+  <!-- Protein Column -->
+  <ng-container matColumnDef="protein">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Protein </th>
+    <td mat-cell *matCellDef="let element"> {{element.protein}} </td>
+  </ng-container>
+  
+  <!-- Total Fat Column -->
+  <ng-container matColumnDef="total fat">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Total Fat </th>
+    <td mat-cell *matCellDef="let element"> {{element.totalFat}} </td>
+  </ng-container>
+  
+  <!-- Type Column -->
+  <ng-container matColumnDef="type">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Type </th>
+    <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: false"></tr> <!--sticky: true-->
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selection.toggle(row)">
+    <!--Added by selection column-->
+  </tr>
+</table>
+
+<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>
+<br><br><br><br>
