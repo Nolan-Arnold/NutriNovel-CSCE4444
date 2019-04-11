@@ -11,7 +11,7 @@ table {
   top: 80px;
   z-index: 3;
 }
-<<<<<<< HEAD
+
 .mat-elevation-z8
 {
   position: relative;
@@ -28,23 +28,4 @@ table {
   width: 99%;
   margin: auto;
   z-index: 2;
-=======
-
-/*
-issue here in th: need to fix header so doesn't go over hover menu
-changed height to cover menu for now, but the irregular thickness is
-at odds with the thickness of the other rows
-*/
-/*
-th {
-  overflow-y: scroll;
-  height: 70px;
-  z-index: 11;
->>>>>>> fc767f09a5997cd56b2251e1ed09c611dfe10781
 }
-*/
-
-/*
-minor bug:
-- table shifts partially up once hit 20 items and keep scrolling if in smaller window
-*/
