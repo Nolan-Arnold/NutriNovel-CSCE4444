@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
 .topnav {
   background-color: white;
@@ -62,4 +63,68 @@ li a:active {
 nav a.active{
   background-color: rgb(167, 194, 70);
   color: white;
+=======
+/*
+.topnav {
+  background-color: white;
+  overflow: hidden;
+  color: red;
+  box-shadow: 1px 1px 8px #888888;
+}
+.mat-button.mat-small {
+  min-width: 1%;
+}
+.menu-c button,
+.menu-c a {
+  margin-right: 20px;
+}
+*/
+img {
+  z-index: 10;
+    position: fixed;
+    right: 0;
+    top: -5;
+    height: 50px;
+    width: 50px;
+}
+
+ul {
+  z-index: 9;
+  position: fixed;
+  font-size: 27px;
+  top: 0;
+  width: 99%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(132, 175, 76);
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 18px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: rgb(233, 233, 233);
+  color: rgb(13, 100, 27);
+}
+
+li a:active {
+  background-color: rgb(167, 194, 70);
+  color: white;
+}
+
+.active {
+  background-color: rgb(167, 194, 70);
+  color: white;
+>>>>>>> fc767f09a5997cd56b2251e1ed09c611dfe10781
 }
