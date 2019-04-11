@@ -5,7 +5,8 @@ table {
 
 .mat-form-field { /*the search bar*/
   font-size: 14px;
-  width: 65%;
+  width: 60%;
+  margin-left: 1%;
   position: fixed;
   top: 80px;
   z-index: 3;
@@ -29,7 +30,6 @@ table {
 }
 
 /*
-2 minor bugs:
+minor bug:
 - table shifts partially up once hit 20 items and keep scrolling if in smaller window
-- in smaller window, paginator covers up last menu item that can be seen in larger window
 */

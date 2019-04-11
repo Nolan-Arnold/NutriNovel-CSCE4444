@@ -1,7 +1,8 @@
 img {
     width: 100%;
     height: auto;
-    opacity: 0.3;
+    opacity: 0.65;
+    z-index: 7;
 }
 
 .container {
@@ -11,12 +12,18 @@ img {
 .center {
   position: absolute;
   left: 0;
-  top: 50%;
+  top: 300px;
   width: 100%;
   text-align: center;
-  font-size: 37px;
+  font-size: 64px;
   font-weight: bolder;
 
-  color: rgb(4, 87, 22);
-  z-index: 11;
+  color: white;
+  text-rendering: optimizeLegibility;
+  z-index: 8;
+}
+
+p {
+  z-index: 8;
+  font-size: 64px;
 }
