@@ -1,9 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatSortModule, MatFormFieldModule,
-  MatInputModule, MatCheckboxModule, MatTableModule } from '@angular/material'; //required for using mat related stuff within module
-import { MatPaginatorModule } from '@angular/material/paginator';
+// required for using mat related stuff within module
+import { MatSortModule, MatFormFieldModule, MatPaginatorModule, MatProgressSpinnerModule,
+  MatInputModule, MatCheckboxModule, MatTableModule } from '@angular/material';
+
 import { MatMenuModule } from '@angular/material/menu';
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
@@ -20,6 +21,7 @@ import { AboutComponent } from './about/about.component';
 import { PlateComponent } from './plate/plate.component';
 import { CompareComponent } from './compare/compare.component';
 import { MessagesComponent } from './messages/messages.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { MessagesComponent } from './messages/messages.component';
     AboutComponent,
     PlateComponent,
     CompareComponent,
-    MessagesComponent
+    MessagesComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
@@ -40,9 +43,9 @@ import { MessagesComponent } from './messages/messages.component';
     MatFormFieldModule,
     MatInputModule,
     MatCheckboxModule,
-
-    MatMenuModule, //menu
-    MatButtonModule, //ripple buttons
+    MatProgressSpinnerModule,
+    MatMenuModule, // menu
+    MatButtonModule, // ripple buttons
     MatPaginatorModule,
     MatToolbarModule,
     RouterModule,
@@ -51,7 +54,7 @@ import { MessagesComponent } from './messages/messages.component';
 
   ],
   providers: [],
-  bootstrap: [AppComponent] //remove other bootstrap components
+  bootstrap: [AppComponent] // remove other bootstrap components
 
 })
 export class AppModule { }
