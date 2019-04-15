@@ -4,12 +4,15 @@ import { catchError, map, tap } from 'rxjs/operators';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 
 import { Food } from './food';
+import { PageCount } from './page-count';
 import { MessageService } from './message.service';
 
 // used for post, update, and delete
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
+
+const safeCount = new PageCount(0);
 
 @Injectable({
   providedIn: 'root'
@@ -57,11 +60,12 @@ export class FoodService {
       );
   }
 
-  getFoodsCount( filter = '' ): Observable<string> {
+  getFoodsCount( filter = '' ): Observable<number> {
     const parameters = new HttpParams().set('filter', filter);
-    return this.http.get<string>(this.foodsUrl, { params: parameters })
+    const url = this.foodsUrl + '/count';
+    return this.http.get<number>(url, { params: parameters })
       .pipe(
-        catchError(this.handleError('getFoodsCount', '0'))
+        catchError(this.handleError('getFoodsCount', 0))
       );
   }
 

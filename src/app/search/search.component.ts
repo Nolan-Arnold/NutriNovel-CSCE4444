@@ -2,8 +2,9 @@
 import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { MatSort, MatPaginator } from '@angular/material';
 import { debounceTime, distinctUntilChanged, tap } from 'rxjs/operators';
-import { merge, fromEvent } from 'rxjs';
+import { merge, fromEvent, Observable } from 'rxjs';
 
+import { PageCount } from '../page-count';
 import { FoodService } from '../food.service';
 import { FoodDataSource } from '../food-data-source';
 
@@ -21,6 +22,7 @@ export class SearchComponent implements OnInit, AfterViewInit {
    *  for walkthrough. Lupe Rivera
    */
   dataSource: FoodDataSource;
+  elementCount: number;
   // selection = new SelectionModel<Food>(true, []);
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -31,6 +33,7 @@ export class SearchComponent implements OnInit, AfterViewInit {
   ngOnInit() {
     this.dataSource = new FoodDataSource(this.foodService);
     this.dataSource.loadFoods('', 'asc', 0, 10);
+    // this.getPageCount('');
   }
 
   ngAfterViewInit() {
@@ -50,7 +53,7 @@ export class SearchComponent implements OnInit, AfterViewInit {
     // reset the paginator after sorting
     this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
 
-      // on sort or paginate events, load a new page
+    // on sort or paginate events, load a new page
     merge(this.sort.sortChange, this.paginator.page)
         .pipe(
           tap(() => this.loadFoodsPage())
@@ -65,4 +68,9 @@ export class SearchComponent implements OnInit, AfterViewInit {
           this.paginator.pageIndex,
           this.paginator.pageSize);
   }
+  /*
+  getPageCount(filter: string) {
+    this.foodService.getFoodsCount(filter).subscribe(count => this.pageCount = count);
+  }
+  */
 }
