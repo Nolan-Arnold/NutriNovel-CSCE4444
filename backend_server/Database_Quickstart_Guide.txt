@@ -13,15 +13,15 @@ This  will create a new database names foods.
 
 Now we will create a new collection named foods inside the database foods (not very creative I know), we will also add data at the same time. Type:
 db.foods.insertMany( [
-{ "_id" : "McDonald's Egg McMuffin®", "restname" : "McDonald's", "item" : "Egg McMuffin®", "calories" : 300, "carbs" : 0, "protein" : 0, "total_fat" : 0, "type" : "Breakfast" }
-{ "_id" : "Whataburger Sweet & Spicy Bacon Burger", "restname" : "Whataburger", "item" : "Sweet & Spicy Bacon Burger", "calories" : 1080, "carbs" : 0, "protein" : 0, "total_fat" : 0, "type" : "Burger" }
-{ "_id" : "Whataburger Cinnamon Roll", "restname" : "Whataburger", "item" : "Cinnamon Roll", "calories" : 570, "carbs" : 0, "protein" : 0, "total_fat" : 0, "type" : "Dessert" }
-{ "_id" : "McDonald's French Fries", "restname" : "McDonald's", "item" : "French Fries", "calories" : 340, "carbs" : 0, "protein" : 0, "total_fat" : 0, "type" : "Side" }
-{ "_id" : "Chick-fil-A Waffle Fries", "restname" : "Chick-fil-A", "item" : "Waffle Fries", "calories" : 280, "carbs" : 0, "protein" : 0, "total_fat" : 0, "type" : "Side" }
-{ "_id" : "Burger King BK Chicken Fries", "restname" : "Burger King", "item" : "BK Chicken Fries", "calories" : 290, "carbs" : 0, "protein" : 0, "total_fat" : 0, "type" : "Fries" }
-{ "_id" : "Five Guys Burger Bowl", "restname" : "Five Guys", "item" : "Burger Bowl", "calories" : 220, "carbs" : 0, "protein" : 0, "total_fat" : 0, "type" : "Burger" }
-{ "_id" : "Whataburger WHATABURGER JR.®", "restname" : "Whataburger", "item" : "WHATABURGER JR.®", "calories" : 400, "carbs" : 0, "protein" : 0, "total_fat" : 0, "type" : "Burger" }
-{ "_id" : "Chick-fil-A Spicy Southwest Salad", "restname" : "Chick-fil-A", "item" : "Spicy Southwest Salad", "calories" : 350, "carbs" : 0, "protein" : 0, "total_fat" : 0, "type" : "Salad" }
+{ "_id" : "McDonald's Egg McMuffin®", "restname" : "McDonald's", "item" : "Egg McMuffin®", "calories" : 300, "carbs" : 0, "protein" : 0, "total_fat" : 0, "type" : "Breakfast" },
+{ "_id" : "Whataburger Sweet & Spicy Bacon Burger", "restname" : "Whataburger", "item" : "Sweet & Spicy Bacon Burger", "calories" : 1080, "carbs" : 0, "protein" : 0, "total_fat" : 0, "type" : "Burger" },
+{ "_id" : "Whataburger Cinnamon Roll", "restname" : "Whataburger", "item" : "Cinnamon Roll", "calories" : 570, "carbs" : 0, "protein" : 0, "total_fat" : 0, "type" : "Dessert" },
+{ "_id" : "McDonald's French Fries", "restname" : "McDonald's", "item" : "French Fries", "calories" : 340, "carbs" : 0, "protein" : 0, "total_fat" : 0, "type" : "Side" },
+{ "_id" : "Chick-fil-A Waffle Fries", "restname" : "Chick-fil-A", "item" : "Waffle Fries", "calories" : 280, "carbs" : 0, "protein" : 0, "total_fat" : 0, "type" : "Side" },
+{ "_id" : "Burger King BK Chicken Fries", "restname" : "Burger King", "item" : "BK Chicken Fries", "calories" : 290, "carbs" : 0, "protein" : 0, "total_fat" : 0, "type" : "Fries" },
+{ "_id" : "Five Guys Burger Bowl", "restname" : "Five Guys", "item" : "Burger Bowl", "calories" : 220, "carbs" : 0, "protein" : 0, "total_fat" : 0, "type" : "Burger" },
+{ "_id" : "Whataburger WHATABURGER JR.®", "restname" : "Whataburger", "item" : "WHATABURGER JR.®", "calories" : 400, "carbs" : 0, "protein" : 0, "total_fat" : 0, "type" : "Burger" },
+{ "_id" : "Chick-fil-A Spicy Southwest Salad", "restname" : "Chick-fil-A", "item" : "Spicy Southwest Salad", "calories" : 350, "carbs" : 0, "protein" : 0, "total_fat" : 0, "type" : "Salad" },
 { "_id" : "McDonald's Happy Meal®", "restname" : "McDonald's", "item" : "Happy Meal®", "calories" : 501, "carbs" : 0, "protein" : 0, "total_fat" : 0, "type" : "Meal" } ] )
 This will add 10 elements to the collection.
 
