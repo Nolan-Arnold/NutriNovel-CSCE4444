@@ -4,9 +4,9 @@ import { MatSort, MatPaginator } from '@angular/material';
 import { debounceTime, distinctUntilChanged, tap } from 'rxjs/operators';
 import { merge, fromEvent, Observable } from 'rxjs';
 
-import { PageCount } from '../page-count';
 import { FoodService } from '../food.service';
 import { FoodDataSource } from '../food-data-source';
+import { DataSource } from '@angular/cdk/table';
 
 @Component({
   selector: 'app-search',
@@ -33,7 +33,7 @@ export class SearchComponent implements OnInit, AfterViewInit {
   ngOnInit() {
     this.dataSource = new FoodDataSource(this.foodService);
     this.dataSource.loadFoods('', 'asc', 0, 10);
-    // this.getPageCount('');
+    this.getPageCount('');
   }
 
   ngAfterViewInit() {
@@ -67,10 +67,11 @@ export class SearchComponent implements OnInit, AfterViewInit {
           this.sort.direction,
           this.paginator.pageIndex,
           this.paginator.pageSize);
+      this.getPageCount(this.input.nativeElement.value)
   }
-  /*
+
   getPageCount(filter: string) {
-    this.foodService.getFoodsCount(filter).subscribe(count => this.pageCount = count);
+    this.dataSource.elementCount$.subscribe(count => this.elementCount = count);
   }
-  */
+
 }

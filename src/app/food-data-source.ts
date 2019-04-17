@@ -2,12 +2,10 @@ import { CollectionViewer, DataSource } from '@angular/cdk/collections';
 import { Observable, of, BehaviorSubject } from 'rxjs';
 import { catchError, finalize } from 'rxjs/operators';
 
-import { PageCount } from './page-count';
 import { Food } from './food';
 import { FoodService } from './food.service';
 
 export class FoodDataSource implements DataSource<Food> {
-    // safeCount = new PageCount(0);
 
     private foodsSubject = new BehaviorSubject<Food[]>([]);
     private loadingSubject = new BehaviorSubject<boolean>(false);
@@ -17,14 +15,7 @@ export class FoodDataSource implements DataSource<Food> {
     public loading$ = this.loadingSubject.asObservable();
     // Allows the table to get total page count based on filter value
     public elementCount$ = this.pageSubject.asObservable();
-    /*
-    public get elementCount$() {
-        return this._elementCount$;
-    }
-    public set pageCount$(value) {
-        this._elementCount$ = value;
-    }
-    */
+
     constructor(private foodService: FoodService) {
     }
 
@@ -42,7 +33,6 @@ export class FoodDataSource implements DataSource<Food> {
                 catchError(() => of(0)),
                 finalize(() => this.loadingSubject.next(false))
             ).subscribe(count => this.pageSubject.next(count));
-
     }
 
     connect(collectionViewer: CollectionViewer): Observable<Food[]> {
