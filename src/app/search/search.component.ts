@@ -67,7 +67,7 @@ export class SearchComponent implements OnInit, AfterViewInit {
           this.sort.direction,
           this.paginator.pageIndex,
           this.paginator.pageSize);
-      this.getPageCount(this.input.nativeElement.value)
+      this.getPageCount(this.input.nativeElement.value);
   }
 
   getPageCount(filter: string) {
