@@ -1,4 +1,4 @@
-import { CollectionViewer, DataSource } from '@angular/cdk/collections';
+import { DataSource } from '@angular/cdk/collections';
 import { Observable, of, BehaviorSubject } from 'rxjs';
 import { catchError, finalize } from 'rxjs/operators';
 
@@ -9,12 +9,14 @@ export class FoodDataSource implements DataSource<Food> {
 
     private foodsSubject = new BehaviorSubject<Food[]>([]);
     private loadingSubject = new BehaviorSubject<boolean>(false);
-    private pageSubject = new BehaviorSubject<number>(99);
+    private pageSubject = new BehaviorSubject<number>(0);
 
     // Allows the table to toggle the loading flag on and off
     public loading$ = this.loadingSubject.asObservable();
     // Allows the table to get total page count based on filter value
     public elementCount$ = this.pageSubject.asObservable();
+    // Allows select?
+    public data$ = this.foodsSubject.asObservable();
 
     constructor(private foodService: FoodService) {
     }
@@ -35,12 +37,12 @@ export class FoodDataSource implements DataSource<Food> {
             ).subscribe(count => this.pageSubject.next(count));
     }
 
-    connect(collectionViewer: CollectionViewer): Observable<Food[]> {
+    connect(): Observable<Food[]> {
         console.log('Connecting data source');
         return this.foodsSubject.asObservable();
     }
 
-    disconnect(collectionViewer: CollectionViewer): void {
+    disconnect(): void {
         this.foodsSubject.complete();
         this.loadingSubject.complete();
         this.pageSubject.complete();

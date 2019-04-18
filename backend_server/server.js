@@ -54,7 +54,7 @@ app.route('/api/foods/count').get((req, res) => {
                 foodsArr = foodsArr.filter(food => food._id.trim().toLowerCase().search(filterBy.toLowerCase()) >= 0);
             }
             const count = Object.keys(foodsArr).length;
-            console.log("Filtered count " + count)
+            // console.log("Filtered count " + count)
             // res.send('{\'elementCount\': ' + count.toString() + ' }');
             res.send( count.toString() );
         });
@@ -70,7 +70,7 @@ app.route('/api/foods').get((req, res) => {
 
     MongoClient.connect(url, function(err, db) {
         assert.equal(null, err);
-        const cursor = db.collection('foods').find( {}, { 
+        const cursor = db.collection('foods').find( {}/*, { 
             _id: 1,
             restname: 1,
             item: 1,
@@ -79,7 +79,7 @@ app.route('/api/foods').get((req, res) => {
             protein: 1,
             total_fat: 1,
             type: 1
-        });
+        }*/);
         cursor.toArray(function (err, foodsArr) {
             assert.equal(null, err);
             // console.log(foodsArr);
