@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 
 import { Food } from './food';
 import { MessageService } from './message.service';
 
+// used for post, update, and delete
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
@@ -47,11 +48,28 @@ export class FoodService {
     };
   }
 
+  findFoods( filter = '', sortOrder = 'asc', pageNumber = 0, pageSize = 10): Observable<Food[]> {
+    const parameters = new HttpParams().set('filter', filter)
+      .set('sortOrder', sortOrder).set('pageNumber', pageNumber.toString()).set('pageSize', pageSize.toString());
+    return this.http.get<Food[]>(this.foodsUrl, { params: parameters })
+      .pipe(
+        catchError(this.handleError('findFoods', []))
+      );
+  }
+
+  getFoodsCount( filter = '' ): Observable<number> {
+    const parameters = new HttpParams().set('filter', filter);
+    const url = this.foodsUrl + '/count';
+    return this.http.get<number>(url, { params: parameters })
+      .pipe(
+        catchError(this.handleError('getFoodsCount', 0))
+      );
+  }
+
   // Get all foods from the server
   getFoods(): Observable<Food[]> {
     return this.http.get<Food[]>(this.foodsUrl)
       .pipe(
-        tap(_ => this.log('fetched foods')),
         catchError(this.handleError('getFoods', []))
       );
   }
