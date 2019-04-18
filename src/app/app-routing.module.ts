@@ -5,6 +5,7 @@ import { ListPlaygroundComponent } from './list-playground/list-playground.compo
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about.component';
+import { SearchComponent } from './search/search.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/about', pathMatch: 'full' },
@@ -12,7 +13,7 @@ const routes: Routes = [
   { path: 'full-menu', component: ListPlaygroundComponent },
   { path: 'compare', component: CompareComponent },
   { path: 'plate', component: PlateComponent },
-  { path: 'search', component: ListPlaygroundComponent }
+  { path: 'search', component: SearchComponent }
 ];
 
 @NgModule({
