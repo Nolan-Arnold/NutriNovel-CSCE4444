@@ -40,7 +40,7 @@ export const FOODS: Food[] = [
     {
         _id: '', restname: 'McDonald\'s', item: 'Happy Meal®',
         calories: 501, carbs: 0, protein: 0, totalFat: 0, type: 'Meal'
-    }, 
+    },
     {
         _id: '', restname: 'McDonald\'s', item: 'Egg McMuffin®',
         calories: 300, carbs: 0, protein: 0, totalFat: 0, type: 'Breakfast'
