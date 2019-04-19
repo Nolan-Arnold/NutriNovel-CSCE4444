@@ -5,6 +5,7 @@ import { FOODS } from '../mock-foods';
 import { FoodService } from '../food.service';
 import { SearchComponent} from '../search/search.component';
 import { PlateFood } from '../plate-food';
+import { PlateFoodService } from '../plate-food.service';
 
 @Component({
   selector: 'app-expansion',
@@ -13,7 +14,7 @@ import { PlateFood } from '../plate-food';
 })
 export class ExpansionComponent implements OnInit {
   panelOpenState = false;
-  constructor() { }
+  constructor(private foodService: FoodService, private plateFoodService: PlateFoodService) { }
 
   ngOnInit() {
   }
@@ -29,7 +30,7 @@ export class ExpansionComponent implements OnInit {
     ]
   };*/
   config = {
-    panels: this.plateFood
+    panels: this.plateFoodService.platelist
   };
   
 

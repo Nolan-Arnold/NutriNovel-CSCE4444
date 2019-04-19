@@ -9,7 +9,7 @@ import {PlateFood} from '../plate-food';
 import { FoodService } from '../food.service';
 import { FoodDataSource } from '../food-data-source';
 import { Food } from '../food';
-
+import { PlateFoodService } from '../plate-food.service';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -32,7 +32,7 @@ export class SearchComponent implements OnInit, AfterViewInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild('input') input: ElementRef;
 
-  constructor(private foodService: FoodService) { }
+  constructor(private foodService: FoodService, private plateFoodService: PlateFoodService) { }
 
   ngOnInit() {
     this.dataSource = new FoodDataSource(this.foodService);
@@ -94,7 +94,7 @@ export class SearchComponent implements OnInit, AfterViewInit {
   loadPlate(event:any): void{
    // this.plateFood = [];
     
-    this.plateFood.plate_food = this.selection.selected;
+    this.plateFoodService.platelist = this.selection.selected;
   }
   toPlate(): any{
    this.plateFood
