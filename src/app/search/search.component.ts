@@ -4,6 +4,8 @@ import { MatSort, MatPaginator } from '@angular/material';
 import { debounceTime, distinctUntilChanged, tap } from 'rxjs/operators';
 import { merge, fromEvent } from 'rxjs';
 
+import {PlateFood} from '../plate-food';
+
 import { FoodService } from '../food.service';
 import { FoodDataSource } from '../food-data-source';
 import { Food } from '../food';
@@ -23,7 +25,8 @@ export class SearchComponent implements OnInit, AfterViewInit {
    */
   dataSource: FoodDataSource;
   elementCount: number;
-  public plateFood: Food[]; // stores food object for plate to access, public so plate component can access
+  plateFood: PlateFood;
+  //public plateFood: Food[]; // stores food object for plate to access, public so plate component can access
   selection = new SelectionModel<Food>(true, []);
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -88,8 +91,12 @@ export class SearchComponent implements OnInit, AfterViewInit {
 
   // this method will load the currently select food objects into the local array plateFood
   // access plateFood from the plate component to get the users slections
-  loadPlate() {
-    this.plateFood = [];
-    this.plateFood = this.selection.selected;
+  loadPlate(event:any): void{
+   // this.plateFood = [];
+    
+    this.plateFood.plate_food = this.selection.selected;
+  }
+  toPlate(): any{
+   this.plateFood
   }
 }
