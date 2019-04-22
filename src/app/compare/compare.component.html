@@ -1,6 +1,30 @@
-<br>
-<br>
-<br>
-<p>
-  compare works!
-</p>
+<br><br><br>
+<!--
+<mat-list>
+  <mat-list-item class="styling">{{showItem(0)}}     {{showItem(1)}}</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item styling>{{showCalories(0)}}  {{showCalories(1)}}</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>{{showFat(0)}}  {{showFat(1)}}</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>{{showCarbs(0)}}  {{showCarbs(1)}}</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>{{showProtein(0)}}  {{showProtein(1)}}</mat-list-item>
+</mat-list>
+-->
+<!---
+<mat-grid-list class='styling' cols="4" rowHeight="100px" [style.background]="'green'">
+  <mat-grid-tile [style.background] = 'lightgreen' [colspan] = 2 [rowspan] = 2 [style.border] = "3px double black">{{showItem(0)}}</mat-grid-tile>
+  <mat-grid-tile [colspan] = 2 [rowspan] = 2 [style.background] = 'lightgreen'>{{showItem(1)}}</mat-grid-tile>
+  <mat-grid-tile [colspan] = 2 [rowspan] = 2>{{showCalories(0)}}</mat-grid-tile>
+  <mat-grid-tile [colspan] = 2 [rowspan] = 2>{{showCalories(1)}}</mat-grid-tile>
+</mat-grid-list>-->
+<mat-grid-list cols="4" rowHeight="100px" gutterSize="5px">
+<mat-grid-tile *ngFor="let tile of tiles"
+[colspan]="tile.cols"
+[rowspan]="tile.rows"
+[style.border]="tile.border"
+[style.background] = "tile.background">
+{{tile.text}}
+</mat-grid-tile>
+</mat-grid-list>

@@ -1,2 +1,10 @@
 /*thanks github*/
 /**Please don't delete me github */
+.styling {
+border-left: 100px;
+border-right: 100px;
+text-align: center;
+};
+mat-grid-tile {
+    background: red;
+  };
