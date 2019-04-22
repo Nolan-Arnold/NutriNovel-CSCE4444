@@ -33,7 +33,7 @@ export class SearchComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this.dataSource = new FoodDataSource(this.foodService);
-    this.dataSource.loadFoods('', 'asc', 0, 10); // intialize the table with data from backend
+    this.dataSource.loadFoods('', 'restname', 'asc', 0, 10); // intialize the table with data from backend
     this.selection.isSelected = this.isChecked.bind(this); // idk
   }
 
@@ -66,6 +66,7 @@ export class SearchComponent implements OnInit, AfterViewInit {
   loadFoodsPage() {
       this.dataSource.loadFoods(
           this.input.nativeElement.value,
+          this.sort.active,
           this.sort.direction,
           this.paginator.pageIndex,
           this.paginator.pageSize);

@@ -14,32 +14,6 @@ app.use(cors(corsOptions))
 var MongoClient = require('mongodb').MongoClient, assert = require('assert');
 // Connection URL of database
 var url = 'mongodb://localhost:27017/foods';
-/*
-// Handles general mass get request. no search parameters
-app.route('/api/foods').get((req, res) => {
-    // Use connect method to connect to the server
-    MongoClient.connect(url, function(err, db) {
-        assert.equal(null, err);
-        console.log("Connected successfully to foods database inside generic get");
-        const cursor = db.collection('foods').find( { }, { 
-            _id: 0,
-            restname: 1,
-            item: 1,
-            calories: 1,
-            carbs: 1,
-            protein: 1,
-            total_fat: 1,
-            type: 1
-        });
-        cursor.toArray(function (err, foodsArr) {
-            assert.equal(null, err);
-            console.log(foodsArr);
-            res.send(foodsArr);
-        });
-        db.close();
-    });
-})
-*/
 
 app.route('/api/foods/count').get((req, res) => {
     const filterBy = req.query.filter;
@@ -63,30 +37,47 @@ app.route('/api/foods/count').get((req, res) => {
 })
 
 app.route('/api/foods').get((req, res) => {
-    const filterBy = req.query.filter;
-    const sortBy = req.query.sortOrder;
-    const reqPageNumber = parseInt(req.query.pageNumber);
-    const reqPageSize = parseInt(req.query.pageSize);
+    const filterBy = req.query.filter;  // user search term
+    const sortId = req.query.sortId;    // name of column to be sorted on
+    const sortBy = req.query.sortOrder; // direction of sort order asc or desc
+    const reqPageNumber = parseInt(req.query.pageNumber);   // user requested page
+    const reqPageSize = parseInt(req.query.pageSize);   // user requested page size
 
     MongoClient.connect(url, function(err, db) {
         assert.equal(null, err);
-        const cursor = db.collection('foods').find( {}/*, { 
-            _id: 1,
-            restname: 1,
-            item: 1,
-            calories: 1,
-            carbs: 1,
-            protein: 1,
-            total_fat: 1,
-            type: 1
-        }*/);
+        const cursor = db.collection('foods').find( {} );
         cursor.toArray(function (err, foodsArr) {
             assert.equal(null, err);
             // console.log(foodsArr);
             if (filterBy) {
                 foodsArr = foodsArr.filter(food => food._id.trim().toLowerCase().search(filterBy.toLowerCase()) >= 0);
             }
-            foodsArr.sort((f1, f2) => f1.restname > f2.restname); 
+            /* 
+            Check which collumn the user wants to sort by.
+            */
+            switch (sortId) {
+                case 'restname': 
+                    foodsArr.sort((f1, f2) => f1.restname > f2.restname);
+                    break;
+                case 'item':
+                    foodsArr.sort((f1, f2) => f1.item > f2.item);
+                    break;
+                case 'calories':
+                    foodsArr.sort((f1, f2) => f1.calories > f2.calories);
+                    break;
+                case 'carbs':
+                    foodsArr.sort((f1, f2) => f1.carbs > f2.carbs);
+                    break;
+                case 'protein':
+                    foodsArr.sort((f1, f2) => f1.protein > f2.protein);
+                    break;
+                case 'total_fat':
+                    foodsArr.sort((f1, f2) => f1.total_fat > f2.total_fat);
+                    break;
+                case 'type':
+                    foodsArr.sort((f1, f2) => f1.type > f2.type);
+                    break;
+            } 
             if (sortBy == "desc") {
                 foodsArr = foodsArr.reverse();
             }          
@@ -123,45 +114,4 @@ app.route('/api/foods/:id').delete((req, res) => {
   
 app.listen(8000, () => {
     console.log('HTTP REST API Server running at http://localhost:8000')
-    /* const filter = 'burger'
-    const sortBy = 'asc';
-    reqPageNumber = 0;
-    reqPageSize = 3;
-    MongoClient.connect(url, function(err, db) {
-        console.log('connected')
-        assert.equal(null, err);
-        const cursor = db.collection('foods').find( { }, { 
-            _id: 1,
-            restname: 1,
-            item: 1,
-            calories: 1,
-            carbs: 1,
-            protein: 1,
-            total_fat: 1,
-            type: 1
-        })
-        console.log('queried');
-        // cursor.sort({ 'restname': 1});
-        cursor.toArray(function (err, foodsArr) {
-            assert.equal(null, err);
-            console.log(foodsArr);
-            // let foodsArr = Object.values(unsrtFOODS); 
-            if (filter) {
-                foodsArr = foodsArr.filter(food => food._id.trim().toLowerCase().search(filter.toLowerCase()) >= 0);
-            }
-            console.log('filtered'); 
-            console.log(foodsArr);       
-            foodsArr.sort((f1, f2) => f1.restname > f2.restname); 
-            if (sortBy == "desc") {
-                foodsArr = foodsArr.reverse();
-            }
-            console.log('sorted'); 
-            console.log(foodsArr);            
-            const initialPos = reqPageNumber * reqPageSize;
-            foodPage = foodsArr.slice(initialPos, initialPos + reqPageSize);
-            console.log('paged');
-            console.log(foodPage);
-        });
-        db.close();
-    }) */
 })

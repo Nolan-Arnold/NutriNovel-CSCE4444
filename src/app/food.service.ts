@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { catchError, map, tap } from 'rxjs/operators';
+import { catchError } from 'rxjs/operators';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 
 import { Food } from './food';
@@ -48,8 +48,8 @@ export class FoodService {
     };
   }
 
-  findFoods( filter = '', sortOrder = 'asc', pageNumber = 0, pageSize = 10): Observable<Food[]> {
-    const parameters = new HttpParams().set('filter', filter)
+  findFoods( filter = '', sortId = 'restname', sortOrder = 'asc', pageNumber = 0, pageSize = 10): Observable<Food[]> {
+    const parameters = new HttpParams().set('filter', filter).set('sortId', sortId)
       .set('sortOrder', sortOrder).set('pageNumber', pageNumber.toString()).set('pageSize', pageSize.toString());
     return this.http.get<Food[]>(this.foodsUrl, { params: parameters })
       .pipe(

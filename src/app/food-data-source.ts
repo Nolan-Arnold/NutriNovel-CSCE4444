@@ -21,10 +21,10 @@ export class FoodDataSource implements DataSource<Food> {
     constructor(private foodService: FoodService) {
     }
 
-    loadFoods(filter: string, sortDirection: string, pageIndex: number, pageSize: number) {
+    loadFoods(filter: string, sortId: string, sortDirection: string, pageIndex: number, pageSize: number) {
         this.loadingSubject.next(true);
 
-        this.foodService.findFoods(filter, sortDirection, pageIndex, pageSize)
+        this.foodService.findFoods(filter, sortId, sortDirection, pageIndex, pageSize)
             .pipe(
                 catchError(() => of([]))
                 // finalize(() => this.loadingSubject.next(false))
