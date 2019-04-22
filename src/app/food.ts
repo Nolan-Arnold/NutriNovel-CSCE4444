@@ -6,6 +6,6 @@ export class Food {
     calories: number;
     carbs: number;
     protein: number;
-    totalFat: number;
+    total_fat: number;
     type: string;
   }

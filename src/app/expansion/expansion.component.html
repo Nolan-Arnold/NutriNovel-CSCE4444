@@ -42,7 +42,7 @@
       </mat-panel-description>-->
     </mat-expansion-panel-header>
     <p class="innerpanel">Calories: {{panel.calories}}</p>
-    <p class="innerpanel">Total Fat: {{panel.totalFat}}</p>
+    <p class="innerpanel">Total Fat: {{panel.total_fat}}</p>
     <p class="innerpanel">Protein: {{panel.protein}}</p>
     <p class="innerpanel">Carbohydrates: {{panel.carbs}}</p>
     <p class="innerpanel">Type: {{panel.type}}</p>
@@ -62,3 +62,4 @@
   <mat-list-item>Total Carbohydrates: {{totalProtein()}}</mat-list-item>
   <mat-divider></mat-divider>
 </mat-list>
+<button mat-button color="warn" (click)="removeWholePlate()">Clear Plate </button>

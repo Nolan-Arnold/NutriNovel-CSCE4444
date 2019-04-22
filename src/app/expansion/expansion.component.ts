@@ -50,7 +50,7 @@ export class ExpansionComponent implements OnInit {
     var total_Fat = 0;
     for (let i of this.plateFoodService.platelist)
     {
-        total_Fat += i.totalFat;
+        total_Fat += i.total_fat;
     }
     return total_Fat;
   }
@@ -83,6 +83,13 @@ export class ExpansionComponent implements OnInit {
 
     console.log(value);
     console.log('yo');
+    this.config = {
+      panels: this.plateFoodService.platelist
+    }
+  }
+  removeWholePlate(){
+
+    this.plateFoodService.platelist = [];
     this.config = {
       panels: this.plateFoodService.platelist
     }
