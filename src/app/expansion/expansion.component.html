@@ -32,11 +32,10 @@
   </mat-expansion-panel>
 </mat-accordion>-->
 <mat-accordion>
-  <mat-expansion-panel *ngFor="let panel of config.panels">
-  
+  <mat-expansion-panel *ngFor="let panel of config.panels; let i = index">
     <mat-expansion-panel-header>
       <mat-panel-title>
-        {{ panel.item }}
+        {{ panel.item }} from {{panel.restname}}
       </mat-panel-title>
       <!---<mat-panel-description>
         {{ panel.description }}
@@ -45,13 +44,21 @@
     <p class="innerpanel">Calories: {{panel.calories}}</p>
     <p class="innerpanel">Total Fat: {{panel.totalFat}}</p>
     <p class="innerpanel">Protein: {{panel.protein}}</p>
+    <p class="innerpanel">Carbohydrates: {{panel.carbs}}</p>
+    <p class="innerpanel">Type: {{panel.type}}</p>
+    <mat-action-row>
+      <button mat-button color="warn" (click)="mat-accordion.innerHTML = ''">Remove from Plate </button>
+    </mat-action-row>
   </mat-expansion-panel>
 </mat-accordion>
 <!--new stuff here-->
 <mat-list>
-  <mat-list-item>Item 1</mat-list-item>
+  <mat-list-item>Total Calories: {{totalCalorie()}}</mat-list-item>
   <mat-divider></mat-divider>
-  <mat-list-item>Item 2</mat-list-item>
+  <mat-list-item>Total Fat: {{totalFatNum()}}</mat-list-item>
   <mat-divider></mat-divider>
-  <mat-list-item>Item 3</mat-list-item>
+  <mat-list-item>Protein: {{totalProtein()}}</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>Total Carbohydrates: {{totalProtein()}}</mat-list-item>
+  <mat-divider></mat-divider>
 </mat-list>

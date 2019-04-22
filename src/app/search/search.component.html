@@ -77,9 +77,12 @@
   </table>
 
 </div>
-<!--Button added by Nolan Arnold-->
+<!--Buttons added by Nolan Arnold-->
 <h3>Basic Buttons</h3>
 <div class="example-button-row">
   <button mat-button
-  (click)="loadPlate($event)"> Add to Plate</button>
+  (click)="loadPlate($event)" routerLink = "/plate"> Add to Plate</button>
+<div class="example-button-row">
+  <button mat-button
+  (click)="loadPlate($event)" routerLink = "/compare"> Compare</button>
 </div>

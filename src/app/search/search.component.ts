@@ -10,6 +10,8 @@ import { FoodService } from '../food.service';
 import { FoodDataSource } from '../food-data-source';
 import { Food } from '../food';
 import { PlateFoodService } from '../plate-food.service';
+import { AppRoutingModule } from '../app-routing.module';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -95,6 +97,7 @@ export class SearchComponent implements OnInit, AfterViewInit {
    // this.plateFood = [];
     
     this.plateFoodService.platelist = this.selection.selected;
+    //this.router.navigateByUrl('/plate');
   }
   toPlate(): any{
    this.plateFood
