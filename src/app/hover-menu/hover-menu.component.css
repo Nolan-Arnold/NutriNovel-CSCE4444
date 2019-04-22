@@ -23,7 +23,7 @@ img {
 }
 
 ul {
-  z-index: 9;
+  z-index: 15;
   position: fixed;
   font-size: 90%;
   top: 0;
