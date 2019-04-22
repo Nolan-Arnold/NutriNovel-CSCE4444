@@ -96,7 +96,8 @@ export class SearchComponent implements OnInit, AfterViewInit {
   loadPlate(event:any): void{
    // this.plateFood = [];
     
-    this.plateFoodService.platelist = this.selection.selected;
+    //this.plateFoodService.platelist = this.selection.selected;
+   this.plateFoodService.platelist = this.plateFoodService.platelist.concat(this.selection.selected);
     //this.router.navigateByUrl('/plate');
   }
   toPlate(): any{

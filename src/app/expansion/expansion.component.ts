@@ -42,7 +42,7 @@ export class ExpansionComponent implements OnInit {
     {
         totalCalories += i.calories;
     }
-    return totalCalories
+    return totalCalories;
   }
   totalFatNum(): any{
     /*const reducer = (accumulator, currentValue) => accumulator + currentValue
@@ -52,7 +52,7 @@ export class ExpansionComponent implements OnInit {
     {
         total_Fat += i.totalFat;
     }
-    return total_Fat
+    return total_Fat;
   }
   totalProtein(): any{
     /*const reducer = (accumulator, currentValue) => accumulator + currentValue
@@ -62,7 +62,7 @@ export class ExpansionComponent implements OnInit {
     {
         totalProtein += i.protein;
     }
-    return totalProtein
+    return totalProtein;
   }
   totalCarbs(): any{
     /*const reducer = (accumulator, currentValue) => accumulator + currentValue
@@ -75,11 +75,17 @@ export class ExpansionComponent implements OnInit {
     return total_carbs;
   }
   removeFromPlate(value){
-    delete this.plateFoodService.platelist[value];
-    var elem = document.getElementById("innerpanel");
-    elem.parentNode.removeChild(elem);
+    //delete this.plateFoodService.platelist[value]
+    //delete this.config.panels[value];
+    //const index = myArray.indexOf(key, 0);
+    
+   this.plateFoodService.platelist.splice(value, 1);
+
     console.log(value);
     console.log('yo');
+    this.config = {
+      panels: this.plateFoodService.platelist
+    }
   }
 }
 
