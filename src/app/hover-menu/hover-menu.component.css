@@ -19,7 +19,7 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow-x: hidden;
   background-color: rgb(65, 109, 28);
 }
 
