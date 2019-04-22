@@ -91,13 +91,16 @@ export class SearchComponent implements OnInit, AfterViewInit {
     return false;
   }
 
-  // this method will load the currently select food objects into the local array plateFood
-  // access plateFood from the plate component to get the users slections
+  // this method will load the currently select food objects into the array platelist
+  // access platelist from the plateFoodService to get the users slections
   loadPlate(event:any): void{
-   // this.plateFood = [];
-    
-    //this.plateFoodService.platelist = this.selection.selected;
+  
    this.plateFoodService.platelist = this.plateFoodService.platelist.concat(this.selection.selected);
-    //this.router.navigateByUrl('/plate');
   }
+  // this method will load the currently select food objects into the array comparelist
+  // access comparelist from the plateFoodService to get the users slections
+  loadCompare(event:any): void{
+     
+     this.plateFoodService.comparelist = this.selection.selected;
+   }
 }

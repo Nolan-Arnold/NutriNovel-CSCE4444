@@ -47,7 +47,7 @@
     <p class="innerpanel">Carbohydrates: {{panel.carbs}}</p>
     <p class="innerpanel">Type: {{panel.type}}</p>
     <mat-action-row>
-      <button mat-button color="warn" (click)="removeFromPlate(i)">Remove from Plate </button>
+      <button matTooltip="Removes item from current plate" aria-label="Button that displays a tooltip when focused or hovered over" mat-button color="warn" (click)="removeFromPlate(i)">Remove from Plate </button>
     </mat-action-row>
   </mat-expansion-panel>
 </mat-accordion>

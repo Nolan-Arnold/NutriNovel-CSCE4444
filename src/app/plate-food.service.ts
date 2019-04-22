@@ -6,5 +6,6 @@ import { Food } from './food';
 })
 export class PlateFoodService {
   platelist: Food[] = []
+  comparelist: Food[] = []
   constructor() { }
 }
