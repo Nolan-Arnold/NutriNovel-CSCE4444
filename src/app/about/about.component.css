@@ -58,7 +58,7 @@
   position: absolute;
   left: 0;
   top: 100px;
-  width: 75%;
+  width: 105%;
   text-align: left;
   font-size: 64px;
   font-weight: bolder;
@@ -69,10 +69,27 @@
 
 .third {
   position: absolute;
-  bottom: 0px;
-  right: 0px;
-  z-index: 10;
+  left: 0;
+  top: 100px;
+  width: 105%;
+  text-align: left;
+  font-size: 64px;
+  font-weight: bolder;
+  color: white;
+  text-rendering: optimizeLegibility;
+  z-index: 14;
 }
+
+.mat-flat-button {
+  position: relative;
+  top: 275px;
+  left: 500px;
+  color: white;
+  font-size: 24px;
+  background: green;
+  height: 40px;
+  width: 150px;
+};
 
 .fourth {
   position: absolute;

@@ -11,7 +11,7 @@ import { ExpansionComponent} from './expansion/expansion.component';
 const routes: Routes = [
   { path: '', redirectTo: '/about', pathMatch: 'full' },
   { path: 'about', component: AboutComponent },
-  { path: 'full-menu', component: ListPlaygroundComponent },
+  { path: 'full-menu', component: SearchComponent },
   { path: 'compare', component: CompareComponent },
   { path: 'plate', component: ExpansionComponent },
   { path: 'search', component: SearchComponent }
