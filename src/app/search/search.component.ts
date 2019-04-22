@@ -4,10 +4,14 @@ import { MatSort, MatPaginator } from '@angular/material';
 import { debounceTime, distinctUntilChanged, tap } from 'rxjs/operators';
 import { merge, fromEvent } from 'rxjs';
 
+import {PlateFood} from '../plate-food';
+
 import { FoodService } from '../food.service';
 import { FoodDataSource } from '../food-data-source';
 import { Food } from '../food';
-
+import { PlateFoodService } from '../plate-food.service';
+import { AppRoutingModule } from '../app-routing.module';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -23,13 +27,14 @@ export class SearchComponent implements OnInit, AfterViewInit {
    */
   dataSource: FoodDataSource;
   elementCount: number;
-  public plateFood: Food[]; // stores food object for plate to access, public so plate component can access
+  plateFood: PlateFood;
+  //public plateFood: Food[]; // stores food object for plate to access, public so plate component can access
   selection = new SelectionModel<Food>(true, []);
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild('input') input: ElementRef;
 
-  constructor(private foodService: FoodService) { }
+  constructor(private foodService: FoodService, private plateFoodService: PlateFoodService) { }
 
   ngOnInit() {
     this.dataSource = new FoodDataSource(this.foodService);
@@ -88,8 +93,14 @@ export class SearchComponent implements OnInit, AfterViewInit {
 
   // this method will load the currently select food objects into the local array plateFood
   // access plateFood from the plate component to get the users slections
-  loadPlate() {
-    this.plateFood = [];
-    this.plateFood = this.selection.selected;
+  loadPlate(event:any): void{
+   // this.plateFood = [];
+    
+    //this.plateFoodService.platelist = this.selection.selected;
+   this.plateFoodService.platelist = this.plateFoodService.platelist.concat(this.selection.selected);
+    //this.router.navigateByUrl('/plate');
+  }
+  toPlate(): any{
+   this.plateFood
   }
 }
