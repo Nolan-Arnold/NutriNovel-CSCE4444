@@ -4,8 +4,8 @@ export class Food {
     restname: string;
     item: string;
     calories: number;
-    carbs: number;
+    carbohydrates: number;
     protein: number;
-    totalFat: number;
+    total_fat: number;
     type: string;
   }

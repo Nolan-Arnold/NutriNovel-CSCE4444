@@ -31,8 +31,8 @@ app.route('/api/foods/count').get((req, res) => {
             // console.log("Filtered count " + count)
             // res.send('{\'elementCount\': ' + count.toString() + ' }');
             res.send( count.toString() );
+            db.close();
         });
-        db.close();
     });
 })
 
@@ -45,8 +45,7 @@ app.route('/api/foods').get((req, res) => {
 
     MongoClient.connect(url, function(err, db) {
         assert.equal(null, err);
-        const cursor = db.collection('foods').find( {} );
-        cursor.toArray(function (err, foodsArr) {
+        db.collection('foods').find( {} ).toArray(function (err, foodsArr) {
             assert.equal(null, err);
             // console.log(foodsArr);
             if (filterBy) {
@@ -65,8 +64,8 @@ app.route('/api/foods').get((req, res) => {
                 case 'calories':
                     foodsArr.sort((f1, f2) => f1.calories > f2.calories);
                     break;
-                case 'carbs':
-                    foodsArr.sort((f1, f2) => f1.carbs > f2.carbs);
+                case 'carbohydrates':
+                    foodsArr.sort((f1, f2) => f1.carbohydrates > f2.carbohydrates);
                     break;
                 case 'protein':
                     foodsArr.sort((f1, f2) => f1.protein > f2.protein);
@@ -84,8 +83,8 @@ app.route('/api/foods').get((req, res) => {
             const initialPos = reqPageNumber * reqPageSize;
             foodsArr = foodsArr.slice(initialPos, initialPos + reqPageSize);
             res.send(foodsArr);
+            db.close();
         });
-        db.close();
     });
 })
 

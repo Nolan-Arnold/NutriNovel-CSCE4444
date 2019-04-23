@@ -15,7 +15,7 @@ import { Food } from '../food';
 })
 
 export class SearchComponent implements OnInit, AfterViewInit {
-  displayedColumns: string[] = ['select', 'restname', 'item', 'calories', 'carbs', 'protein', 'total fat', 'type'];
+  displayedColumns: string[] = ['select', 'restname', 'item', 'calories', 'carbohydrates', 'protein', 'total fat', 'type'];
   /** TODO: MatTableDataSource will not work with the observables being returned
    *  need to convert to a model using Custom Angular CDK Data Source.
    *  see https://blog.angular-university.io/angular-material-data-table/
