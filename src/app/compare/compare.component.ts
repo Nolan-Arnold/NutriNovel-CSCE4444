@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PlateFoodService } from '../plate-food.service';
 import { FoodService } from '../food.service';
-import { Food } from '../Food'
+import { Food } from '../food'
 
 export interface Tile {
 
