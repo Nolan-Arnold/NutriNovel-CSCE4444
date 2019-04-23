@@ -13,6 +13,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatListModule} from '@angular/material/list'; 
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatGridListModule} from '@angular/material/grid-list';
+
+
 
 import { AppComponent } from './app.component';
 import { ListPlaygroundComponent } from './list-playground/list-playground.component';
@@ -22,6 +29,7 @@ import { PlateComponent } from './plate/plate.component';
 import { CompareComponent } from './compare/compare.component';
 import { MessagesComponent } from './messages/messages.component';
 import { SearchComponent } from './search/search.component';
+import { ExpansionComponent} from './expansion/expansion.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +40,8 @@ import { SearchComponent } from './search/search.component';
     PlateComponent,
     CompareComponent,
     MessagesComponent,
-    SearchComponent
+    SearchComponent,
+    ExpansionComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +58,12 @@ import { SearchComponent } from './search/search.component';
     MatPaginatorModule,
     MatToolbarModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    MatExpansionModule,
+    MatDividerModule,
+    MatListModule,
+    MatTooltipModule,
+    MatGridListModule
 
 
   ],

@@ -10,7 +10,14 @@
 <!-- TODO Page length not correctly subscribing to observable created in my food-data-source-->
 <!--div *ngIf="let count of dataSource.elementCount$ | async"-->
 <mat-paginator [pageSize]=10 [length]="elementCount" [pageSizeOptions]="[20, 15, 10, 5]" showFirstLastButtons></mat-paginator>
+
 <!--/div-->
+<!--Buttons added by Nolan Arnold-->
+<br><br><br><br><br><br><br>
+<div class="example-button-row">
+  &nbsp;<button mat-button (click)="loadPlate($event)" routerLink="/plate">Add to Plate</button>&nbsp;
+  <button mat-button (click)="loadCompare($event)" routerLink="/compare">Compare</button>
+</div>
 
 <div matSort class="mat-elevation-z8" matSortActive="restname" matSortDirection="asc" matSortDisableClear>
   <table mat-table [dataSource]="dataSource"> <!--matSort class="mat-elevation-z8"-->
@@ -18,11 +25,11 @@
     <!-- Checkbox Column -->
     <ng-container matColumnDef="select">
       <th mat-header-cell *matHeaderCellDef>
-        
+
       </th>
       <td mat-cell *matCellDef="let row">
-        <mat-checkbox 
-          (click)="$event.stopPropagation()" 
+        <mat-checkbox
+          (click)="$event.stopPropagation()"
           (change)="$event ? selection.toggle(row) : null"
           [checked]="selection.isSelected(row)">
         </mat-checkbox>

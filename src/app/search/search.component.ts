@@ -4,10 +4,12 @@ import { MatSort, MatPaginator } from '@angular/material';
 import { debounceTime, distinctUntilChanged, tap } from 'rxjs/operators';
 import { merge, fromEvent } from 'rxjs';
 
+import {PlateFood} from '../plate-food';
+
 import { FoodService } from '../food.service';
 import { FoodDataSource } from '../food-data-source';
 import { Food } from '../food';
-
+import { PlateFoodService } from '../plate-food.service';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -16,20 +18,25 @@ import { Food } from '../food';
 
 export class SearchComponent implements OnInit, AfterViewInit {
   displayedColumns: string[] = ['select', 'restname', 'item', 'calories', 'carbohydrates', 'protein', 'total fat', 'type'];
-  /** TODO: MatTableDataSource will not work with the observables being returned
+  /** TODO: Initial table load does not show the total number of pages, it
+   *  updates after user interacts with the table.
+   *
+   *  COMPLETED: MatTableDataSource will not work with the observables being returned
    *  need to convert to a model using Custom Angular CDK Data Source.
    *  see https://blog.angular-university.io/angular-material-data-table/
    *  for walkthrough. Lupe Rivera
+   *
+   *  Completed - Lupe Rivera
    */
   dataSource: FoodDataSource;
   elementCount: number;
-  public plateFood: Food[]; // stores food object for plate to access, public so plate component can access
+  plateFood: PlateFood;
   selection = new SelectionModel<Food>(true, []);
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild('input') input: ElementRef;
 
-  constructor(private foodService: FoodService) { }
+  constructor(private foodService: FoodService, private plateFoodService: PlateFoodService) { }
 
   ngOnInit() {
     this.dataSource = new FoodDataSource(this.foodService);
@@ -87,10 +94,15 @@ export class SearchComponent implements OnInit, AfterViewInit {
     return false;
   }
 
-  // this method will load the currently select food objects into the local array plateFood
-  // access plateFood from the plate component to get the users slections
-  loadPlate() {
-    this.plateFood = [];
-    this.plateFood = this.selection.selected;
+  // this method will load the currently select food objects into the array platelist
+  // access platelist from the plateFoodService to get the users slections
+  loadPlate( event: any ): void {
+    this.plateFoodService.platelist = this.plateFoodService.platelist.concat(this.selection.selected);
+  }
+
+  // this method will load the currently select food objects into the array comparelist
+  // access comparelist from the plateFoodService to get the users slections
+  loadCompare( event: any ): void {
+    this.plateFoodService.comparelist = this.selection.selected;
   }
 }

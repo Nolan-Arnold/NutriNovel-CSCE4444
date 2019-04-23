@@ -72,6 +72,7 @@ export class FoodService {
       .pipe(
         catchError(this.handleError('getFoods', []))
       );
+     // this.http.get()
   }
   /*
   // GET foods whose name contains search term

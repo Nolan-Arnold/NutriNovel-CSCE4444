@@ -6,6 +6,7 @@ export class Food {
     calories: number;
     carbohydrates: number;
     protein: number;
+    // tslint:disable-next-line: variable-name
     total_fat: number;
     type: string;
   }

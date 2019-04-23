@@ -1,18 +1,3 @@
-/*
-.topnav {
-  background-color: white;
-  overflow: hidden;
-  color: red;
-  box-shadow: 1px 1px 8px #888888;
-}
-.mat-button.mat-small {
-  min-width: 1%;
-}
-.menu-c button,
-.menu-c a {
-  margin-right: 20px;
-}
-*/
 img {
   z-index: 10;
   position: 10%;
@@ -22,8 +7,9 @@ img {
   width: 10%;
 }
 
+/* this is for hover menu bar, color remains as normal one */
 ul {
-  z-index: 9;
+  z-index: 15;
   position: fixed;
   font-size: 90%;
   top: 0;
@@ -33,8 +19,8 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  background-color: rgb(132, 175, 76);
+  overflow-x: hidden;
+  background-color: rgb(65, 109, 28);
 }
 
 li {
@@ -49,17 +35,20 @@ li a {
   text-decoration: none;
 }
 
+/* this is for when hovering over button, changes color */
 li a:hover {
   background-color: rgb(233, 233, 233);
   color: rgb(13, 100, 27);
 }
 
+/* this is for clicking on button, make sure color same as nav a.active! */
 li a:active {
-  background-color: rgb(167, 194, 70);
+  background-color: rgb(83, 150, 28);
   color: white;
 }
 
+/* this is for active button, color remains changed as long as on page */
 nav a.active {
-  background-color: rgb(167, 194, 70);
+  background-color: rgb(83, 150, 28);
   color: white;
 }

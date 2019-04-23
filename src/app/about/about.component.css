@@ -1,8 +1,23 @@
-img {
+.base {
     width: 100%;
-    height: auto;
-    opacity: 0.75;
+    height: 750px;
+    object-fit: cover;
     z-index: 7;
+}
+
+.top {
+  z-index: 7;
+  opacity: 0.79;
+  top: 500px;
+  height: 400px;
+  width: 80%;
+}
+
+.top2 {
+  z-index: 8;
+  opacity: 0.8;
+  height: 600px;
+  width: 100%;
 }
 
 .container {
@@ -12,28 +27,90 @@ img {
 .first {
   position: absolute;
   left: 0;
-  top: 300px;
+  top: 120px;
   width: 100%;
-  text-align: center;
+  left: 50px;
+  text-align: left;
   font-size: 64px;
   font-weight: bolder;
-
-  color: white;
+  color:  rgb(0, 107, 9);
   text-rendering: optimizeLegibility;
-  z-index: 8;
+  z-index: 10;
 }
+
+.first2 {
+  position: absolute;
+  left: 0;
+  top: 120px;
+  width: 100%;
+  left: 50px;
+  text-align: left;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: bolder;
+  color:  rgba(12, 109, 20, 0.74);
+  text-rendering: optimizeLegibility;
+  z-index: 10;
+}
+
 
 .second {
   position: absolute;
   left: 0;
-  top: 1000px;
-  width: 100%;
-  text-align: center;
-  height: 100px;
+  top: 100px;
+  width: 105%;
+  text-align: left;
   font-size: 64px;
   font-weight: bolder;
-
   color: white;
   text-rendering: optimizeLegibility;
-  z-index: 8;
+  z-index: 7;
+}
+
+.third {
+  position: absolute;
+  left: 0;
+  top: 100px;
+  width: 105%;
+  text-align: left;
+  font-size: 64px;
+  font-weight: bolder;
+  color: white;
+  text-rendering: optimizeLegibility;
+  z-index: 14;
+}
+
+.mat-flat-button {
+  position: relative;
+  top: 275px;
+  left: 500px;
+  color: white;
+  font-size: 24px;
+  background: green;
+  height: 40px;
+  width: 150px;
+};
+
+.fourth {
+  position: absolute;
+  top: 500px;
+  width: 100%;
+  left: 100px;
+  text-align: left;
+  font-size: 24px;
+  font-weight: bolder;
+  color: rgb(0, 107, 9);
+  text-rendering: optimizeLegibility;
+  z-index: 9;
+}
+
+p {
+  font-size: 24px;
+  text-align: center;
+  padding-left: 5em;
+}
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
