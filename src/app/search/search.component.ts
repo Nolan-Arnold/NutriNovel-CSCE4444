@@ -10,8 +10,6 @@ import { FoodService } from '../food.service';
 import { FoodDataSource } from '../food-data-source';
 import { Food } from '../food';
 import { PlateFoodService } from '../plate-food.service';
-import { AppRoutingModule } from '../app-routing.module';
-import { Router } from '@angular/router';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -19,16 +17,20 @@ import { Router } from '@angular/router';
 })
 
 export class SearchComponent implements OnInit, AfterViewInit {
-  displayedColumns: string[] = ['select', 'restname', 'item', 'calories', 'carbs', 'protein', 'total fat', 'type'];
-  /** TODO: MatTableDataSource will not work with the observables being returned
+  displayedColumns: string[] = ['select', 'restname', 'item', 'calories', 'carbohydrates', 'protein', 'total fat', 'type'];
+  /** TODO: Initial table load does not show the total number of pages, it
+   *  updates after user interacts with the table.
+   *
+   *  COMPLETED: MatTableDataSource will not work with the observables being returned
    *  need to convert to a model using Custom Angular CDK Data Source.
    *  see https://blog.angular-university.io/angular-material-data-table/
    *  for walkthrough. Lupe Rivera
+   *
+   *  Completed - Lupe Rivera
    */
   dataSource: FoodDataSource;
   elementCount: number;
   plateFood: PlateFood;
-  //public plateFood: Food[]; // stores food object for plate to access, public so plate component can access
   selection = new SelectionModel<Food>(true, []);
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -38,7 +40,7 @@ export class SearchComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this.dataSource = new FoodDataSource(this.foodService);
-    this.dataSource.loadFoods('', 'asc', 0, 10); // intialize the table with data from backend
+    this.dataSource.loadFoods('', 'restname', 'asc', 0, 10); // intialize the table with data from backend
     this.selection.isSelected = this.isChecked.bind(this); // idk
   }
 
@@ -71,6 +73,7 @@ export class SearchComponent implements OnInit, AfterViewInit {
   loadFoodsPage() {
       this.dataSource.loadFoods(
           this.input.nativeElement.value,
+          this.sort.active,
           this.sort.direction,
           this.paginator.pageIndex,
           this.paginator.pageSize);
@@ -93,14 +96,13 @@ export class SearchComponent implements OnInit, AfterViewInit {
 
   // this method will load the currently select food objects into the array platelist
   // access platelist from the plateFoodService to get the users slections
-  loadPlate(event:any): void{
-
-   this.plateFoodService.platelist = this.plateFoodService.platelist.concat(this.selection.selected);
+  loadPlate( event: any ): void {
+    this.plateFoodService.platelist = this.plateFoodService.platelist.concat(this.selection.selected);
   }
+
   // this method will load the currently select food objects into the array comparelist
   // access comparelist from the plateFoodService to get the users slections
-  loadCompare(event:any): void{
-
-     this.plateFoodService.comparelist = this.selection.selected;
-   }
+  loadCompare( event: any ): void {
+    this.plateFoodService.comparelist = this.selection.selected;
+  }
 }

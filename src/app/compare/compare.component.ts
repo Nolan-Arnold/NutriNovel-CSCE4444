@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PlateFoodService } from '../plate-food.service';
 import { FoodService } from '../food.service';
-import { Food } from '../food'
+import { Food } from '../food';
 
 export interface Tile {
 
@@ -18,42 +18,44 @@ export interface Tile {
 export class CompareComponent implements OnInit {
 
   constructor(private foodService: FoodService, private plateFoodService: PlateFoodService) { }
-
-  ngOnInit() {
-
-  }
  /* tiles: Tile[] = [
     {text: 'One', cols: 3, rows: 1, color: 'lightblue'},
     {text: 'Two', cols: 1, rows: 2, color: 'lightgreen'},
     {text: 'Three', cols: 1, rows: 1, color: 'lightpink'},
     {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
   ];*/
-  compare_items: Food[] = this.plateFoodService.comparelist;
+  compareItems: Food[] = this.plateFoodService.comparelist;
+
   tiles: Tile[] = [
-    {text: this.compare_items[0].item, cols: 2, rows: 1, background: 'lightgray'},
-    {text: this.compare_items[1].item, cols: 2, rows: 1, background: 'lightgray'},
-    {text: String(this.compare_items[0].calories + " Calories"), cols: 2, rows: 1, background: 'white'},
-    {text: String(this.compare_items[1].calories + " Calories"), cols: 2, rows: 1, background: 'white'},
-    {text: String(this.compare_items[0].total_fat + " Total Fat"), cols: 2, rows: 1, background: 'white'},
-    {text: String(this.compare_items[1].total_fat + " Total Fat"), cols: 2, rows: 1, background: 'white'},
-    {text: String(this.compare_items[0].carbs + " Carbs"), cols: 2, rows: 1, background: 'white'},
-    {text: String(this.compare_items[1].carbs + " Carbs"), cols: 2, rows: 1, background: 'white'},
-    {text: String(this.compare_items[0].protein + " Protein"), cols: 2, rows: 1, background: 'white'},
-    {text: String(this.compare_items[1].protein + " Protein"), cols: 2, rows: 1, background: 'white'},
+    { text: this.compareItems[0].item, cols: 2, rows: 1, background: 'lightgray' },
+    {text: this.compareItems[1].item, cols: 2, rows: 1, background: 'lightgray'},
+    {text: String(this.compareItems[0].calories + ' Calories'), cols: 2, rows: 1, background: 'white'},
+    {text: String(this.compareItems[1].calories + ' Calories'), cols: 2, rows: 1, background: 'white'},
+    {text: String(this.compareItems[0].total_fat + ' Total Fat (g)'), cols: 2, rows: 1, background: 'white'},
+    {text: String(this.compareItems[1].total_fat + ' Total Fat (g)'), cols: 2, rows: 1, background: 'white'},
+    {text: String(this.compareItems[0].carbohydrates + ' Carbohydrates (g)'), cols: 2, rows: 1, background: 'white'},
+    {text: String(this.compareItems[1].carbohydrates + ' Carbohydrates (g)'), cols: 2, rows: 1, background: 'white'},
+    {text: String(this.compareItems[0].protein + ' Protein (g)'), cols: 2, rows: 1, background: 'white'},
+    {text: String(this.compareItems[1].protein + ' Protein (g)'), cols: 2, rows: 1, background: 'white'},
     ];
-  showCalories(i): any{
-    return this.compare_items[i].calories;
+
+  ngOnInit() {
+
   }
-  showFat(i): any{
-    return this.compare_items[i].total_fat;
+
+  showCalories(i): any {
+    return this.compareItems[i].calories;
   }
-  showCarbs(i): any{
-    return this.compare_items[i].carbs;
+  showFat(i): any {
+    return this.compareItems[i].total_fat;
   }
-  showProtein(i): any{
-    return this.compare_items[i].protein;
+  showCarbs(i): any {
+    return this.compareItems[i].carbohydrates;
   }
-  showItem(i): any{
-    return this.compare_items[i].item;
+  showProtein(i): any {
+    return this.compareItems[i].protein;
+  }
+  showItem(i): any {
+    return this.compareItems[i].item;
   }
 }

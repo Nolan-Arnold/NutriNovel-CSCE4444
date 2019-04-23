@@ -15,13 +15,14 @@ import { templateSourceUrl } from '@angular/compiler';
 })
 export class ExpansionComponent implements OnInit {
   panelOpenState = false;
+  plateFood: Food[] = this.plateFood; // create array of food
+  config = { panels: this.plateFoodService.platelist };
+
   constructor(private foodService: FoodService, private plateFoodService: PlateFoodService) { }
 
   ngOnInit() {
 
   }
-
-  plateFood: Food[] = this.plateFood;//create array of food
 
   /*config = {
     panels: [
@@ -31,67 +32,65 @@ export class ExpansionComponent implements OnInit {
       { name: 'Section 4', description: 'Fourth section'}
     ]
   };*/
-  config = {
-    panels: this.plateFoodService.platelist
-  };
-  totalCalorie(): any{
+
+  totalCalorie(): any {
     /*const reducer = (accumulator, currentValue) => accumulator + currentValue
     console.log(this.plateFoodService.platelist.calories.reduce(reducer))*/
-    var totalCalories = 0;
-    for (let i of this.plateFoodService.platelist)
-    {
+    let totalCalories = 0;
+    for (const i of this.plateFoodService.platelist) {
         totalCalories += i.calories;
     }
     return totalCalories;
   }
-  totalFatNum(): any{
+
+  totalFatNum(): any {
     /*const reducer = (accumulator, currentValue) => accumulator + currentValue
     console.log(this.plateFoodService.platelist.calories.reduce(reducer))*/
-    var total_Fat = 0;
-    for (let i of this.plateFoodService.platelist)
-    {
-        total_Fat += i.total_fat;
+    let totalFat = 0;
+    for (const i of this.plateFoodService.platelist) {
+      totalFat += i.total_fat;
     }
-    return total_Fat;
+    return totalFat;
   }
-  totalProtein(): any{
+
+  totalProtein(): any {
     /*const reducer = (accumulator, currentValue) => accumulator + currentValue
     console.log(this.plateFoodService.platelist.calories.reduce(reducer))*/
-    var totalProtein = 0;
-    for (let i of this.plateFoodService.platelist)
-    {
+    let totalProtein = 0;
+    for (const i of this.plateFoodService.platelist) {
         totalProtein += i.protein;
     }
     return totalProtein;
   }
-  totalCarbs(): any{
+
+  totalCarbs(): any {
     /*const reducer = (accumulator, currentValue) => accumulator + currentValue
     console.log(this.plateFoodService.platelist.calories.reduce(reducer))*/
-    var total_carbs = 0;
-    for (let i of this.plateFoodService.platelist)
-    {
-        total_carbs += i.carbs;
+    let totalCarbs = 0;
+    for (const i of this.plateFoodService.platelist) {
+        totalCarbs += i.carbohydrates;
     }
-    return total_carbs;
+    return totalCarbs;
   }
-  removeFromPlate(value){
-    //delete this.plateFoodService.platelist[value]
-    //delete this.config.panels[value];
-    //const index = myArray.indexOf(key, 0);
 
-   this.plateFoodService.platelist.splice(value, 1);
+  removeFromPlate(value) {
+    // delete this.plateFoodService.platelist[value]
+    // delete this.config.panels[value];
+    // const index = myArray.indexOf(key, 0);
+
+    this.plateFoodService.platelist.splice(value, 1);
 
     console.log(value);
     console.log('yo');
     this.config = {
       panels: this.plateFoodService.platelist
-    }
+    };
   }
-  removeWholePlate(){
 
+  removeWholePlate() {
     this.plateFoodService.platelist = [];
     this.config = {
       panels: this.plateFoodService.platelist
-    }
+    };
   }
 }
