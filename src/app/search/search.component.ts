@@ -94,13 +94,13 @@ export class SearchComponent implements OnInit, AfterViewInit {
   // this method will load the currently select food objects into the array platelist
   // access platelist from the plateFoodService to get the users slections
   loadPlate(event:any): void{
-  
+
    this.plateFoodService.platelist = this.plateFoodService.platelist.concat(this.selection.selected);
   }
   // this method will load the currently select food objects into the array comparelist
   // access comparelist from the plateFoodService to get the users slections
   loadCompare(event:any): void{
-     
+
      this.plateFoodService.comparelist = this.selection.selected;
    }
 }

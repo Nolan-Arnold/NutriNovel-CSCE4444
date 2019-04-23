@@ -20,9 +20,9 @@ export class ExpansionComponent implements OnInit {
   ngOnInit() {
 
   }
-  
+
   plateFood: Food[] = this.plateFood;//create array of food
-  
+
   /*config = {
     panels: [
       { name: 'Section 1', description: 'First section' },
@@ -78,7 +78,7 @@ export class ExpansionComponent implements OnInit {
     //delete this.plateFoodService.platelist[value]
     //delete this.config.panels[value];
     //const index = myArray.indexOf(key, 0);
-    
+
    this.plateFoodService.platelist.splice(value, 1);
 
     console.log(value);
@@ -95,4 +95,3 @@ export class ExpansionComponent implements OnInit {
     }
   }
 }
-

@@ -2,7 +2,7 @@ table {
     width: 100%;
     margin: auto;
   }
-  
+
   .mat-form-field { /*the search bar*/
     font-size: 14px;
     width: 60%;
@@ -15,13 +15,12 @@ table {
   .mat-elevation-z8
   {
     position: relative;
-    margin-top : 75px;
+    margin-top : 10px;
     height: auto;
     max-height: 600px;
-    top: 55px;
     overflow: auto;
   }
-  
+
   .mat-paginator
   {
     position:fixed;
@@ -30,3 +29,14 @@ table {
     margin: auto;
     z-index: 2;
   }
+
+  .mat-button {
+  color: white;
+  font-size: 11px;
+  background: rgb(65, 109, 28);
+};
+span:before{
+    content:" ";
+    display:inline-block;
+    width:32px;
+}
