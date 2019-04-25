@@ -42,9 +42,9 @@
       </mat-panel-description>-->
     </mat-expansion-panel-header>
     <p class="innerpanel">Calories: {{panel.calories}}</p>
-    <p class="innerpanel">Total Fat: {{panel.total_fat}}</p>
-    <p class="innerpanel">Protein: {{panel.protein}}</p>
-    <p class="innerpanel">Carbohydrates: {{panel.carbohydrates}}</p>
+    <p class="innerpanel">Total Fat (g): {{panel.total_fat}}</p>
+    <p class="innerpanel">Protein (g): {{panel.protein}}</p>
+    <p class="innerpanel">Carbohydrates (g): {{panel.carbohydrates}}</p>
     <p class="innerpanel">Type: {{panel.type}}</p>
     <mat-action-row>
       <button matTooltip="Removes item from current plate" aria-label="Button that displays a tooltip when focused or hovered over" mat-button color="warn" (click)="removeFromPlate(i)">Remove from Plate </button>
@@ -55,11 +55,11 @@
 <mat-list>
   <mat-list-item>Total Calories: {{totalCalorie()}}</mat-list-item>
   <mat-divider></mat-divider>
-  <mat-list-item>Total Fat: {{totalFatNum()}}</mat-list-item>
+  <mat-list-item>Total Fat (g): {{totalFatNum()}}</mat-list-item>
   <mat-divider></mat-divider>
-  <mat-list-item>Protein: {{totalProtein()}}</mat-list-item>
+  <mat-list-item>Protein (g): {{totalProtein()}}</mat-list-item>
   <mat-divider></mat-divider>
-  <mat-list-item>Total Carbohydrates: {{totalProtein()}}</mat-list-item>
+  <mat-list-item>Total Carbohydrates (g): {{totalProtein()}}</mat-list-item>
   <mat-divider></mat-divider>
 </mat-list>
 <button mat-button color="warn" (click)="removeWholePlate()">Clear Plate </button>

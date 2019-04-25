@@ -80,8 +80,8 @@ export class ExpansionComponent implements OnInit {
 
     this.plateFoodService.platelist.splice(value, 1);
 
-    console.log(value);
-    console.log('yo');
+    // console.log(value);
+    // console.log('yo');
     this.config = {
       panels: this.plateFoodService.platelist
     };
