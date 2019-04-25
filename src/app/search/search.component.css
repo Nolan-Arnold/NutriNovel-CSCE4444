@@ -33,8 +33,13 @@ table {
 
   .mat-button {
   color: white;
+
   font-size: 11px;
   background: rgb(65, 109, 28);
+}
+
+.buttons {
+  position: fixed;
 }
 
 span:before{

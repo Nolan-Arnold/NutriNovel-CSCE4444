@@ -63,7 +63,7 @@
 .fourth {
   position: absolute;
   left: 0;
-  top: 100px;
+  top: 120px;
   width: 105%;
   text-align: left;
   font-size: 64px;
@@ -79,9 +79,9 @@
   left: 500px;
   color: white;
 
-  font-size: 36px;
+  font-size: 30px;
   background: green;
-  height: 50px;
+  height: 40px;
   width: 200px;
 }
 
