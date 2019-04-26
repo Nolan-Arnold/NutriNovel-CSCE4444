@@ -10,6 +10,7 @@ import { FoodService } from '../food.service';
 import { FoodDataSource } from '../food-data-source';
 import { Food } from '../food';
 import { PlateFoodService } from '../plate-food.service';
+
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -28,10 +29,12 @@ export class SearchComponent implements OnInit, AfterViewInit {
    *
    *  Completed - Lupe Rivera
    */
-  dataSource: FoodDataSource;
-  elementCount: number;
-  plateFood: PlateFood;
-  selection = new SelectionModel<Food>(true, []);
+
+  compareDisabled = true; // used to turn the compare button on or off
+  dataSource: FoodDataSource; // retrieves and stores data that the table displays
+  elementCount: number; // stores the total number of elements matching the filtered query
+  plateFood: PlateFood; // Nolan, what is this for? lol
+  selection = new SelectionModel<Food>(true, []); // tracks what elements the users has selected
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild('input') input: ElementRef;
@@ -40,13 +43,15 @@ export class SearchComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this.dataSource = new FoodDataSource(this.foodService);
-    this.dataSource.loadFoods('', 'restname', 'asc', 0, 10); // intialize the table with data from backend
-    this.selection.isSelected = this.isChecked.bind(this); // idk
+    this.getPageCount(); // ensure page count is updated for first page load
+    this.dataSource.loadFoods('', 'restname', 'asc', 0, 15); // intialize the table with data from backend
+    this.selection.isSelected = this.isChecked.bind(this); // Overwrites built in method with new local method
+    this.selection.toggle = this.myToggle.bind(this); // Overwrites built in method with new local method
   }
 
   ngAfterViewInit() {
 
-    // server-side search
+    // server-side search on user search entry
     fromEvent(this.input.nativeElement, 'keyup')
       .pipe(
           debounceTime(150),
@@ -77,21 +82,42 @@ export class SearchComponent implements OnInit, AfterViewInit {
           this.sort.direction,
           this.paginator.pageIndex,
           this.paginator.pageSize);
-      this.getPageCount(this.input.nativeElement.value);
+      this.getPageCount();
   }
 
   // updates the total number of elements
-  getPageCount(filter: string) {
+  getPageCount() {
     this.dataSource.elementCount$.subscribe(count => this.elementCount = count);
   }
 
   // override the isSelected method so it checks based on the objects internal _id
-  isChecked(row: any): boolean {
+  isChecked(row: Food): boolean {
     const found = this.selection.selected.find(food => food._id === row._id);
-    if (found) {
+    if ( found !== undefined ) {
+      this.activateCompare(1);
       return true;
     }
+    this.activateCompare(0);
     return false;
+  }
+
+  // override the toggle() method so it toggles based on the objects interal _id
+  myToggle(value: Food): void {
+    if ( this.isChecked(value) ) {
+      const found = this.selection.selected.find(food => food._id === value._id);
+      this.selection.deselect(found);
+    } else {
+      this.selection.select(value);
+    }
+  }
+
+  // Toggles the compare button on and off based on if the user has exactly 2 food items selected.
+  activateCompare(num: number): void {
+    if (this.selection.selected.length + num === 2) {
+      this.compareDisabled = false;
+    } else {
+      this.compareDisabled = true;
+    }
   }
 
   // this method will load the currently select food objects into the array platelist
@@ -103,6 +129,14 @@ export class SearchComponent implements OnInit, AfterViewInit {
   // this method will load the currently select food objects into the array comparelist
   // access comparelist from the plateFoodService to get the users slections
   loadCompare( event: any ): void {
-    this.plateFoodService.comparelist = this.selection.selected;
+    if ( this.selection.selected.length === 2 ) {
+      this.plateFoodService.comparelist = this.selection.selected;
+    } else
+    if ( this.selection.selected.length === 1 ) {
+      const temp = this.plateFoodService.comparelist.pop();
+      this.plateFoodService.comparelist = this.selection.selected;
+      this.plateFoodService.comparelist.push(temp);
+    }
+    // TODO Need handle cases where the user selects 3 or more items to compare
   }
 }
