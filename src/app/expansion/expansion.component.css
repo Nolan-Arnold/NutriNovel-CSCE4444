@@ -1,3 +1,19 @@
 .innerpanel{
+    /* stuff inside panel */
     padding-left: 3em
+}
+
+.item-title {
+    /* panel header */
+    font-size: 24px;
+    background-color: bisque;
+}
+
+::ng-deep .mat-expansion-panel {
+    width: auto !important;
+    max-width: 500px !important;
+}
+
+.mat-panel-title {
+    position: relative;
 }

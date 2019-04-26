@@ -13,13 +13,6 @@
   width: 80%;
 }
 
-.top2 {
-  z-index: 8;
-  opacity: 0.8;
-  height: 600px;
-  width: 100%;
-}
-
 .container {
   position: relative;
 }
@@ -38,7 +31,7 @@
   z-index: 10;
 }
 
-.first2 {
+.second {
   position: absolute;
   left: 0;
   top: 120px;
@@ -54,7 +47,7 @@
 }
 
 
-.second {
+.third {
   position: absolute;
   left: 0;
   top: 100px;
@@ -67,10 +60,10 @@
   z-index: 7;
 }
 
-.third {
+.fourth {
   position: absolute;
   left: 0;
-  top: 100px;
+  top: 120px;
   width: 105%;
   text-align: left;
   font-size: 64px;
@@ -82,32 +75,14 @@
 
 .mat-flat-button {
   position: relative;
-  top: 275px;
+  top: 260px;
   left: 500px;
   color: white;
-  font-size: 24px;
+
+  font-size: 30px;
   background: green;
   height: 40px;
-  width: 150px;
-};
-
-.fourth {
-  position: absolute;
-  top: 500px;
-  width: 100%;
-  left: 100px;
-  text-align: left;
-  font-size: 24px;
-  font-weight: bolder;
-  color: rgb(0, 107, 9);
-  text-rendering: optimizeLegibility;
-  z-index: 9;
-}
-
-p {
-  font-size: 24px;
-  text-align: center;
-  padding-left: 5em;
+  width: 200px;
 }
 
 body {
