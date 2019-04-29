@@ -4,8 +4,6 @@ import { MatSort, MatPaginator } from '@angular/material';
 import { debounceTime, distinctUntilChanged, tap } from 'rxjs/operators';
 import { merge, fromEvent } from 'rxjs';
 
-import {PlateFood} from '../plate-food';
-
 import { FoodService } from '../food.service';
 import { FoodDataSource } from '../food-data-source';
 import { Food } from '../food';
@@ -33,7 +31,6 @@ export class SearchComponent implements OnInit, AfterViewInit {
   compareDisabled = true; // used to turn the compare button on or off
   dataSource: FoodDataSource; // retrieves and stores data that the table displays
   elementCount: number; // stores the total number of elements matching the filtered query
-  plateFood: PlateFood; // Nolan, what is this for? lol
   selection = new SelectionModel<Food>(true, []); // tracks what elements the users has selected
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;

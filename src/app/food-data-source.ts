@@ -26,7 +26,7 @@ export class FoodDataSource implements DataSource<Food> {
 
         this.foodService.getFoodsCount(filter)
             .pipe(
-                catchError(() => of(10))
+                catchError(() => of(0))
             ).subscribe(count => this.pageSubject.next(count));
 
         this.foodService.findFoods(filter, sortId, sortDirection, pageIndex, pageSize)
