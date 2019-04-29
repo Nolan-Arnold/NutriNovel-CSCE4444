@@ -2,6 +2,7 @@
 .footernav{
     align-items: center;
     z-index: 10;
+    padding-top: 120px;
     left: 0;
     position: fixed;
     bottom: 0;
