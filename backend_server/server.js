@@ -21,7 +21,7 @@ var collectionName = 'foods';
  * elements with a matching partial string in item, restname, or type will be counted.
  */
 app.route('/api/foods/count').get((req, res) => {
-    filterBy = req.query.filter;
+    const filterBy = req.query.filter;
 
     // establish connection to database
     MongoClient.connect(url, function(err, db) {
