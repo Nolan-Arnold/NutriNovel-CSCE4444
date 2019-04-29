@@ -1,12 +1,17 @@
-.innerpanel{
+.innerpanel {
     /* stuff inside panel */
-    padding-left: 3em
+    padding-left: 3em;
 }
+
+.mat-accordion {
+    z-index: 7;
+    opacity: 0.8;
+}
+
 
 .item-title {
     /* panel header */
-    font-size: 24px;
-    background-color: bisque;
+    font-size: 18px;
 }
 
 ::ng-deep .mat-expansion-panel {
@@ -14,6 +19,31 @@
     max-width: 500px !important;
 }
 
-.mat-panel-title {
-    position: relative;
+.background {
+    opacity: 0.8;
+    object-fit: contain;
+    z-index: 1;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.mat-action-row {
+    z-index: 7;
+}
+
+button {
+    z-index: 7;
+    color: white !important;
+    background: green;
+}
+
+.mat-list {
+    z-index: 7;
+    background-color: white;
+    opacity: 0.8;
+}
+
+.mat-grid-list {
+    height: 100px !important;
+    overflow: hidden !important;
 }

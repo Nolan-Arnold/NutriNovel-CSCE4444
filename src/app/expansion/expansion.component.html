@@ -1,4 +1,4 @@
-<br><br><br>
+<br><br><br><br>
 <!--<mat-accordion>
   <mat-expansion-panel>
     <mat-expansion-panel-header>
@@ -68,32 +68,35 @@
 <button mat-button color="warn" (click)="removeWholePlate()">Clear Plate </button>
 -->
 
-
-
-<mat-grid-list cols="1" rowHeight="2:1">
-  <mat-grid-tile><mat-accordion>
-    <mat-expansion-panel *ngFor="let panel of config.panels; let i = index">
-      <mat-expansion-panel-header>
-        <mat-panel-title class="item-title">
-          {{ panel.item }} from {{panel.restname}}
-        </mat-panel-title>
-        <!--<mat-panel-description>
+<mat-grid-list cols="2" rowHeight="1:1">
+  <mat-grid-tile>
+    <mat-accordion>
+      <mat-expansion-panel *ngFor="let panel of config.panels; let i = index">
+        <mat-expansion-panel-header>
+          <mat-panel-title class="item-title">
+            {{ panel.item }} from {{panel.restname}}
+          </mat-panel-title>
+          <!--<mat-panel-description>
           {{ panel.description }}
           </mat-panel-description>-->
-      </mat-expansion-panel-header>
-      <p class="innerpanel">Calories: {{panel.calories}}</p>
-      <p class="innerpanel">Total Fat (g): {{panel.total_fat}}</p>
-      <p class="innerpanel">Protein (g): {{panel.protein}}</p>
-      <p class="innerpanel">Carbohydrates (g): {{panel.carbohydrates}}</p>
-      <p class="innerpanel">Type: {{panel.type}}</p>
-      <mat-action-row>
-        <button matTooltip="Removes item from current plate"
-          aria-label="Button that displays a tooltip when focused or hovered over" mat-button color="warn"
-          (click)="removeFromPlate(i)">Remove from Plate</button>
-      </mat-action-row>
-    </mat-expansion-panel>
-  </mat-accordion>
-  <!--new stuff here-->
+        </mat-expansion-panel-header>
+        <p class="innerpanel">Calories: {{panel.calories}}</p>
+        <p class="innerpanel">Total Fat (g): {{panel.total_fat}}</p>
+        <p class="innerpanel">Protein (g): {{panel.protein}}</p>
+        <p class="innerpanel">Carbohydrates (g): {{panel.carbohydrates}}</p>
+        <p class="innerpanel">Type: {{panel.type}}</p>
+        <mat-action-row>
+          <button matTooltip="Removes item from current plate"
+            aria-label="Button that displays a tooltip when focused or hovered over" mat-button color="warn"
+            (click)="removeFromPlate(i)">Remove from Plate</button>
+        </mat-action-row>
+      </mat-expansion-panel>
+      <br><button mat-button color="warn" (click)="removeWholePlate()">Clear Plate </button>
+    </mat-accordion>
+
+    <!--new stuff here-->
+  </mat-grid-tile>
+  <mat-grid-tile>
     <mat-list>
       <mat-list-item>Total Calories: {{totalCalorie()}}</mat-list-item>
       <mat-divider></mat-divider>
@@ -104,5 +107,7 @@
       <mat-list-item>Total Carbohydrates (g): {{totalProtein()}}</mat-list-item>
       <mat-divider></mat-divider>
     </mat-list>
-    <button mat-button color="warn" (click)="removeWholePlate()">Clear Plate </button></mat-grid-tile>
-  <mat-grid-tile>2</mat-grid-tile>
+  </mat-grid-tile>
+    <img class="background"
+      src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fprod-dietdoctor-d3xpwb8eqyot4ma5.stackpathdns.com%2Fwp-content%2Fuploads%2F2017%2F08%2FDD-485-ketomincedbeef-2400x1600.jpg&f=1">
+</mat-grid-list>
