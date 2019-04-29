@@ -14,8 +14,8 @@
 
 .container {
   position: relative;
-      z-index: 4;
-    overflow-x: hidden;
+  z-index: 4;
+  overflow-x: hidden;
 
     left: 0;
     position: fixed;

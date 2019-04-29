@@ -1,9 +1,9 @@
 /*thanks github*/
 /**Please don't delete me github */
 .styling {
-border-left: 100px;
-border-right: 100px;
-text-align: center;
+  border-left: 100px;
+  border-right: 100px;
+  text-align: center;
 }
 
 .mat-grid-tile {
@@ -15,6 +15,15 @@ text-align: center;
 
 .container {
   position: relative;
+  z-index: 4;
+  overflow-x: hidden;
+
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  object-fit: cover;
+
 }
 
 .compare {
@@ -26,12 +35,14 @@ text-align: center;
 
   text-rendering: optimizeLegibility;
   z-index: 10;
+
 }
 
-.background {
-    object-fit: cover;
-    max-height: 800px;
-    overflow: hidden;
-    z-index: 7;
-
+.background img {
+  width: 100%;
+  left: 0;
+  height: 800px;
+  overflow: hidden;
+  background-size:auto;
+  z-index: 7;
 }
