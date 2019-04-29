@@ -1,10 +1,20 @@
 /*the bar in respect to screen display*/
 .footernav{
     align-items: center;
+    z-index: 10;
+    left: 0;
+    position: fixed;
+    bottom: 0;
+    font-size: 30%;
+    height: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
     justify-content: space-around;
     display: flex;
     flex-flow: row wrap;
-    padding: 8px;
+
     background-color: #272727;
     font-family: "Helvetica";
     /*background-color: rgb(65, 109, 28);*/

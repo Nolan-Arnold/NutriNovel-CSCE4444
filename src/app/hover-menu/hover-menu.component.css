@@ -10,10 +10,11 @@ img {
 /* this is for hover menu bar, color remains as normal one */
 ul {
   z-index: 15;
+  left: 0;
   position: fixed;
   font-size: 90%;
   top: 0;
-  width: 99%;
+  width: 100%;
   height: auto;
   font-size: 27px;
   list-style-type: none;

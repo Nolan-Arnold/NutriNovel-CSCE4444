@@ -29,7 +29,7 @@ text-align: center;
 }
 
 .background {
-    width: 100%;
+    object-fit: cover;
     max-height: 800px;
     overflow: hidden;
     z-index: 7;
