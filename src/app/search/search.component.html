@@ -12,10 +12,12 @@
 <!--/div-->
 <!--Buttons added by Nolan Arnold-->
 <br><br><br><br><br><br><br>
-<div class="example-button-row">
-  &nbsp;<button mat-button (click)="loadPlate($event)" routerLink="/plate">Add to Plate</button>&nbsp;
+<div class="buttons">
+  &nbsp;<button mat-button (click)="loadPlate($event)">Add to Plate</button>
+  &nbsp;<button mat-button routerLink="/plate">Go to Plate</button>&nbsp;
   <button mat-button (click)="loadCompare($event)" routerLink="/compare" [disabled]="compareDisabled">Compare</button>
 </div>
+<br><br>
 
 <div class="spinner-container" *ngIf="dataSource.loading$ | async">
   <br><br><br><br><br><br><br><br><br><br><br><br><br>

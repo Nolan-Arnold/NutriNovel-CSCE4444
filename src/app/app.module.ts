@@ -26,6 +26,7 @@ import { CompareComponent } from './compare/compare.component';
 import { MessagesComponent } from './messages/messages.component';
 import { SearchComponent } from './search/search.component';
 import { ExpansionComponent} from './expansion/expansion.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ExpansionComponent} from './expansion/expansion.component';
     CompareComponent,
     MessagesComponent,
     SearchComponent,
-    ExpansionComponent
+    ExpansionComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

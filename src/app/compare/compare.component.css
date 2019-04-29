@@ -4,7 +4,34 @@
 border-left: 100px;
 border-right: 100px;
 text-align: center;
-};
-mat-grid-tile {
-    background: red;
-  };
+}
+
+.mat-grid-tile {
+    background: white !important;
+    opacity: 0.95;
+    width: 350px !important;
+    margin: auto;
+}
+
+.container {
+  position: relative;
+}
+
+.compare {
+  position: absolute;
+
+  top: 120px;
+  width: 100%;
+  left: 10%;
+
+  text-rendering: optimizeLegibility;
+  z-index: 10;
+}
+
+.background {
+    width: 100%;
+    max-height: 800px;
+    overflow: hidden;
+    z-index: 7;
+
+}
