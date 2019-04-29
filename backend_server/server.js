@@ -23,9 +23,11 @@ app.route('/api/foods/count').get((req, res) => {
         const cursor = db.collection('foods').find( {} );
         cursor.toArray(function (err, foodsArr) {
             assert.equal(null, err);
-            // console.log(foodsArr);
+            //console.log(foodsArr);
             if (filterBy) {
-                foodsArr = foodsArr.filter(food => food._id.trim().toLowerCase().search(filterBy.toLowerCase()) >= 0);
+                foodsArr = foodsArr.filter(food => 
+                    (food._id.trim().toLowerCase().search(filterBy.toLowerCase()) >= 0 
+                    || food.type.trim().toLowerCase().search(filterBy.toLowerCase()) >= 0));
             }
             const count = Object.keys(foodsArr).length;
             // console.log("Filtered count " + count)
@@ -49,7 +51,9 @@ app.route('/api/foods').get((req, res) => {
             assert.equal(null, err);
             // console.log(foodsArr);
             if (filterBy) {
-                foodsArr = foodsArr.filter(food => food._id.trim().toLowerCase().search(filterBy.toLowerCase()) >= 0);
+                foodsArr = foodsArr.filter(food => 
+                    (food._id.trim().toLowerCase().search(filterBy.toLowerCase()) >= 0 
+                    || food.type.trim().toLowerCase().search(filterBy.toLowerCase()) >= 0));
             }
             /* 
             Check which collumn the user wants to sort by.
