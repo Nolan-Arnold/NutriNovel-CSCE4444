@@ -1,4 +1,4 @@
-<br><br><br>
+
 <!--
 <mat-list>
   <mat-list-item class="styling">{{showItem(0)}}     {{showItem(1)}}</mat-list-item>
@@ -19,12 +19,15 @@
   <mat-grid-tile [colspan] = 2 [rowspan] = 2>{{showCalories(0)}}</mat-grid-tile>
   <mat-grid-tile [colspan] = 2 [rowspan] = 2>{{showCalories(1)}}</mat-grid-tile>
 </mat-grid-list>-->
-<mat-grid-list cols="4" rowHeight="100px" gutterSize="5px">
-<mat-grid-tile *ngFor="let tile of tiles"
-[colspan]="tile.cols"
-[rowspan]="tile.rows"
-[style.border]="tile.border"
-[style.background] = "tile.background">
-{{tile.text}}
-</mat-grid-tile>
-</mat-grid-list>
+<div class="container">
+  <div class="compare"><mat-grid-list cols="4" rowHeight="100px" gutterSize="10px">
+
+    <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.border]="tile.border"
+      [style.background]="tile.background">
+      {{tile.text}}
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+  <div class="background"><img src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimg%2F1767125.jpg&f=1"></div>
+
+</div>

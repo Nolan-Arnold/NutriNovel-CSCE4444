@@ -14,11 +14,12 @@ table {
 
   .mat-elevation-z8
   {
-    position: relative;
+    position: absolute;
+    width: 98%;
     margin-top : 10px;
     height: auto;
     max-height: 600px;
-    overflow: auto;
+    overflow: scroll;
     z-index: 6;
   }
 
