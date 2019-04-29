@@ -6,7 +6,7 @@
     left: 0;
     position: fixed;
     bottom: 0;
-    font-size: .8vw;
+    font-size: .7vw;
     height: auto;
     width: 100%;
     margin: 0;
@@ -17,7 +17,7 @@
     flex-flow: row wrap;
 
     background-color: #272727;
-    font-family: "Helvetica";
+    font-family: Helvetica;
     /*background-color: rgb(65, 109, 28);*/
 }
 .linkslist ul li{
