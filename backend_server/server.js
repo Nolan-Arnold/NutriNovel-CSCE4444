@@ -126,25 +126,49 @@ app.route('/api/foods').get((req, res) => {
             //Check which collumn the user wants to sort by.
             switch (sortId) {
                 case 'restname': 
-                    foodsArr.sort((f1, f2) => f1.restname > f2.restname);
+                    foodsArr.sort((f1, f2) => {
+                        if (f1.restname.toLowerCase() < f2.restname.toLowerCase()) {
+                            return -1;
+                        }
+                        if (f1.restname.toLowerCase() > f2.restname.toLowerCase()) {
+                            return 1;
+                        }
+                            return 0;
+                    });
                     break;
                 case 'item':
-                    foodsArr.sort((f1, f2) => f1.item > f2.item);
+                    foodsArr.sort((f1, f2) => {
+                        if (f1.item.toLowerCase() < f2.item.toLowerCase()) {
+                            return -1;
+                        }
+                        if (f1.item.toLowerCase() > f2.item.toLowerCase()) {
+                            return 1;
+                        }
+                            return 0;
+                    });
                     break;
                 case 'calories':
-                    foodsArr.sort((f1, f2) => f1.calories > f2.calories);
+                    foodsArr.sort((f1, f2) => f1.calories - f2.calories);
                     break;
                 case 'carbohydrates':
-                    foodsArr.sort((f1, f2) => f1.carbohydrates > f2.carbohydrates);
+                    foodsArr.sort((f1, f2) => f1.carbohydrates - f2.carbohydrates);
                     break;
                 case 'protein':
-                    foodsArr.sort((f1, f2) => f1.protein > f2.protein);
+                    foodsArr.sort((f1, f2) => f1.protein - f2.protein);
                     break;
                 case 'total_fat':
-                    foodsArr.sort((f1, f2) => f1.total_fat > f2.total_fat);
+                    foodsArr.sort((f1, f2) => f1.total_fat - f2.total_fat);
                     break;
                 case 'type':
-                    foodsArr.sort((f1, f2) => f1.type > f2.type);
+                    foodsArr.sort((f1, f2) => {
+                        if (f1.type.toLowerCase() < f2.type.toLowerCase()) {
+                            return -1;
+                        }
+                        if (f1.type.toLowerCase() > f2.type.toLowerCase()) {
+                            return 1;
+                        }
+                            return 0;
+                    });
                     break;
             }
             // reverse order if descending is requested
