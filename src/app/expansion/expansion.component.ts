@@ -3,8 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { Food } from '../food';
 import { FOODS } from '../mock-foods';
 import { FoodService } from '../food.service';
-import { SearchComponent} from '../search/search.component';
-import { PlateFood } from '../plate-food';
 import { PlateFoodService } from '../plate-food.service';
 import { templateSourceUrl } from '@angular/compiler';
 
@@ -73,7 +71,7 @@ export class ExpansionComponent implements OnInit {
     return totalCarbs;
   }
 
-  removeFromPlate(value) {
+  removeFromPlate(value: number) {
     // delete this.plateFoodService.platelist[value]
     // delete this.config.panels[value];
     // const index = myArray.indexOf(key, 0);

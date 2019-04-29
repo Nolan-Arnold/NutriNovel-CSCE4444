@@ -43,19 +43,19 @@ export class CompareComponent implements OnInit {
 
   }
 
-  showCalories(i): any {
+  showCalories(i: number): number {
     return this.compareItems[i].calories;
   }
-  showFat(i): any {
+  showFat(i: number): number {
     return this.compareItems[i].total_fat;
   }
-  showCarbs(i): any {
+  showCarbs(i: number): number {
     return this.compareItems[i].carbohydrates;
   }
-  showProtein(i): any {
+  showProtein(i: number): number {
     return this.compareItems[i].protein;
   }
-  showItem(i): any {
+  showItem(i: number): string {
     return this.compareItems[i].item;
   }
 }
