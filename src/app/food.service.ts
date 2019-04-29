@@ -66,15 +66,15 @@ export class FoodService {
       );
   }
 
+  /*
   // Get all foods from the server
   getFoods(): Observable<Food[]> {
     return this.http.get<Food[]>(this.foodsUrl)
       .pipe(
         catchError(this.handleError('getFoods', []))
       );
-     // this.http.get()
   }
-  /*
+
   // GET foods whose name contains search term
   searchFoods(term: string): Observable<Food[]> {
     if (!term.trim()) {
