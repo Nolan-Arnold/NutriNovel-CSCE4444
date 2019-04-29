@@ -47,3 +47,8 @@ span:before{
     display:inline-block;
     width:32px;
 }
+
+button:disabled {
+  background-color: #cccccc;
+  color: #666666;
+}
