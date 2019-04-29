@@ -35,10 +35,11 @@ table {
     width: 98%;
     margin-top : 10px;
     height: auto;
-    max-height: 600px;
+    max-height: 540px;
     overflow: scroll;
     z-index: 6;
   }
+
 
   .mat-paginator
   {
