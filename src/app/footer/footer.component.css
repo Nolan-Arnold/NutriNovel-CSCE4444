@@ -1,0 +1,39 @@
+/*the bar in respect to screen display*/
+.footernav{
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 8px;
+    background-color: #272727;
+    font-family: "Helvetica";
+    /*background-color: rgb(65, 109, 28);*/
+}
+.linkslist ul li{
+    list-style-type: none; /*gets rid of bullet list*/
+    text-align: center;
+}
+
+.linkslist ul li a{
+    flex: 1;
+    color: #fff;
+    text-decoration: none; /*change text decoration (underlines) if needed */
+    /*font-size: 20px;*/ /*change font size here if needed*/
+    font-weight:600;
+    text-transform: uppecase;
+}
+
+.designers span{
+    flex:1;
+    color: #fff;
+    display: flex;
+    text-align: center; /*see below note, but for text alignment*/
+    padding-bottom: 8px; /*shrinking window makes a space between this and copyright*/
+}
+.copyright span{
+    flex: 1;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
