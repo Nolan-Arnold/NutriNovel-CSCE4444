@@ -1,3 +1,8 @@
 - when click on item, accordion to look at more detailed info
 - must click on checkbox to actually get checkmark
 - checkmarks and search bar show through navbar
+
+
+
+
+- sorting doesn't seem to work anymore
