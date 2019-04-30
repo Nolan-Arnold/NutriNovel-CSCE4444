@@ -27,9 +27,9 @@ ul {
   display: block;
   z-index: 15;
   position: absolute;
-  top: 4px;
+  top: 5px;
   right: 10px;
-  width:2.5%;
+  width:3%;
   height: auto;
   transform:scale(1,1);
 }

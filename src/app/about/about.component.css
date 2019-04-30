@@ -1,20 +1,22 @@
 .base {   /*the actual background image of food*/
   position: relative;
   width: 100%;
-  height: 900px;
+  height: 750px;
   object-fit: cover;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
 
 .background{ /*the white box surrounding the text*/
   position: absolute;
-  top: 400px;
+  width: 75%;
+  height: 450px;
+  top: 325px;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   z-index: 7;
-  background: rgba(255, 255, 255, 0.9) /*control box color and opacity, last value being opacity*/
+  background: rgba(255, 255, 255, 0.75) /*control box color and opacity, last value being opacity*/
 }
 
 .mat-flat-button { /*the button*/
