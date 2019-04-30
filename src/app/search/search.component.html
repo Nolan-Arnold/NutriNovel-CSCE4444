@@ -13,7 +13,7 @@
 <div class="buttons">
   &nbsp;<button mat-button (click)="loadPlate($event)">Add to Plate</button>
   &nbsp;<button mat-button routerLink="/plate">Go to Plate</button>&nbsp;
-  <button mat-button (click)="loadCompare($event)" routerLink="/compare" [disabled]="compareDisabled">Compare</button>
+  <div class = "button-wrapper " matTooltip="Two items must be selected" style="display: inline"><button mat-button (click)="loadCompare($event)" routerLink="/compare" [disabled]="compareDisabled">Compare</button></div>
 </div>
 <br><br>
 
