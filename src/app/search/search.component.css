@@ -48,7 +48,7 @@ table {
     margin-left: 1%;
     /*margin-top : 10px;*/
     height: auto;
-    max-height: 540px;
+    max-height: 740px;
     overflow: scroll;
     z-index: 6;
   }
@@ -68,7 +68,6 @@ table {
 
   .mat-button {
     color: white;
-    margin-left: 1%;
     top: 42px;
     font-size: 11px;
     background: rgb(65, 109, 28);
@@ -83,6 +82,7 @@ table {
 
 .buttons{
   /*position: fixed;*/
+  margin-left: .75%;
 }
 
 
