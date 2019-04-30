@@ -16,7 +16,7 @@ ul {
   top: 0;
   width: 100%;
   height: auto;
-  font-size: 27px;
+  font-size: 1.2vw;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -24,12 +24,14 @@ ul {
   background-color: rgb(65, 109, 28);
 }
 .fifth {
+  display: block;
   z-index: 15;
   position: absolute;
   top: 4px;
   right: 10px;
-  width: 60px;
-  height: 60px;
+  width:2.5%;
+  height: auto;
+  transform:scale(1,1);
 }
 
 li {
