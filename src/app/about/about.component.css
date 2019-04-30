@@ -1,100 +1,40 @@
-.base {
-    width: 100%;
-    height: 700px;
-    object-fit: cover;
-}
-
-.top {
-  z-index: 7;
-  opacity: 0.79;
-  top: 500px;
-  height: 400px;
-  width: 80%;
-}
-
-.container {
+.base {   /*the actual background image of food*/
   position: relative;
-  z-index: 4;
-  overflow-x: hidden;
-
-    left: 0;
-    position: fixed;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-.content .fourth a{
-  background-color: blue;
-}
-.first {
-  position: absolute;
-  left: 0;
-  top: 120px;
   width: 100%;
-  left: 40px;
-  text-align: left;
+  height: 900px;
+  object-fit: cover;
+}
+
+.background{ /*the white box surrounding the text*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 7;
+  background: rgba(255, 255, 255, 0.9) /*control box color and opacity, last value being opacity*/
+}
+
+.mat-flat-button { /*the button*/
+  margin: 50px;
+  background-color: green;
+  font-size: 30px;
+  color: white;
+}
+
+.title { /*title*/
   font-size: 64px;
   font-weight: bolder;
   color:  rgb(0, 107, 9);
   text-rendering: optimizeLegibility;
   z-index: 10;
 }
-
-.second {
-  position: absolute;
-  left: 0;
-  top: 120px;
-  width: 100%;
-  left: 40px;
-  text-align: left;
+.story { /*text*/
+  display: block;
   font-size: 24px;
   font-style: italic;
   font-weight: bolder;
   color:  rgba(12, 109, 20, 0.74);
   text-rendering: optimizeLegibility;
   z-index: 10;
-}
-
-
-.third {
-  position: absolute;
-  left: 0;
-  top: 100px;
-  width: 105%;
-  text-align: left;
-  font-size: 64px;
-  font-weight: bolder;
-  color: white;
-  text-rendering: optimizeLegibility;
-  z-index: 7;
-}
-
-.fourth {
-  position: absolute;
-  left: 0;
-  top: 120px;
-  width: 105%;
-  text-align: left;
-  font-size: 64px;
-  font-weight: bolder;
-  color: white;
-  text-rendering: optimizeLegibility;
-  z-index: 14;
-}
-
-.mat-flat-button {
-  position: relative;
-  top: 260px;
-  left: 500px;
-  color: white;
-
-  font-size: 30px;
-  background: green;
-  height: 40px;
-  width: 200px;
-}
-
-body {
-  max-width: 100%;
-  overflow-x: hidden;
 }

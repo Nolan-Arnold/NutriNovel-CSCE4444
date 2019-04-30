@@ -39,7 +39,10 @@ table {
     overflow: scroll;
     z-index: 6;
   }
-
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
 
   .mat-paginator
   {
