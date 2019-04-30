@@ -1,6 +1,7 @@
 table {
     width: 100%;
-    margin: auto;
+    padding: auto;
+    padding-bottom: 20px;
   }
 
   .mat-form-field { /*the search bar*/
@@ -12,16 +13,33 @@ table {
     z-index: 8;
   }
 
+  /*checkmark color*/
+  ::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+    background-color: rgb(65, 109, 28) !important;
+  }
+  
+  /*checkmark color frame*/
+/*
+  ::ng-deep .mat-checkbox .mat-checkbox-frame {
+    border-color: green;
+  }
+*/
+  /*checkmark ripple*/
+  ::ng-deep .mat-ripple-element {
+    background: green !important;
+  }
+
   .mat-elevation-z8
   {
     position: absolute;
     width: 98%;
     margin-top : 10px;
     height: auto;
-    max-height: 600px;
+    max-height: 540px;
     overflow: scroll;
     z-index: 6;
   }
+
 
   .mat-paginator
   {
@@ -37,6 +55,13 @@ table {
 
   font-size: 11px;
   background: rgb(65, 109, 28);
+}
+
+/*elements within cell*/
+
+.mat-cell{
+  font-size: 1vw;
+  font-family: Helvetica;
 }
 
 .buttons {

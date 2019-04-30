@@ -25,6 +25,12 @@
     z-index: 1;
     max-width: 100%;
     overflow: hidden;
+
+        left: 0;
+    position: fixed;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .mat-action-row {
@@ -40,7 +46,7 @@ button {
 .mat-list {
     z-index: 7;
     background-color: white;
-    opacity: 0.8;
+    opacity: 0.95;
 }
 
 .mat-grid-list {
