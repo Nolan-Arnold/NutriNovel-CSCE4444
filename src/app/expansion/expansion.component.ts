@@ -91,4 +91,10 @@ export class ExpansionComponent implements OnInit {
       panels: this.plateFoodService.platelist
     };
   }
+  getPercent(x: number, y: number){
+    if( y != 0)
+      return Math.round(x/y * 100);
+    else 
+      return 0;
+ }
 }
