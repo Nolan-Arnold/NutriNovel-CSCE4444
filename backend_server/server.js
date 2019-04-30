@@ -122,7 +122,6 @@ app.route('/api/foods').get((req, res) => {
                     (food._id.trim().toLowerCase().search(filterBy.toLowerCase()) >= 0 
                     || food.type.trim().toLowerCase().search(filterBy.toLowerCase()) >= 0));
             }
-            console.log(sortId);
             //Check which collumn the user wants to sort by.
             switch (sortId) {
                 case 'restname': 

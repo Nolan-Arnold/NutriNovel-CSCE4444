@@ -4,6 +4,7 @@ import { catchError } from 'rxjs/operators';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 
 import { Food } from './food';
+import { FOODS } from './mock-foods';
 import { MessageService } from './message.service';
 
 // used for post, update, and delete
@@ -53,7 +54,7 @@ export class FoodService {
       .set('sortOrder', sortOrder).set('pageNumber', pageNumber.toString()).set('pageSize', pageSize.toString());
     return this.http.get<Food[]>(this.foodsUrl, { params: parameters })
       .pipe(
-        catchError(this.handleError('findFoods', []))
+        catchError(this.handleError('findFoods', FOODS))
       );
   }
 
