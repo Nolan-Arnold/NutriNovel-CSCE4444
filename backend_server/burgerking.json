@@ -1,0 +1,1112 @@
+[
+ {
+   "_id": "Burger King WHOPPER Sandwich",
+   "restname": "Burger King",
+   "item": "WHOPPER Sandwich",
+   "calories": 660,
+   "total_fat": 40,
+   "carbohydrates": 49,
+   "protein": 28,
+   "type": "Beef & Pork"
+ },
+ {
+   "_id": "Burger King WHOPPER Sandwich with Cheese",
+   "restname": "Burger King",
+   "item": "WHOPPER Sandwich with Cheese",
+   "calories": 740,
+   "total_fat": 46,
+   "carbohydrates": 50,
+   "protein": 32,
+   "type": "Beef & Pork"
+ },
+ {
+   "_id": "Burger King Bacon & Cheese WHOPPER Sandwich",
+   "restname": "Burger King",
+   "item": "Bacon & Cheese WHOPPER Sandwich",
+   "calories": 790,
+   "total_fat": 51,
+   "carbohydrates": 50,
+   "protein": 35,
+   "type": "Beef & Pork"
+ },
+ {
+   "_id": "Burger King BBQ Bacon WHOPPER Sandwich",
+   "restname": "Burger King",
+   "item": "BBQ Bacon WHOPPER Sandwich",
+   "calories": 800,
+   "total_fat": 51,
+   "carbohydrates": 53,
+   "protein": 35,
+   "type": "Beef & Pork"
+ },
+ {
+   "_id": "Burger King DOUBLEWHOPPER Sandwich",
+   "restname": "Burger King",
+   "item": "DOUBLEWHOPPER Sandwich",
+   "calories": 900,
+   "total_fat": 58,
+   "carbohydrates": 49,
+   "protein": 48,
+   "type": "Beef & Pork"
+ },
+ {
+   "_id": "Burger King DOUBLE WHOPPER Sandwich with Cheese",
+   "restname": "Burger King",
+   "item": "DOUBLE WHOPPER Sandwich with Cheese",
+   "calories": 980,
+   "total_fat": 64,
+   "carbohydrates": 50,
+   "protein": 52,
+   "type": "Beef & Pork"
+ },
+ {
+   "_id": "Burger King TRIPLE WHOPPER Sandwich with Cheese",
+   "restname": "Burger King",
+   "item": "TRIPLE WHOPPER Sandwich with Cheese",
+   "calories": 1220,
+   "total_fat": 82,
+   "carbohydrates": 50,
+   "protein": 71,
+   "type": "Beef & Pork"
+ },
+ {
+   "_id": "Burger King WHOPPER JR Sandwich",
+   "restname": "Burger King",
+   "item": "WHOPPER JR Sandwich",
+   "calories": 310,
+   "total_fat": 18,
+   "carbohydrates": 27,
+   "protein": 13,
+   "type": "Beef & Pork"
+ },
+ {
+   "_id": "Burger King BACON KING Sandwich",
+   "restname": "Burger King",
+   "item": "BACON KING Sandwich",
+   "calories": 1150,
+   "total_fat": 79,
+   "carbohydrates": 49,
+   "protein": 61,
+   "type": "Beef & Pork"
+ },
+ {
+   "_id": "Burger King BACON KING Jr. Sandwich",
+   "restname": "Burger King",
+   "item": "BACON KING Jr. Sandwich",
+   "calories": 570,
+   "total_fat": 38,
+   "carbohydrates": 27,
+   "protein": 29,
+   "type": "Beef & Pork"
+ },
+ {
+   "_id": "Burger King RODEO KING Sandwich",
+   "restname": "Burger King",
+   "item": "RODEO KING Sandwich",
+   "calories": 1250,
+   "total_fat": 82,
+   "carbohydrates": 69,
+   "protein": 60,
+   "type": "Beef & Pork"
+ },
+ {
+   "_id": "Burger King Single Quarter Pound KING Sandwich",
+   "restname": "Burger King",
+   "item": "Single Quarter Pound KING Sandwich",
+   "calories": 580,
+   "total_fat": 29,
+   "carbohydrates": 49,
+   "protein": 32,
+   "type": "Beef & Pork"
+ },
+ {
+   "_id": "Burger King Double Quarter Pound KING Sandwich",
+   "restname": "Burger King",
+   "item": "Double Quarter Pound KING Sandwich",
+   "calories": 900,
+   "total_fat": 54,
+   "carbohydrates": 50,
+   "protein": 56,
+   "type": "Beef & Pork"
+ },
+ {
+   "_id": "Burger King Hamburger",
+   "restname": "Burger King",
+   "item": "Hamburger",
+   "calories": 240,
+   "total_fat": 10,
+   "carbohydrates": 26,
+   "protein": 13,
+   "type": "Beef & Pork"
+ },
+ {
+   "_id": "Burger King Cheeseburger",
+   "restname": "Burger King",
+   "item": "Cheeseburger",
+   "calories": 280,
+   "total_fat": 13,
+   "carbohydrates": 27,
+   "protein": 15,
+   "type": "Beef & Pork"
+ },
+ {
+   "_id": "Burger King Double Hamburger",
+   "restname": "Burger King",
+   "item": "Double Hamburger",
+   "calories": 350,
+   "total_fat": 18,
+   "carbohydrates": 26,
+   "protein": 21,
+   "type": "Beef & Pork"
+ },
+ {
+   "_id": "Burger King Double Cheeseburger",
+   "restname": "Burger King",
+   "item": "Double Cheeseburger",
+   "calories": 390,
+   "total_fat": 21,
+   "carbohydrates": 27,
+   "protein": 23,
+   "type": "Beef & Pork"
+ },
+ {
+   "_id": "Burger King Extra Long Cheeseburger",
+   "restname": "Burger King",
+   "item": "Extra Long Cheeseburger",
+   "calories": 630,
+   "total_fat": 37,
+   "carbohydrates": 45,
+   "protein": 29,
+   "type": "Beef & Pork"
+ },
+ {
+   "_id": "Burger King Bacon Cheeseburger",
+   "restname": "Burger King",
+   "item": "Bacon Cheeseburger",
+   "calories": 320,
+   "total_fat": 16,
+   "carbohydrates": 27,
+   "protein": 17,
+   "type": "Beef & Pork"
+ },
+ {
+   "_id": "Burger King Bacon Double Cheeseburger",
+   "restname": "Burger King",
+   "item": "Bacon Double Cheeseburger",
+   "calories": 420,
+   "total_fat": 24,
+   "carbohydrates": 27,
+   "protein": 25,
+   "type": "Beef & Pork"
+ },
+ {
+   "_id": "Burger King Grilled Chicken Sandwich",
+   "restname": "Burger King",
+   "item": "Grilled Chicken Sandwich",
+   "calories": 470,
+   "total_fat": 19,
+   "carbohydrates": 39,
+   "protein": 37,
+   "type": "Chicken"
+ },
+ {
+   "_id": "Burger King Crispy Chicken Sandwich",
+   "restname": "Burger King",
+   "item": "Crispy Chicken Sandwich",
+   "calories": 670,
+   "total_fat": 41,
+   "carbohydrates": 54,
+   "protein": 23,
+   "type": "Chicken"
+ },
+ {
+   "_id": "Burger King Spicy Crispy Chicken Sandwich",
+   "restname": "Burger King",
+   "item": "Spicy Crispy Chicken Sandwich",
+   "calories": 700,
+   "total_fat": 42,
+   "carbohydrates": 57,
+   "protein": 25,
+   "type": "Chicken"
+ },
+ {
+   "_id": "Burger King Original Chicken Sandwich",
+   "restname": "Burger King",
+   "item": "Original Chicken Sandwich",
+   "calories": 660,
+   "total_fat": 40,
+   "carbohydrates": 48,
+   "protein": 28,
+   "type": "Chicken"
+ },
+ {
+   "_id": "Burger King Bacon & Cheese Crispy Chicken Sandwich",
+   "restname": "Burger King",
+   "item": "Bacon & Cheese Crispy Chicken Sandwich",
+   "calories": 800,
+   "total_fat": 52,
+   "carbohydrates": 55,
+   "protein": 30,
+   "type": "Chicken"
+ },
+ {
+   "_id": "Burger King RODEO Crispy Chicken Sandwich",
+   "restname": "Burger King",
+   "item": "RODEO Crispy Chicken Sandwich",
+   "calories": 960,
+   "total_fat": 60,
+   "carbohydrates": 72,
+   "protein": 33,
+   "type": "Chicken"
+ },
+ {
+   "_id": "Burger King Crispy Chicken Jr.",
+   "restname": "Burger King",
+   "item": "Crispy Chicken Jr.",
+   "calories": 450,
+   "total_fat": 30,
+   "carbohydrates": 34,
+   "protein": 12,
+   "type": "Chicken"
+ },
+ {
+   "_id": "Burger King Spicy Crispy Chicken Jr.",
+   "restname": "Burger King",
+   "item": "Spicy Crispy Chicken Jr.",
+   "calories": 390,
+   "total_fat": 21,
+   "carbohydrates": 37,
+   "protein": 12,
+   "type": "Chicken"
+ },
+ {
+   "_id": "Burger King Chicken Nuggets- 4pc",
+   "restname": "Burger King",
+   "item": "Chicken Nuggets- 4pc",
+   "calories": 170,
+   "total_fat": 11,
+   "carbohydrates": 11,
+   "protein": 8,
+   "type": "Chicken"
+ },
+ {
+   "_id": "Burger King Chicken Nuggets- 6pc",
+   "restname": "Burger King",
+   "item": "Chicken Nuggets- 6pc",
+   "calories": 260,
+   "total_fat": 16,
+   "carbohydrates": 16,
+   "protein": 12,
+   "type": "Chicken"
+ },
+ {
+   "_id": "Burger King Chicken Nuggets- 10pc",
+   "restname": "Burger King",
+   "item": "Chicken Nuggets- 10pc",
+   "calories": 430,
+   "total_fat": 27,
+   "carbohydrates": 27,
+   "protein": 20,
+   "type": "Chicken"
+ },
+ {
+   "_id": "Burger King Chicken Nuggets- 20pc",
+   "restname": "Burger King",
+   "item": "Chicken Nuggets- 20pc",
+   "calories": 860,
+   "total_fat": 54,
+   "carbohydrates": 53,
+   "protein": 39,
+   "type": "Chicken"
+ },
+ {
+   "_id": "Burger King Chicken Fries- 9pc.",
+   "restname": "Burger King",
+   "item": "Chicken Fries- 9pc.",
+   "calories": 280,
+   "total_fat": 17,
+   "carbohydrates": 20,
+   "protein": 13,
+   "type": "Chicken"
+ },
+ {
+   "_id": "Burger King BIG FISH Sandwich",
+   "restname": "Burger King",
+   "item": "BIG FISH Sandwich",
+   "calories": 510,
+   "total_fat": 28,
+   "carbohydrates": 51,
+   "protein": 16,
+   "type": "Fish"
+ },
+ {
+   "_id": "Burger King BK VEGGIE Burger",
+   "restname": "Burger King",
+   "item": "BK VEGGIE Burger",
+   "calories": 390,
+   "total_fat": 17,
+   "carbohydrates": 41,
+   "protein": 21,
+   "type": "Vegetarian"
+ },
+ {
+   "_id": "Burger King Mott's Natural Applesauce",
+   "restname": "Burger King",
+   "item": "Mott's Natural Applesauce",
+   "calories": 50,
+   "total_fat": 0,
+   "carbohydrates": 13,
+   "protein": 0,
+   "type": "Snacks & Sides"
+ },
+ {
+   "_id": "Burger King Capri Sun 100% Apple Juice",
+   "restname": "Burger King",
+   "item": "Capri Sun 100% Apple Juice",
+   "calories": 80,
+   "total_fat": 0,
+   "carbohydrates": 20,
+   "protein": 0,
+   "type": "Beverages"
+ },
+ {
+   "_id": "Burger King PB&J Jamwich",
+   "restname": "Burger King",
+   "item": "PB&J Jamwich",
+   "calories": 300,
+   "total_fat": 16,
+   "carbohydrates": 33,
+   "protein": 11,
+   "type": "Snacks & Sides"
+ },
+ {
+   "_id": "Burger King Capri Sun 100% Apple Juice",
+   "restname": "Burger King",
+   "item": "Chocolate Chip Cookie",
+   "calories": 160,
+   "total_fat": 8,
+   "carbohydrates": 24,
+   "protein": 2,
+   "type": "Deserts"
+ },
+ {
+   "_id": "Burger King PB&J Jamwich",
+   "restname": "Burger King",
+   "item": "Garden Chicken Salad with Grilled Chicken no dressing",
+   "calories": 340,
+   "total_fat": 15,
+   "carbohydrates": 16,
+   "protein": 39,
+   "type": "Salads"
+ },
+ {
+   "_id": "#REF!",
+   "restname": "Burger King",
+   "item": "Garden Chicken Salad with Crispy Chicken no dressing",
+   "calories": 440,
+   "total_fat": 25,
+   "carbohydrates": 31,
+   "protein": 25,
+   "type": "Salads"
+ },
+ {
+   "_id": "Burger King Chocolate Chip Cookie",
+   "restname": "Burger King",
+   "item": "Club Salad with Grilled Chicken no dressing",
+   "calories": 440,
+   "total_fat": 23,
+   "carbohydrates": 16,
+   "protein": 44,
+   "type": "Salads"
+ },
+ {
+   "_id": "Burger King Garden Chicken Salad with Grilled Chicken no dressing",
+   "restname": "Burger King",
+   "item": "Club Salad with Crispy Chicken no dressing",
+   "calories": 540,
+   "total_fat": 33,
+   "carbohydrates": 31,
+   "protein": 31,
+   "type": "Salads"
+ },
+ {
+   "_id": "Burger King Garden Chicken Salad with Crispy Chicken no dressing",
+   "restname": "Burger King",
+   "item": "Garden Side Salad - w/o dressing",
+   "calories": 60,
+   "total_fat": 4,
+   "carbohydrates": 3,
+   "protein": 4,
+   "type": "Salads"
+ },
+ {
+   "_id": "Burger King Club Salad with Grilled Chicken no dressing",
+   "restname": "Burger King",
+   "item": "Ken's Ranch Dressing",
+   "calories": 260,
+   "total_fat": 28,
+   "carbohydrates": 2,
+   "protein": 1,
+   "type": "Snacks & Sides"
+ },
+ {
+   "_id": "Burger King Club Salad with Crispy Chicken no dressing",
+   "restname": "Burger King",
+   "item": "Ken's Golden Italian Dressing",
+   "calories": 160,
+   "total_fat": 17,
+   "carbohydrates": 4,
+   "protein": 0,
+   "type": "Snacks & Sides"
+ },
+ {
+   "_id": "Burger King Garden Side Salad - w/o dressing",
+   "restname": "Burger King",
+   "item": "Ken's Lite Honey Balsamic Vinaigrette",
+   "calories": 120,
+   "total_fat": 8,
+   "carbohydrates": 14,
+   "protein": 0,
+   "type": "Snacks & Sides"
+ },
+ {
+   "_id": "Burger King Ken's Ranch Dressing",
+   "restname": "Burger King",
+   "item": "Buttery Garlic Croutons- Packet",
+   "calories": 60,
+   "total_fat": 2.5,
+   "carbohydrates": 9,
+   "protein": 1,
+   "type": "Snacks & Sides"
+ },
+ {
+   "_id": "Burger King Ken's Golden Italian Dressing",
+   "restname": "Burger King",
+   "item": "Onion Rings (Value)",
+   "calories": 150,
+   "total_fat": 8,
+   "carbohydrates": 19,
+   "protein": 1,
+   "type": "Snacks & Sides"
+ },
+ {
+   "_id": "Burger King Ken's Lite Honey Balsamic Vinaigrette",
+   "restname": "Burger King",
+   "item": "Onion Rings (Small)",
+   "calories": 320,
+   "total_fat": 16,
+   "carbohydrates": 41,
+   "protein": 3,
+   "type": "Snacks & Sides"
+ },
+ {
+   "_id": "Burger King Buttery Garlic Croutons- Packet",
+   "restname": "Burger King",
+   "item": "Onion Rings (Medium)",
+   "calories": 410,
+   "total_fat": 21,
+   "carbohydrates": 53,
+   "protein": 4,
+   "type": "Snacks & Sides"
+ },
+ {
+   "_id": "Burger King Onion Rings (Value)",
+   "restname": "Burger King",
+   "item": "Onion Rings (Large)",
+   "calories": 500,
+   "total_fat": 25,
+   "carbohydrates": 64,
+   "protein": 5,
+   "type": "Snacks & Sides"
+ },
+ {
+   "_id": "Burger King Onion Rings (Small)",
+   "restname": "Burger King",
+   "item": "Cheesy Tots (8 pc)",
+   "calories": 310,
+   "total_fat": 15,
+   "carbohydrates": 34,
+   "protein": 9,
+   "type": "Snacks & Sides"
+ },
+ {
+   "_id": "Burger King Onion Rings (Medium)",
+   "restname": "Burger King",
+   "item": "French Fries (Value)",
+   "calories": 220,
+   "total_fat": 10,
+   "carbohydrates": 31,
+   "protein": 3,
+   "type": "Snacks & Sides"
+ },
+ {
+   "_id": "Burger King Onion Rings (Large)",
+   "restname": "Burger King",
+   "item": "French Fries (Small)",
+   "calories": 320,
+   "total_fat": 14,
+   "carbohydrates": 44,
+   "protein": 4,
+   "type": "Snacks & Sides"
+ },
+ {
+   "_id": "Burger King Cheesy Tots (8 pc)",
+   "restname": "Burger King",
+   "item": "French Fries (Medium)",
+   "calories": 380,
+   "total_fat": 17,
+   "carbohydrates": 53,
+   "protein": 5,
+   "type": "Snacks & Sides"
+ },
+ {
+   "_id": "Burger King French Fries (Value)",
+   "restname": "Burger King",
+   "item": "French Fries (Large)",
+   "calories": 430,
+   "total_fat": 19,
+   "carbohydrates": 60,
+   "protein": 6,
+   "type": "Snacks & Sides"
+ },
+ {
+   "_id": "Burger King French Fries (Small)",
+   "restname": "Burger King",
+   "item": "Quaker Oatmeal Maple Flavor (Artificial)",
+   "calories": 170,
+   "total_fat": 3,
+   "carbohydrates": 32,
+   "protein": 4,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Burger King French Fries (Medium)",
+   "restname": "Burger King",
+   "item": "Sausage Egg Cheese & Hash Brown Burrito",
+   "calories": 370,
+   "total_fat": 23,
+   "carbohydrates": 27,
+   "protein": 15,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Burger King French Fries (Large)",
+   "restname": "Burger King",
+   "item": "EGG-NORMOUS Burrito",
+   "calories": 940,
+   "total_fat": 57,
+   "carbohydrates": 68,
+   "protein": 38,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Burger King Quaker Oatmeal Maple Flavor (Artificial)",
+   "restname": "Burger King",
+   "item": "BK™ Ultimate Breakfast Platter",
+   "calories": 1230,
+   "total_fat": 70,
+   "carbohydrates": 122,
+   "protein": 29,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Burger King Sausage Egg Cheese & Hash Brown Burrito",
+   "restname": "Burger King",
+   "item": "NY Ultimate Platter",
+   "calories": 900,
+   "total_fat": 46,
+   "carbohydrates": 95,
+   "protein": 25,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Burger King EGG-NORMOUS Burrito",
+   "restname": "Burger King",
+   "item": "Pancake and Sausage Platter",
+   "calories": 610,
+   "total_fat": 31,
+   "carbohydrates": 72,
+   "protein": 12,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Burger King BK™ Ultimate Breakfast Platter",
+   "restname": "Burger King",
+   "item": "CROISSAN'WICH Egg & Cheese",
+   "calories": 340,
+   "total_fat": 18,
+   "carbohydrates": 29,
+   "protein": 12,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Burger King NY Ultimate Platter",
+   "restname": "Burger King",
+   "item": "CROISSAN'WICH Sausage Egg & Cheese",
+   "calories": 500,
+   "total_fat": 33,
+   "carbohydrates": 30,
+   "protein": 19,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Burger King Pancake and Sausage Platter",
+   "restname": "Burger King",
+   "item": "CROISSAN'WICH Ham Egg & Cheese",
+   "calories": 370,
+   "total_fat": 19,
+   "carbohydrates": 30,
+   "protein": 17,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Burger King CROISSAN'WICH Egg & Cheese",
+   "restname": "Burger King",
+   "item": "CROISSAN'WICH Bacon Egg & Cheese",
+   "calories": 370,
+   "total_fat": 21,
+   "carbohydrates": 30,
+   "protein": 14,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Burger King CROISSAN'WICH Sausage Egg & Cheese",
+   "restname": "Burger King",
+   "item": "Fully Loaded CROISSAN'WICH",
+   "calories": 610,
+   "total_fat": 40,
+   "carbohydrates": 31,
+   "protein": 28,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Burger King CROISSAN'WICH Ham Egg & Cheese",
+   "restname": "Burger King",
+   "item": "KING CROISSAN'WICH w/ Double Sausage",
+   "calories": 710,
+   "total_fat": 52,
+   "carbohydrates": 31,
+   "protein": 29,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Burger King CROISSAN'WICH Bacon Egg & Cheese",
+   "restname": "Burger King",
+   "item": "KING CROISSAN'WICH w/ Sausage and Bacon",
+   "calories": 580,
+   "total_fat": 40,
+   "carbohydrates": 31,
+   "protein": 23,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Burger King Fully Loaded CROISSAN'WICH",
+   "restname": "Burger King",
+   "item": "KING CROISSAN'WICH w/ Ham and Sausage",
+   "calories": 580,
+   "total_fat": 38,
+   "carbohydrates": 31,
+   "protein": 27,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Burger King KING CROISSAN'WICH w/ Double Sausage",
+   "restname": "Burger King",
+   "item": "Sausage Biscuit",
+   "calories": 420,
+   "total_fat": 28,
+   "carbohydrates": 28,
+   "protein": 12,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Burger King KING CROISSAN'WICH w/ Sausage and Bacon",
+   "restname": "Burger King",
+   "item": "Ham Egg & Cheese Biscuit",
+   "calories": 400,
+   "total_fat": 24,
+   "carbohydrates": 29,
+   "protein": 17,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Burger King KING CROISSAN'WICH w/ Ham and Sausage",
+   "restname": "Burger King",
+   "item": "Sausage Egg & Cheese Biscuit",
+   "calories": 530,
+   "total_fat": 38,
+   "carbohydrates": 29,
+   "protein": 19,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Burger King Sausage Biscuit",
+   "restname": "Burger King",
+   "item": "Bacon Egg & Cheese Biscuit",
+   "calories": 400,
+   "total_fat": 26,
+   "carbohydrates": 29,
+   "protein": 13,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Burger King Ham Egg & Cheese Biscuit",
+   "restname": "Burger King",
+   "item": "Fully Loaded Biscuit",
+   "calories": 640,
+   "total_fat": 45,
+   "carbohydrates": 31,
+   "protein": 28,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Burger King Sausage Egg & Cheese Biscuit",
+   "restname": "Burger King",
+   "item": "Hash Browns (Small)",
+   "calories": 250,
+   "total_fat": 16,
+   "carbohydrates": 24,
+   "protein": 2,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Burger King Bacon Egg & Cheese Biscuit",
+   "restname": "Burger King",
+   "item": "Hash Browns (Medium)",
+   "calories": 500,
+   "total_fat": 33,
+   "carbohydrates": 48,
+   "protein": 4,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Burger King Fully Loaded Biscuit",
+   "restname": "Burger King",
+   "item": "Hash Browns (Large)",
+   "calories": 670,
+   "total_fat": 44,
+   "carbohydrates": 65,
+   "protein": 5,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Burger King Hash Browns (Small)",
+   "restname": "Burger King",
+   "item": "French Toast Sticks (3 piece)",
+   "calories": 230,
+   "total_fat": 11,
+   "carbohydrates": 29,
+   "protein": 3,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Burger King Hash Browns (Medium)",
+   "restname": "Burger King",
+   "item": "French Toast Sticks (5 piece)",
+   "calories": 380,
+   "total_fat": 18,
+   "carbohydrates": 49,
+   "protein": 5,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Burger King Hash Browns (Large)",
+   "restname": "Burger King",
+   "item": "Dutch Apple Pie",
+   "calories": 340,
+   "total_fat": 14,
+   "carbohydrates": 51,
+   "protein": 3,
+   "type": "Deserts"
+ },
+ {
+   "_id": "Burger King French Toast Sticks (3 piece)",
+   "restname": "Burger King",
+   "item": "HERSHEY'S Sundae Pie",
+   "calories": 310,
+   "total_fat": 19,
+   "carbohydrates": 32,
+   "protein": 3,
+   "type": "Deserts"
+ },
+ {
+   "_id": "Burger King French Toast Sticks (5 piece)",
+   "restname": "Burger King",
+   "item": "Pie made with TWIX",
+   "calories": 370,
+   "total_fat": 20,
+   "carbohydrates": 45,
+   "protein": 4,
+   "type": "Deserts"
+ },
+ {
+   "_id": "Burger King Dutch Apple Pie",
+   "restname": "Burger King",
+   "item": "OREO Cookie Cheesecake",
+   "calories": 350,
+   "total_fat": 18,
+   "carbohydrates": 41,
+   "protein": 6,
+   "type": "Deserts"
+ },
+ {
+   "_id": "Burger King HERSHEY'S Sundae Pie",
+   "restname": "Burger King",
+   "item": "Soft Serve Cone",
+   "calories": 190,
+   "total_fat": 4.5,
+   "carbohydrates": 32,
+   "protein": 5,
+   "type": "Deserts"
+ },
+ {
+   "_id": "Burger King Pie made with TWIX",
+   "restname": "Burger King",
+   "item": "Soft Serve Cup",
+   "calories": 170,
+   "total_fat": 4.5,
+   "carbohydrates": 28,
+   "protein": 5,
+   "type": "Deserts"
+ },
+ {
+   "_id": "Burger King OREO Cookie Cheesecake",
+   "restname": "Burger King",
+   "item": "HERSHEY's Chocolate Sundae",
+   "calories": 280,
+   "total_fat": 7,
+   "carbohydrates": 47,
+   "protein": 6,
+   "type": "Deserts"
+ },
+ {
+   "_id": "Burger King Soft Serve Cone",
+   "restname": "Burger King",
+   "item": "Caramel Sundae",
+   "calories": 290,
+   "total_fat": 6,
+   "carbohydrates": 53,
+   "protein": 6,
+   "type": "Deserts"
+ },
+ {
+   "_id": "Burger King Soft Serve Cup",
+   "restname": "Burger King",
+   "item": "Butter Sugar Cookie",
+   "calories": 160,
+   "total_fat": 7,
+   "carbohydrates": 22,
+   "protein": 2,
+   "type": "Deserts"
+ },
+ {
+   "_id": "Burger King HERSHEY's Chocolate Sundae",
+   "restname": "Burger King",
+   "item": "Carnival Cookie",
+   "calories": 160,
+   "total_fat": 7,
+   "carbohydrates": 22,
+   "protein": 2,
+   "type": "Deserts"
+ },
+ {
+   "_id": "Burger King Caramel Sundae",
+   "restname": "Burger King",
+   "item": "Red White & Blue Cookie",
+   "calories": 160,
+   "total_fat": 6,
+   "carbohydrates": 23,
+   "protein": 1,
+   "type": "Deserts"
+ },
+ {
+   "_id": "Burger King Butter Sugar Cookie",
+   "restname": "Burger King",
+   "item": "Ginger Spice Cookie",
+   "calories": 150,
+   "total_fat": 5,
+   "carbohydrates": 25,
+   "protein": 2,
+   "type": "Deserts"
+ },
+ {
+   "_id": "Burger King Carnival Cookie",
+   "restname": "Burger King",
+   "item": "Chocolate Chip Cookies (2)",
+   "calories": 330,
+   "total_fat": 15,
+   "carbohydrates": 47,
+   "protein": 3,
+   "type": "Deserts"
+ },
+ {
+   "_id": "Burger King Red White & Blue Cookie",
+   "restname": "Burger King",
+   "item": "White Chocolate Macadamia Nut Cookies (2)",
+   "calories": 340,
+   "total_fat": 18,
+   "carbohydrates": 44,
+   "protein": 4,
+   "type": "Deserts"
+ },
+ {
+   "_id": "Burger King Ginger Spice Cookie",
+   "restname": "Burger King",
+   "item": "Oatmeal Raisin Cookies (2)",
+   "calories": 310,
+   "total_fat": 13,
+   "carbohydrates": 46,
+   "protein": 4,
+   "type": "Deserts"
+ },
+ {
+   "_id": "Burger King Chocolate Chip Cookies (2)",
+   "restname": "Burger King",
+   "item": "Fat FREE Milk (8 fl oz)",
+   "calories": 90,
+   "total_fat": 0,
+   "carbohydrates": 13,
+   "protein": 9,
+   "type": "Beverages"
+ },
+ {
+   "_id": "Burger King White Chocolate Macadamia Nut Cookies (2)",
+   "restname": "Burger King",
+   "item": "1% Low Fat Chocolate Milk (8 fl oz)",
+   "calories": 160,
+   "total_fat": 2.5,
+   "carbohydrates": 26,
+   "protein": 8,
+   "type": "Beverages"
+ },
+ {
+   "_id": "Burger King Oatmeal Raisin Cookies (2)",
+   "restname": "Burger King",
+   "item": "Smoothie: Strawberry Banana (16 fl oz)",
+   "calories": 310,
+   "total_fat": 1,
+   "carbohydrates": 71,
+   "protein": 4,
+   "type": "Smoothies & Shakes"
+ },
+ {
+   "_id": "Burger King Fat FREE Milk (8 fl oz)",
+   "restname": "Burger King",
+   "item": "Smoothie: Tropical Mango (16 fl oz)",
+   "calories": 370,
+   "total_fat": 0,
+   "carbohydrates": 86,
+   "protein": 5,
+   "type": "Smoothies & Shakes"
+ },
+ {
+   "_id": "Burger King 1% Low Fat Chocolate Milk (8 fl oz)",
+   "restname": "Burger King",
+   "item": "Oreo Shake",
+   "calories": 720,
+   "total_fat": 20,
+   "carbohydrates": 118,
+   "protein": 16,
+   "type": "Smoothies & Shakes"
+ },
+ {
+   "_id": "Burger King Smoothie: Strawberry Banana (16 fl oz)",
+   "restname": "Burger King",
+   "item": "Chocolate Oreo Shake",
+   "calories": 740,
+   "total_fat": 22,
+   "carbohydrates": 121,
+   "protein": 17,
+   "type": "Smoothies & Shakes"
+ },
+ {
+   "_id": "Burger King Smoothie: Tropical Mango (16 fl oz)",
+   "restname": "Burger King",
+   "item": "FROOT LOOPS Shake",
+   "calories": 720,
+   "total_fat": 17,
+   "carbohydrates": 126,
+   "protein": 16,
+   "type": "Smoothies & Shakes"
+ },
+ {
+   "_id": "Burger King Oreo Shake",
+   "restname": "Burger King",
+   "item": "Vanilla Milk Shake",
+   "calories": 580,
+   "total_fat": 15,
+   "carbohydrates": 98,
+   "protein": 14,
+   "type": "Smoothies & Shakes"
+ },
+ {
+   "_id": "Burger King Chocolate Oreo Shake",
+   "restname": "Burger King",
+   "item": "HERSHEY'S Chocolate Milk Shake",
+   "calories": 610,
+   "total_fat": 16,
+   "carbohydrates": 103,
+   "protein": 14,
+   "type": "Smoothies & Shakes"
+ },
+ {
+   "_id": "Burger King FROOT LOOPS Shake",
+   "restname": "Burger King",
+   "item": "Strawberry Milk Shake",
+   "calories": 640,
+   "total_fat": 15,
+   "carbohydrates": 113,
+   "protein": 14,
+   "type": "Smoothies & Shakes"
+ },
+ {
+   "_id": "Burger King Vanilla Milk Shake",
+   "restname": "Burger King",
+   "item": "BK Joe-Regular or Decaf (16 fl oz)",
+   "calories": 0,
+   "total_fat": 0,
+   "carbohydrates": 0,
+   "protein": 0,
+   "type": "Coffee & Tea"
+ },
+ {
+   "_id": "Burger King HERSHEY'S Chocolate Milk Shake",
+   "restname": "Burger King",
+   "item": "BK Joe-Regular or Decaf (20 fl oz)",
+   "calories": 0,
+   "total_fat": 0,
+   "carbohydrates": 0,
+   "protein": 0,
+   "type": "Coffee & Tea"
+ },
+ {
+   "_id": "Burger King Strawberry Milk Shake",
+   "restname": "Burger King",
+   "item": "BK Joe Iced Coffee (Medium)",
+   "calories": 150,
+   "total_fat": 8,
+   "carbohydrates": 19,
+   "protein": 1,
+   "type": "Coffee & Tea"
+ },
+ {
+   "_id": "Burger King BK Joe-Regular or Decaf (16 fl oz)",
+   "restname": "Burger King",
+   "item": "BK Joe Iced Coffee (Medium VANILLA)",
+   "calories": 190,
+   "total_fat": 8,
+   "carbohydrates": 28,
+   "protein": 1,
+   "type": "Coffee & Tea"
+ },
+ {
+   "_id": "Burger King BK Joe-Regular or Decaf (20 fl oz)",
+   "restname": "Burger King",
+   "item": "BK Joe Iced Coffee (Medium MOCHA)",
+   "calories": 170,
+   "total_fat": 8,
+   "carbohydrates": 23,
+   "protein": 2,
+   "type": "Coffee & Tea"
+ }
+]

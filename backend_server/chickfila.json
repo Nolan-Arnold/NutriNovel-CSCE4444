@@ -1,0 +1,572 @@
+[
+ {
+   "_id": "Chick-fil-A Chick-fil-A Chicken Biscuit",
+   "restname": "Chick-fil-A",
+   "item": "Chick-fil-A Chicken Biscuit",
+   "calories": 440,
+   "total_fat": 20,
+   "carbohydrates": 48,
+   "protein": 16,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Chick-fil-A 4 Chick-n-Minis",
+   "restname": "Chick-fil-A",
+   "item": "4 Chick-n-Minis",
+   "calories": 350,
+   "total_fat": 14,
+   "carbohydrates": 37,
+   "protein": 19,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Chick-fil-A 10 ct Chick-n-Minis",
+   "restname": "Chick-fil-A",
+   "item": "10 ct Chick-n-Minis",
+   "calories": 870,
+   "total_fat": 35,
+   "carbohydrates": 92,
+   "protein": 48,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Chick-fil-A Egg White Grill",
+   "restname": "Chick-fil-A",
+   "item": "Egg White Grill",
+   "calories": 300,
+   "total_fat": 7,
+   "carbohydrates": 31,
+   "protein": 25,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Chick-fil-A Bacon Egg & Cheese Biscuit",
+   "restname": "Chick-fil-A",
+   "item": "Bacon Egg & Cheese Biscuit",
+   "calories": 440,
+   "total_fat": 23,
+   "carbohydrates": 42,
+   "protein": 16,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Chick-fil-A Sausage Egg & Cheese Biscuit",
+   "restname": "Chick-fil-A",
+   "item": "Sausage Egg & Cheese Biscuit",
+   "calories": 670,
+   "total_fat": 46,
+   "carbohydrates": 43,
+   "protein": 22,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Chick-fil-A Buttered Biscuit",
+   "restname": "Chick-fil-A",
+   "item": "Buttered Biscuit",
+   "calories": 310,
+   "total_fat": 14,
+   "carbohydrates": 42,
+   "protein": 4,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Chick-fil-A Sunflower Multigrain Bagel w/ Cream Cheese",
+   "restname": "Chick-fil-A",
+   "item": "Sunflower Multigrain Bagel w/ Cream Cheese",
+   "calories": 290,
+   "total_fat": 10,
+   "carbohydrates": 43,
+   "protein": 8,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Chick-fil-A Hash Browns",
+   "restname": "Chick-fil-A",
+   "item": "Hash Browns",
+   "calories": 250,
+   "total_fat": 17,
+   "carbohydrates": 23,
+   "protein": 3,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Chick-fil-A Greek Yogurt Parfait w/ Cookie Crumbs",
+   "restname": "Chick-fil-A",
+   "item": "Greek Yogurt Parfait w/ Cookie Crumbs",
+   "calories": 220,
+   "total_fat": 8,
+   "carbohydrates": 27,
+   "protein": 12,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Chick-fil-A Greek Yogurt Parfait w/ Granola",
+   "restname": "Chick-fil-A",
+   "item": "Greek Yogurt Parfait w/ Granola",
+   "calories": 250,
+   "total_fat": 9,
+   "carbohydrates": 30,
+   "protein": 13,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Chick-fil-A Small Fruit Cup",
+   "restname": "Chick-fil-A",
+   "item": "Small Fruit Cup",
+   "calories": 45,
+   "total_fat": 0,
+   "carbohydrates": 11,
+   "protein": 0,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Chick-fil-A Medium Fruit Cup",
+   "restname": "Chick-fil-A",
+   "item": "Medium Fruit Cup",
+   "calories": 50,
+   "total_fat": 0,
+   "carbohydrates": 12,
+   "protein": 1,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Chick-fil-A Large Fruit Cup",
+   "restname": "Chick-fil-A",
+   "item": "Large Fruit Cup",
+   "calories": 70,
+   "total_fat": 0,
+   "carbohydrates": 17,
+   "protein": 1,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Chick-fil-A Chicken Egg & Cheese Bagel",
+   "restname": "Chick-fil-A",
+   "item": "Chicken Egg & Cheese Bagel",
+   "calories": 460,
+   "total_fat": 18,
+   "carbohydrates": 49,
+   "protein": 26,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Chick-fil-A Hash Brown Scramble Burrito",
+   "restname": "Chick-fil-A",
+   "item": "Hash Brown Scramble Burrito",
+   "calories": 690,
+   "total_fat": 38,
+   "carbohydrates": 52,
+   "protein": 35,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Chick-fil-A Hash Brown Scramble Bowl",
+   "restname": "Chick-fil-A",
+   "item": "Hash Brown Scramble Bowl",
+   "calories": 460,
+   "total_fat": 29,
+   "carbohydrates": 21,
+   "protein": 30,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Chick-fil-A English Muffin",
+   "restname": "Chick-fil-A",
+   "item": "English Muffin",
+   "calories": 150,
+   "total_fat": 1,
+   "carbohydrates": 30,
+   "protein": 4,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Chick-fil-A Bacon Egg & Cheese Muffin",
+   "restname": "Chick-fil-A",
+   "item": "Bacon Egg & Cheese Muffin",
+   "calories": 310,
+   "total_fat": 13,
+   "carbohydrates": 31,
+   "protein": 16,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Chick-fil-A Sausage Egg & Cheese Muffin",
+   "restname": "Chick-fil-A",
+   "item": "Sausage Egg & Cheese Muffin",
+   "calories": 550,
+   "total_fat": 36,
+   "carbohydrates": 32,
+   "protein": 22,
+   "type": "Breakfast"
+ },
+ {
+   "_id": "Chick-fil-A Chick-fil-A Chicken Sandwich",
+   "restname": "Chick-fil-A",
+   "item": "Chick-fil-A Chicken Sandwich",
+   "calories": 440,
+   "total_fat": 19,
+   "carbohydrates": 40,
+   "protein": 28,
+   "type": "Chicken"
+ },
+ {
+   "_id": "Chick-fil-A Chick-fil-A Deluxe Sandwich",
+   "restname": "Chick-fil-A",
+   "item": "Chick-fil-A Deluxe Sandwich",
+   "calories": 500,
+   "total_fat": 23,
+   "carbohydrates": 42,
+   "protein": 31,
+   "type": "Chicken"
+ },
+ {
+   "_id": "Chick-fil-A Spicy Chicken Sandwich",
+   "restname": "Chick-fil-A",
+   "item": "Spicy Chicken Sandwich",
+   "calories": 450,
+   "total_fat": 19,
+   "carbohydrates": 41,
+   "protein": 29,
+   "type": "Chicken"
+ },
+ {
+   "_id": "Chick-fil-A Spicy Deluxe Sandwich",
+   "restname": "Chick-fil-A",
+   "item": "Spicy Deluxe Sandwich",
+   "calories": 540,
+   "total_fat": 25,
+   "carbohydrates": 43,
+   "protein": 34,
+   "type": "Chicken"
+ },
+ {
+   "_id": "Chick-fil-A Grilled Chicken Sandwich",
+   "restname": "Chick-fil-A",
+   "item": "Grilled Chicken Sandwich",
+   "calories": 310,
+   "total_fat": 6,
+   "carbohydrates": 36,
+   "protein": 29,
+   "type": "Chicken"
+ },
+ {
+   "_id": "Chick-fil-A Grilled Chicken Club",
+   "restname": "Chick-fil-A",
+   "item": "Grilled Chicken Club",
+   "calories": 440,
+   "total_fat": 16,
+   "carbohydrates": 36,
+   "protein": 38,
+   "type": "Chicken"
+ },
+ {
+   "_id": "Chick-fil-A Chick-fil-A Nuggets",
+   "restname": "Chick-fil-A",
+   "item": "Chick-fil-A Nuggets",
+   "calories": 260,
+   "total_fat": 12,
+   "carbohydrates": 9,
+   "protein": 28,
+   "type": "Chicken"
+ },
+ {
+   "_id": "Chick-fil-A Chick-n-Strips",
+   "restname": "Chick-fil-A",
+   "item": "Chick-n-Strips",
+   "calories": 330,
+   "total_fat": 16,
+   "carbohydrates": 21,
+   "protein": 26,
+   "type": "Chicken"
+ },
+ {
+   "_id": "Chick-fil-A Grilled Cool Wrap",
+   "restname": "Chick-fil-A",
+   "item": "Grilled Cool Wrap",
+   "calories": 360,
+   "total_fat": 14,
+   "carbohydrates": 30,
+   "protein": 42,
+   "type": "Chicken"
+ },
+ {
+   "_id": "Chick-fil-A Grilled Nuggets",
+   "restname": "Chick-fil-A",
+   "item": "Grilled Nuggets",
+   "calories": 140,
+   "total_fat": 3.5,
+   "carbohydrates": 2,
+   "protein": 25,
+   "type": "Chicken"
+ },
+ {
+   "_id": "Chick-fil-A Spicy Southwest Salad",
+   "restname": "Chick-fil-A",
+   "item": "Spicy Southwest Salad",
+   "calories": 450,
+   "total_fat": 19,
+   "carbohydrates": 38,
+   "protein": 34,
+   "type": "Salad"
+ },
+ {
+   "_id": "Chick-fil-A Cobb Salad",
+   "restname": "Chick-fil-A",
+   "item": "Cobb Salad",
+   "calories": 550,
+   "total_fat": 29,
+   "carbohydrates": 30,
+   "protein": 42,
+   "type": "Salad"
+ },
+ {
+   "_id": "Chick-fil-A Market Salad",
+   "restname": "Chick-fil-A",
+   "item": "Market Salad",
+   "calories": 340,
+   "total_fat": 14,
+   "carbohydrates": 27,
+   "protein": 28,
+   "type": "Salad"
+ },
+ {
+   "_id": "Chick-fil-A Waffle Potato Fries (Small)",
+   "restname": "Chick-fil-A",
+   "item": "Waffle Potato Fries (Small)",
+   "calories": 280,
+   "total_fat": 14,
+   "carbohydrates": 33,
+   "protein": 4,
+   "type": "Snacks & Sides"
+ },
+ {
+   "_id": "Chick-fil-A Waffle Potato Fries (Medium)",
+   "restname": "Chick-fil-A",
+   "item": "Waffle Potato Fries (Medium)",
+   "calories": 360,
+   "total_fat": 18,
+   "carbohydrates": 43,
+   "protein": 5,
+   "type": "Snacks & Sides"
+ },
+ {
+   "_id": "Chick-fil-A Waffle Potato Fries (Large)",
+   "restname": "Chick-fil-A",
+   "item": "Waffle Potato Fries (Large)",
+   "calories": 460,
+   "total_fat": 24,
+   "carbohydrates": 56,
+   "protein": 6,
+   "type": "Snacks & Sides"
+ },
+ {
+   "_id": "Chick-fil-A Side Salad",
+   "restname": "Chick-fil-A",
+   "item": "Side Salad",
+   "calories": 160,
+   "total_fat": 10,
+   "carbohydrates": 13,
+   "protein": 6,
+   "type": "Snacks & Sides"
+ },
+ {
+   "_id": "Chick-fil-A Chicken Noodle Soup",
+   "restname": "Chick-fil-A",
+   "item": "Chicken Noodle Soup",
+   "calories": 130,
+   "total_fat": 3.5,
+   "carbohydrates": 15,
+   "protein": 9,
+   "type": "Snacks & Sides"
+ },
+ {
+   "_id": "Chick-fil-A Small Chicken Noodle Soup",
+   "restname": "Chick-fil-A",
+   "item": "Small Chicken Noodle Soup",
+   "calories": 130,
+   "total_fat": 3.5,
+   "carbohydrates": 15,
+   "protein": 9,
+   "type": "Snacks & Sides"
+ },
+ {
+   "_id": "Chick-fil-A Large Chicken Noodle Soup",
+   "restname": "Chick-fil-A",
+   "item": "Large Chicken Noodle Soup",
+   "calories": 240,
+   "total_fat": 6,
+   "carbohydrates": 29,
+   "protein": 18,
+   "type": "Snacks & Sides"
+ },
+ {
+   "_id": "Chick-fil-A Superfood Side (Small)",
+   "restname": "Chick-fil-A",
+   "item": "Superfood Side (Small)",
+   "calories": 140,
+   "total_fat": 8,
+   "carbohydrates": 16,
+   "protein": 4,
+   "type": "Snacks & Sides"
+ },
+ {
+   "_id": "Chick-fil-A Superfood Side (Large)",
+   "restname": "Chick-fil-A",
+   "item": "Superfood Side (Large)",
+   "calories": 180,
+   "total_fat": 9,
+   "carbohydrates": 24,
+   "protein": 4,
+   "type": "Snacks & Sides"
+ },
+ {
+   "_id": "Chick-fil-A Nuggets Kid's Meal",
+   "restname": "Chick-fil-A",
+   "item": "Nuggets Kid's Meal",
+   "calories": 270,
+   "total_fat": 9,
+   "carbohydrates": 26,
+   "protein": 21,
+   "type": "Chicken"
+ },
+ {
+   "_id": "Chick-fil-A Chick-n-Strips Kid's Meal",
+   "restname": "Chick-fil-A",
+   "item": "Chick-n-Strips Kid's Meal",
+   "calories": 310,
+   "total_fat": 12,
+   "carbohydrates": 34,
+   "protein": 19,
+   "type": "Chicken"
+ },
+ {
+   "_id": "Chick-fil-A Grilled Nuggets Kid's Meal",
+   "restname": "Chick-fil-A",
+   "item": "Grilled Nuggets Kid's Meal",
+   "calories": 190,
+   "total_fat": 3,
+   "carbohydrates": 21,
+   "protein": 20,
+   "type": "Chicken"
+ },
+ {
+   "_id": "Chick-fil-A Chocolate Milkshake (Small)",
+   "restname": "Chick-fil-A",
+   "item": "Chocolate Milkshake (Small)",
+   "calories": 580,
+   "total_fat": 22,
+   "carbohydrates": 87,
+   "protein": 12,
+   "type": "Smoothies & Shakes"
+ },
+ {
+   "_id": "Chick-fil-A Chocolate Milkshake (Large)",
+   "restname": "Chick-fil-A",
+   "item": "Chocolate Milkshake (Large)",
+   "calories": 740,
+   "total_fat": 26,
+   "carbohydrates": 114,
+   "protein": 15,
+   "type": "Smoothies & Shakes"
+ },
+ {
+   "_id": "Chick-fil-A Cookies & Cream Milkshake (Small)",
+   "restname": "Chick-fil-A",
+   "item": "Cookies & Cream Milkshake (Small)",
+   "calories": 610,
+   "total_fat": 25,
+   "carbohydrates": 85,
+   "protein": 12,
+   "type": "Smoothies & Shakes"
+ },
+ {
+   "_id": "Chick-fil-A Cookies & Cream Milkshake (Large)",
+   "restname": "Chick-fil-A",
+   "item": "Cookies & Cream Milkshake (Large)",
+   "calories": 780,
+   "total_fat": 31,
+   "carbohydrates": 111,
+   "protein": 16,
+   "type": "Smoothies & Shakes"
+ },
+ {
+   "_id": "Chick-fil-A Strawberry Milkshake (Small)",
+   "restname": "Chick-fil-A",
+   "item": "Strawberry Milkshake (Small)",
+   "calories": 610,
+   "total_fat": 22,
+   "carbohydrates": 94,
+   "protein": 12,
+   "type": "Smoothies & Shakes"
+ },
+ {
+   "_id": "Chick-fil-A Strawberry Milkshake(Large)",
+   "restname": "Chick-fil-A",
+   "item": "Strawberry Milkshake(Large)",
+   "calories": 780,
+   "total_fat": 26,
+   "carbohydrates": 125,
+   "protein": 15,
+   "type": "Smoothies & Shakes"
+ },
+ {
+   "_id": "Chick-fil-A Vanilla Milkshake (Small)",
+   "restname": "Chick-fil-A",
+   "item": "Vanilla Milkshake (Small)",
+   "calories": 520,
+   "total_fat": 22,
+   "carbohydrates": 72,
+   "protein": 12,
+   "type": "Smoothies & Shakes"
+ },
+ {
+   "_id": "Chick-fil-A Vanilla Milkshake (Large)",
+   "restname": "Chick-fil-A",
+   "item": "Vanilla Milkshake (Large)",
+   "calories": 640,
+   "total_fat": 26,
+   "carbohydrates": 91,
+   "protein": 15,
+   "type": "Smoothies & Shakes"
+ },
+ {
+   "_id": "Chick-fil-A Freshly-Brewed Iced Tea Sweetened (Small)",
+   "restname": "Chick-fil-A",
+   "item": "Freshly-Brewed Iced Tea Sweetened (Small)",
+   "calories": 70,
+   "total_fat": 0,
+   "carbohydrates": 19,
+   "protein": 0,
+   "type": "Coffee & Tea"
+ },
+ {
+   "_id": "Chick-fil-A Freshly-Brewed Iced Tea Sweetened (Medium)",
+   "restname": "Chick-fil-A",
+   "item": "Freshly-Brewed Iced Tea Sweetened (Medium)",
+   "calories": 120,
+   "total_fat": 0,
+   "carbohydrates": 31,
+   "protein": 0,
+   "type": "Coffee & Tea"
+ },
+ {
+   "_id": "Chick-fil-A Freshly-Brewed Iced Tea Sweetened (Large)",
+   "restname": "Chick-fil-A",
+   "item": "Freshly-Brewed Iced Tea Sweetened (Large)",
+   "calories": 170,
+   "total_fat": 0,
+   "carbohydrates": 43,
+   "protein": 0,
+   "type": "Coffee & Tea"
+ },
+ {
+   "_id": "Chick-fil-A Chick-fil-A Sauce",
+   "restname": "Chick-fil-A",
+   "item": "Chick-fil-A Sauce",
+   "calories": 140,
+   "total_fat": 13,
+   "carbohydrates": 6,
+   "protein": 0,
+   "type": "Snacks & Sides"
+ }
+]
