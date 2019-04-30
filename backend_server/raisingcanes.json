@@ -1,0 +1,172 @@
+[
+ {
+   "_id": "Raising Cane's Chicken Finger",
+   "restname": "Raising Cane's",
+   "item": "Chicken Finger",
+   "calories": 149,
+   "total_fat": 7,
+   "carbohydrates": 6,
+   "protein": 13,
+   "type": "Chicken"
+ },
+ {
+   "_id": "Raising Cane's Crinkle-Cut Fries",
+   "restname": "Raising Cane's",
+   "item": "Crinkle-Cut Fries",
+   "calories": 390,
+   "total_fat": 19,
+   "carbohydrates": 49,
+   "protein": 5,
+   "type": "Snacks & Sides"
+ },
+ {
+   "_id": "Raising Cane's Texas Toast",
+   "restname": "Raising Cane's",
+   "item": "Texas Toast",
+   "calories": 150,
+   "total_fat": 5,
+   "carbohydrates": 24,
+   "protein": 4,
+   "type": "Snacks & Sides"
+ },
+ {
+   "_id": "Raising Cane's Coleslaw",
+   "restname": "Raising Cane's",
+   "item": "Coleslaw",
+   "calories": 100,
+   "total_fat": 6,
+   "carbohydrates": 11,
+   "protein": 1,
+   "type": "Snacks & Sides"
+ },
+ {
+   "_id": "Raising Cane's Cane's Sauce",
+   "restname": "Raising Cane's",
+   "item": "Cane's Sauce",
+   "calories": 190,
+   "total_fat": 19,
+   "carbohydrates": 6,
+   "protein": 0,
+   "type": "Snacks & Sides"
+ },
+ {
+   "_id": "Raising Cane's Chicken Sandwhich",
+   "restname": "Raising Cane's",
+   "item": "Chicken Sandwhich",
+   "calories": 840,
+   "total_fat": 41,
+   "carbohydrates": 70,
+   "protein": 48,
+   "type": "Chicken"
+ },
+ {
+   "_id": "Raising Cane's Kids Combo",
+   "restname": "Raising Cane's",
+   "item": "Kids Combo",
+   "calories": 650,
+   "total_fat": 42,
+   "carbohydrates": 40,
+   "protein": 29,
+   "type": "Chicken"
+ },
+ {
+   "_id": "Raising Cane's 3 Finger Combo",
+   "restname": "Raising Cane's",
+   "item": "3 Finger Combo",
+   "calories": 1060,
+   "total_fat": 60,
+   "carbohydrates": 84,
+   "protein": 47,
+   "type": "Chicken"
+ },
+ {
+   "_id": "Raising Cane's Box Combo",
+   "restname": "Raising Cane's",
+   "item": "Box Combo",
+   "calories": 1300,
+   "total_fat": 73,
+   "carbohydrates": 100,
+   "protein": 60,
+   "type": "Chicken"
+ },
+ {
+   "_id": "Raising Cane's Caniac Combo",
+   "restname": "Raising Cane's",
+   "item": "Caniac Combo",
+   "calories": 1860,
+   "total_fat": 111,
+   "carbohydrates": 129,
+   "protein": 88,
+   "type": "Chicken"
+ },
+ {
+   "_id": "Raising Cane's Chicken Sandwhich Combo",
+   "restname": "Raising Cane's",
+   "item": "Chicken Sandwhich Combo",
+   "calories": 1140,
+   "total_fat": 56,
+   "carbohydrates": 107,
+   "protein": 52,
+   "type": "Chicken"
+ },
+ {
+   "_id": "Raising Cane's Sweet Tea - Regular",
+   "restname": "Raising Cane's",
+   "item": "Sweet Tea - Regular",
+   "calories": 140,
+   "total_fat": 0,
+   "carbohydrates": 36,
+   "protein": 0,
+   "type": "Coffee & Tea"
+ },
+ {
+   "_id": "Raising Cane's Sweet Tea - Large",
+   "restname": "Raising Cane's",
+   "item": "Sweet Tea - Large",
+   "calories": 190,
+   "total_fat": 0,
+   "carbohydrates": 49,
+   "protein": 0,
+   "type": "Coffee & Tea"
+ },
+ {
+   "_id": "Raising Cane's Unsweet Tea - Regular",
+   "restname": "Raising Cane's",
+   "item": "Unsweet Tea - Regular",
+   "calories": 0,
+   "total_fat": 0,
+   "carbohydrates": 0,
+   "protein": 0,
+   "type": "Coffee & Tea"
+ },
+ {
+   "_id": "Raising Cane's Unsweet Tea - Large",
+   "restname": "Raising Cane's",
+   "item": "Unsweet Tea - Large",
+   "calories": 0,
+   "total_fat": 0,
+   "carbohydrates": 0,
+   "protein": 0,
+   "type": "Coffee & Tea"
+ },
+ {
+   "_id": "Raising Cane's Lemonade - Regular",
+   "restname": "Raising Cane's",
+   "item": "Lemonade - Regular",
+   "calories": 160,
+   "total_fat": 0,
+   "carbohydrates": 43,
+   "protein": 0,
+   "type": "Beverages"
+ },
+ {
+   "_id": "Raising Cane's Lemonade - Large",
+   "restname": "Raising Cane's",
+   "item": "Lemonade - Large",
+   "calories": 220,
+   "total_fat": 0,
+   "carbohydrates": 59,
+   "protein": 0,
+   "type": "Beverages"
+ }
+]
