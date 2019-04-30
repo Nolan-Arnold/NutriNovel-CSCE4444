@@ -4,6 +4,11 @@ table {
     padding-bottom: 20px;
   }
 
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
   .mat-form-field { /*the search bar*/
     font-size: 14px;
     width: 60%;

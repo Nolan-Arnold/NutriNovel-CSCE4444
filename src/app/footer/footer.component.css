@@ -1,7 +1,7 @@
 /*the bar in respect to screen display*/
 .footernav{
     align-items: center;
-    z-index: 15;
+    z-index: 10;
     padding-top: 120px;
     left: 0;
     position: fixed;
