@@ -72,6 +72,10 @@ table {
 .buttons {
   position: fixed;
 }
+.button-wrapper{
+  
+}
+
 
 span:before{
     content:" ";
