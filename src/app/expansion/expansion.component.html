@@ -81,10 +81,10 @@
           {{ panel.description }}
           </mat-panel-description>-->
         </mat-expansion-panel-header>
-        <p class="innerpanel">Calories: {{panel.calories}} Percentage of Calories: {{getPercent(panel.calories, totalCalorie())}}%</p>
-        <p class="innerpanel">Total Fat (g): {{panel.total_fat}} Percentage of Total Fat: {{getPercent(panel.total_fat, totalFatNum())}}%</p>
-        <p class="innerpanel">Protein (g): {{panel.protein}} Percentage of Total Protein: {{getPercent(panel.protein, totalProtein())}}%</p>
-        <p class="innerpanel">Carbohydrates (g): {{panel.carbohydrates}} Percentage of Total Carbohydrates: {{getPercent(panel.carbohydrates, totalCarbs())}}%</p>
+        <p class="innerpanel">Calories: {{panel.calories}}<br>Percentage of Calories: {{getPercent(panel.calories, totalCalorie())}}%</p>
+        <p class="innerpanel">Total Fat (g): {{panel.total_fat}}<br>Percentage of Total Fat: {{getPercent(panel.total_fat, totalFatNum())}}%</p>
+        <p class="innerpanel">Protein (g): {{panel.protein}}<br>Percentage of Total Protein: {{getPercent(panel.protein, totalProtein())}}%</p>
+        <p class="innerpanel">Carbohydrates (g): {{panel.carbohydrates}}<br>Percentage of Total Carbohydrates: {{getPercent(panel.carbohydrates, totalCarbs())}}%</p>
         <p class="innerpanel">Type: {{panel.type}}</p>
         <mat-action-row>
           <button matTooltip="Removes item from current plate"
