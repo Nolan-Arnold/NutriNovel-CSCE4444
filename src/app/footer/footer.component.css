@@ -1,16 +1,17 @@
 /*the bar in respect to screen display*/
 .footernav{
     align-items: center;
-    z-index: 10;
-    padding-top: 120px;
-    left: 0;
-    position: fixed;
-    bottom: 0;
-    font-size: .7vw;
-    height: auto;
-    width: 100%;
-    margin: 0;
+    /*z-index: 10;*/
+    /*padding-top: 120px;*/
+    box-sizing: border-box;
     padding: 0;
+    margin: 0;
+    position: relative;
+    font-size: .7vw;
+    /*height: auto;*/
+    /*width: 100%;*/
+    /*margin-left: 0%;
+    padding: 0;*/
     overflow-x: hidden;
     justify-content: space-around;
     display: flex;

@@ -41,10 +41,14 @@
 }
 
 .background img {
-  width: 100%;
-  left: 0;
-  height: 800px;
+  opacity: 0.8;
+  object-fit: contain;
+  z-index: 1;
+  max-width: 100%;
   overflow: hidden;
-  background-size:auto;
-  z-index: 7;
+  left: 0;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }

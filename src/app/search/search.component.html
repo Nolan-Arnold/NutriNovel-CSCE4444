@@ -3,24 +3,22 @@
     <input matInput placeholder="Search Foods" #input>
   </mat-form-field>
 
-<!-- TODO Page length not correctly subscribing to observable created in my food-data-source-->
-<!--div *ngIf="let count of dataSource.elementCount$ | async"-->
-<mat-paginator [pageSize]=15 [length]="elementCount" [pageSizeOptions]="[20, 15, 10, 5]" showFirstLastButtons></mat-paginator>
-
 <!--/div-->
 <!--Buttons added by Nolan Arnold-->
-<br><br><br><br><br><br><br>
+<!--<br><br><br><br><br><br><br>-->
 <div class="buttons">
   &nbsp;<button mat-button (click)="loadPlate($event)">Add to Plate</button>
   &nbsp;<button mat-button routerLink="/plate">Go to Plate</button>&nbsp;
   <div class = "button-wrapper " matTooltip="Two items must be selected" style="display: inline"><button mat-button (click)="loadCompare($event)" routerLink="/compare" [disabled]="compareDisabled">Compare</button></div>
 </div>
-<br><br>
+<!--<br><br>-->
 
 <div class="spinner-container" *ngIf="dataSource.loading$ | async">
   <br><br><br><br><br><br><br><br><br><br><br><br><br>
   <mat-spinner></mat-spinner>
 </div>
+
+<mat-paginator [pageSize]=15 [length]="elementCount" [pageSizeOptions]="[20, 15, 10, 5]" showFirstLastButtons></mat-paginator>
 
 <div matSort class="mat-elevation-z8" matSortActive="restname" matSortDirection="asc" matSortDisableClear>
   <table mat-table [dataSource]="dataSource"> <!--matSort class="mat-elevation-z8"-->
@@ -84,10 +82,6 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr> <!--sticky: true-->
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"> <!--Added by selection column--></tr>
   </table>
-
-
-      <app-footer></app-footer>
-
 </div>
+<br><br>
 
-<br><br><br><br>

@@ -18,7 +18,7 @@
   overflow-x: hidden;
 
     left: 0;
-    position: fixed;
+    /*position: fixed;*/
     width: 100%;
     margin: 0;
     padding: 0;
