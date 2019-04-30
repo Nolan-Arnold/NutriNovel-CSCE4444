@@ -48,7 +48,7 @@ table {
     margin-left: 1%;
     /*margin-top : 10px;*/
     height: auto;
-    max-height: 540px;
+    max-height: 740px;
     overflow: scroll;
     z-index: 6;
   }
