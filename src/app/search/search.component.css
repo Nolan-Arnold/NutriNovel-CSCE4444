@@ -13,11 +13,16 @@ table {
     z-index: 8;
   }
 
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
   /*checkmark color*/
   ::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
     background-color: rgb(65, 109, 28) !important;
   }
-  
+
   /*checkmark color frame*/
 /*
   ::ng-deep .mat-checkbox .mat-checkbox-frame {
@@ -68,7 +73,7 @@ table {
   position: fixed;
 }
 .button-wrapper{
-  
+
 }
 
 
