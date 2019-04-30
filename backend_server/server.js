@@ -122,7 +122,7 @@ app.route('/api/foods').get((req, res) => {
                     (food._id.trim().toLowerCase().search(filterBy.toLowerCase()) >= 0 
                     || food.type.trim().toLowerCase().search(filterBy.toLowerCase()) >= 0));
             }
-            
+            console.log(sortId);
             //Check which collumn the user wants to sort by.
             switch (sortId) {
                 case 'restname': 
@@ -156,7 +156,7 @@ app.route('/api/foods').get((req, res) => {
                 case 'protein':
                     foodsArr.sort((f1, f2) => f1.protein - f2.protein);
                     break;
-                case 'total_fat':
+                case 'total fat':
                     foodsArr.sort((f1, f2) => f1.total_fat - f2.total_fat);
                     break;
                 case 'type':
