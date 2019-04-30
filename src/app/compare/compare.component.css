@@ -9,8 +9,10 @@
 .mat-grid-tile {
     background: white !important;
     opacity: 0.95;
-    width: 350px !important;
+    width: 400px !important;
     margin: auto;
+    font-size: 21px;
+    text-align: center;
 }
 
 .container {
