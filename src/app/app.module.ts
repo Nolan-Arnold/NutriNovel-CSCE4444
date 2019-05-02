@@ -3,7 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // required for using mat related stuff within module
 import { MatSortModule, MatFormFieldModule, MatPaginatorModule, MatProgressSpinnerModule,
-  MatInputModule, MatCheckboxModule, MatTableModule } from '@angular/material';
+  MatInputModule, MatCheckboxModule, MatTableModule, MatCardModule, MatIconModule } from '@angular/material';
 
 import { MatMenuModule } from '@angular/material/menu';
 import { NgModule } from '@angular/core';
@@ -27,6 +27,8 @@ import { MessagesComponent } from './messages/messages.component';
 import { SearchComponent } from './search/search.component';
 import { ExpansionComponent} from './expansion/expansion.component';
 import { FooterComponent } from './footer/footer.component';
+import { LoginComponent } from './login/login.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { FooterComponent } from './footer/footer.component';
     MessagesComponent,
     SearchComponent,
     ExpansionComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
@@ -53,6 +57,8 @@ import { FooterComponent } from './footer/footer.component';
     MatButtonModule, // ripple buttons
     MatPaginatorModule,
     MatToolbarModule,
+    MatCardModule,
+    MatIconModule,
     RouterModule,
     HttpClientModule,
     MatExpansionModule,
