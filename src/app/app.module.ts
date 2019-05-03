@@ -3,11 +3,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // required for using mat related stuff within module
 import { MatSortModule, MatFormFieldModule, MatPaginatorModule, MatProgressSpinnerModule,
-  MatInputModule, MatCheckboxModule, MatTableModule, MatCardModule, MatIconModule } from '@angular/material';
+  MatInputModule, MatCheckboxModule, MatTableModule, MatCardModule, MatIconModule} from '@angular/material';
 
 import { MatMenuModule } from '@angular/material/menu';
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { AppRoutingModule } from './app-routing.module';
@@ -65,7 +66,9 @@ import { AdminComponent } from './admin/admin.component';
     MatDividerModule,
     MatListModule,
     MatTooltipModule,
-    MatGridListModule
+    MatGridListModule,
+    FormsModule,
+    ReactiveFormsModule
 
 
   ],

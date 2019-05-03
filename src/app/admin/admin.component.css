@@ -1,0 +1,7 @@
+.col-container{
+    width: 100%;
+    padding: 5%;
+}
+.col-container > *{
+    width: 100%;
+}
