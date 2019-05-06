@@ -1,4 +1,60 @@
 <app-search></app-search>
-<p>
-  admin works!
-</p>
+
+<form [formGroup]="service.form">
+    <mat-grid-list cols="2" rowHeight="500px">
+      <mat-grid-tile>
+          <div class="col-container">
+          <input type="hidden" formControlName="$key">
+
+          <mat-form-field>
+            <input formControlName="restname" matInput placeholder="Resteraunt Name*">
+            <mat-error>This field is mandatory.</mat-error>
+          </mat-form-field>
+
+          <mat-form-field>
+            <input formControlName="item" matInput placeholder="Item*">
+            <mat-error>This field is mandatory.</mat-error>
+          </mat-form-field>
+        </div>
+      </mat-grid-tile>
+
+      <mat-grid-tile>
+        <div class="col-container">
+          <mat-form-field>
+            <input formControlName="calories" matInput placeholder="Calories*">
+            <mat-error *ngIf="service.form.controls['calories'].errors?.required"> This field is mandatory.</mat-error>
+            <mat-error *ngIf="service.form.controls['calories'].errors?.pattern" > Natural values only.</mat-error>
+          </mat-form-field>
+
+          <mat-form-field>
+              <input formControlName="carbohydrates" matInput placeholder="Carbohydrates*">
+              <mat-error *ngIf="service.form.controls['carbohydrates'].errors?.required"> This field is mandatory.</mat-error>
+              <mat-error *ngIf="service.form.controls['carbohydrates'].errors?.pattern" > Natural values only.</mat-error>
+          </mat-form-field>
+
+          <mat-form-field>
+            <input formControlName="protein" matInput placeholder="Protein*">
+            <mat-error *ngIf="service.form.controls['protein'].errors?.required"> This field is mandatory.</mat-error>
+            <mat-error *ngIf="service.form.controls['protein'].errors?.pattern" > Natural values only.</mat-error>
+          </mat-form-field>
+
+          <mat-form-field>
+              <input formControlName="total_fat" matInput placeholder="Total Fat*">
+              <mat-error *ngIf="service.form.controls['total_fat'].errors?.required"> This field is mandatory.</mat-error>
+              <mat-error *ngIf="service.form.controls['total_fat'].errors?.pattern" > Natural values only.</mat-error>
+          </mat-form-field>
+
+          <mat-form-field>
+              <input formControlName="type" matInput placeholder="Type*">
+              <mat-error *ngIf="service.form.controls['type'].errors?.required"> This field is mandatory.</mat-error>
+              <mat-error *ngIf="service.form.controls['type'].errors?.pattern" > Food type only.</mat-error> <!--Might make this a limited option dropdown-->
+          </mat-form-field>
+
+          <div class="button-row">
+            <button mat-raised-button color="primary" type="submit" [disabled]="service.form.invalid">Submit</button>
+            <button mat-raised-button color="warn" (click)="onClear()">Clear</button>
+          </div>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+</form>

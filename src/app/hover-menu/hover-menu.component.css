@@ -4,7 +4,7 @@ img {
   height: 2.5%;
   width: 2.5%;
   float: right;
-  margin-right: 1px;
+  margin-right: 5px;
   transform-origin: center;
   transform: translateX(-25%) translateY(-25%);
 }
