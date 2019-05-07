@@ -5,3 +5,6 @@
 .col-container > *{
     width: 100%;
 }
+.button-row button {
+    margin: 5px;
+}

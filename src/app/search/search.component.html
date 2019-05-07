@@ -6,10 +6,15 @@
 <!--/div-->
 <!--Buttons added by Nolan Arnold-->
 <!--<br><br><br><br><br><br><br>-->
-<div class="buttons">
-  &nbsp;<button mat-button (click)="loadPlate($event)">Add to Plate</button>
+<div class="buttons" *ngIf="adminActive">
+  <div class = "button-wrapper " matTooltip="Only one item may be selected" style="display: inline"><button mat-button [disabled]="updateDisabled" (click)="onUpdate()">Update</button></div>
+  <div class = "button-wrapper " matTooltip="Only one item may be selected" style="display: inline"><button mat-button [disabled]="deleteDisabled" (click)="onDelete()">Delete</button></div>
+  <button mat-button (click)="onLogout()" routerLink="/login">LOGOUT</button>
+</div>
+<div class="buttons" *ngIf="!adminActive">
+  &nbsp;<button mat-button (click)="loadPlate()">Add to Plate</button>
   &nbsp;<button mat-button routerLink="/plate">Go to Plate</button>&nbsp;
-  <div class = "button-wrapper " matTooltip="Two items must be selected" style="display: inline"><button mat-button (click)="loadCompare($event)" routerLink="/compare" [disabled]="compareDisabled">Compare</button></div>
+  <div class = "button-wrapper " matTooltip="Two items must be selected" style="display: inline"><button mat-button (click)="loadCompare()" routerLink="/compare" [disabled]="compareDisabled">Compare</button></div>
 </div>
 <!--<br><br>-->
 

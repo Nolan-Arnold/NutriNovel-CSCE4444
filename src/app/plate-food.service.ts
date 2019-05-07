@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable, of, BehaviorSubject } from 'rxjs';
 import { Food } from './food';
 
 @Injectable({
@@ -16,5 +17,10 @@ export class PlateFoodService {
           calories: 0, carbohydrates: 0, protein: 0, total_fat: 0, type: 'NA'
       }
   ];
-  constructor() { }
+  private userSubject = new BehaviorSubject<boolean>(false);
+  public userMode$ = this.userSubject.asObservable();
+
+  setUserMode(mode: boolean): void {
+    this.userSubject.next(mode);
+  }
 }

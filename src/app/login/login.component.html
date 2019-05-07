@@ -8,14 +8,19 @@
         <tr>
           <td>
             <mat-form-field class="example-full-width">
-              <input matInput placeholder="Username" #username>
+              <input matInput placeholder="Username" #username autocomplete="off">
             </mat-form-field>
           </td>
         </tr>
         <tr>
           <td>
             <mat-form-field class="example-full-width">
-              <input matInput placeholder="Password" #password>
+              <mat-pass-toggle-visibility #toggle matSuffix>
+                  <button class="mat-icon-button" mat-icon-button="" matripple="" matripplecentered="true">
+                    <mat-icon class="mat-icons">visibility_off</mat-icon>
+                  </button>
+              </mat-pass-toggle-visibility>
+              <input matInput placeholder="Password" #password autocomplete="off" [type]="toggle.type">
             </mat-form-field>
           </td>
         </tr>

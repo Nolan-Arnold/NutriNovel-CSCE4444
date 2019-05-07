@@ -9,6 +9,9 @@ var corsOptions = {
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204 
 }
 app.use(cors(corsOptions))
+const bodyParser = require('body-parser'); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: false })); // for parsing application/x-www-form-urlencoded
+app.use(bodyParser.json());
 
 // Connect to database using nodejs driver dependencys 
 var MongoClient = require('mongodb').MongoClient, assert = require('assert');
@@ -42,67 +45,6 @@ app.route('/api/foods/count').get((req, res) => {
         });
     });
 })
-
-function getCount(filterBy, resCount) {
-    // establish connection to database
-    MongoClient.connect(url, function(err, db) {
-        assert.equal(null, err);
-        // pull food objects from the database and store in local array
-        db.collection(collectionName).find( {} ).toArray(function (err, foodsArr) {
-            assert.equal(null, err);
-            // filter out elements based on user query from search box
-            if (filterBy) {
-                foodsArr = foodsArr.filter(food => 
-                    (food._id.trim().toLowerCase().search(filterBy.toLowerCase()) >= 0 
-                    || food.type.trim().toLowerCase().search(filterBy.toLowerCase()) >= 0));
-            }
-            const count = Object.keys(foodsArr).length;
-            
-            db.close(); // close connection
-            resCount = count.toString() // return count as a string
-        });
-    });
-}
-
-function testSuite() {
-    // expected Food[] returned
-    response_one = [/* Preload with static JSON data matching expected return */];
-    response_two = [/* Preload with static JSON data matching expected return */];
-    response_three = [/* Preload with static JSON data matching expected return */];
-
-    //test 1
-    query = '';
-    sortID = 'restname';
-    sortBy = 'asc';
-    pageNumber = 0;
-    pageSize = 10;
-    assert.equal(getCount(query), '[expectedCount]');
-    assert.equal(getQuery(query, sortId, sortBy, pageNumber, pageSize));
-    //test 2
-    query = 'burger';
-    sortID = 'type';
-    sortBy = 'des';
-    pageNumber = 2;
-    pageSize = 15;
-    assert.equal(getCount(query), '[expectedCount]');
-    assert.equal(getQuery(query, sortId, sortBy, pageNumber, pageSize));
-    //test 3
-    query = 'McDonald\'s';
-    sortID = 'calories';
-    sortBy = 'asc';
-    pageNumber = 0;
-    pageSize = 25;
-    assert.equal(getCount(query), '[expectedCount]');
-    assert.equal(getQuery(query, sortId, sortBy, pageNumber, pageSize));
-    //test 4
-    query = 'desert';
-    sortID = 'protein';
-    sortBy = 'des';
-    pageNumber = 1;
-    pageSize = 10;
-    assert.equal(getCount(query), '[expectedCount]');
-    assert.equal(getQuery(query, sortId, sortBy, pageNumber, pageSize));
-}
 
 app.route('/api/foods').get((req, res) => {
     const filterBy = req.query.filter;  // user search term
@@ -181,82 +123,59 @@ app.route('/api/foods').get((req, res) => {
         });
     });
 })
-/* TODO Learn how to return array of JSON
-function getQuery(filterBy, sortId, sortBy, reqPageNumber, reqPageSize, foodsArr) {
-    // establish connection to database
-    MongoClient.connect(url, function(err, db) {
-        assert.equal(null, err);
-        // pull food objects from the database and store in local array
-        db.collection(collectionName).find( {} ).toArray(function (err, foodsArr) {
-            assert.equal(null, err);
-            // filter out elements based on user query from search box
-            if (filterBy) {
-                foodsArr = foodsArr.filter(food => 
-                    (food._id.trim().toLowerCase().search(filterBy.toLowerCase()) >= 0 
-                    || food.type.trim().toLowerCase().search(filterBy.toLowerCase()) >= 0));
-            }
-            
-            //Check which collumn the user wants to sort by.
-            switch (sortId) {
-                case 'restname': 
-                    foodsArr.sort((f1, f2) => f1.restname > f2.restname);
-                    break;
-                case 'item':
-                    foodsArr.sort((f1, f2) => f1.item > f2.item);
-                    break;
-                case 'calories':
-                    foodsArr.sort((f1, f2) => f1.calories > f2.calories);
-                    break;
-                case 'carbohydrates':
-                    foodsArr.sort((f1, f2) => f1.carbohydrates > f2.carbohydrates);
-                    break;
-                case 'protein':
-                    foodsArr.sort((f1, f2) => f1.protein > f2.protein);
-                    break;
-                case 'total_fat':
-                    foodsArr.sort((f1, f2) => f1.total_fat > f2.total_fat);
-                    break;
-                case 'type':
-                    foodsArr.sort((f1, f2) => f1.type > f2.type);
-                    break;
-            }
-            // reverse order if descending is requested
-            if (sortBy == "desc") {
-                foodsArr = foodsArr.reverse();
-            }          
-            const initialPos = reqPageNumber * reqPageSize; // calculate start of requested page
-            foodsArr = foodsArr.slice(initialPos, initialPos + reqPageSize); // reduce array to just the page requested
-            db.close(); // close the database connection
-            return foodsArr; // send the final page (array) back to route method
-        });
-    });
-}
-*/
-/*
-// TODO handles get request for specific search term
-app.route('/api/foods/:searchTerm').get((req, res) => {
-    const requestedFoodId = req.params['searchTerm']
-    res.send({ id: requestedFoodId, name: 'TestName'})
-})
 
 // TODO handles post request to add new document to the database
-const bodyParser = require('body-parser')
-app.use(bodyParser.json())
 app.route('/api/foods').post((req, res) => {
-    res.send(201, req.body)
+    //console.log('post');
+    console.log(req.body);
+    var id;
+    if (req.body._id == null) {
+        id = req.body.restname + ' ' + req.body.item;
+    } else {
+        id = req.body._id;
+    }
+    console.log(id);
+    MongoClient.connect(url, function(err, db) {
+        assert.equal(null, err);
+        db.collection(collectionName).updateOne({ _id: id }
+            ,{ $set: {
+            _id: id,
+            restname: req.body.restname,
+            item: req.body.item,
+            calories: Number(req.body.calories),
+            carbohydrates: Number(req.body.carbohydrates),
+            protein: Number(req.body.protein),
+            total_fat: Number(req.body.total_fat),
+            type: req.body.type
+            }}, { upsert:true }
+        );
+        var obj = { _id: id };
+        res.send(obj);
+        db.close(); // close the database connection
+    });
 })
-
+/*
 // TODO handles put request to update an existing document
-app.route('/api/foods/:id').put((req, res) => {
-    res.send(200, req.body)
+app.route('/api/foods').put((req, res) => {
+    console.log("put");
+    console.log(req.body._id);
+    console.log(req.body);
+    res.send(req.body);
 })
-
+*/
 // TODO handles delete request
 app.route('/api/foods/:id').delete((req, res) => {
-    res.sendStatus(204)
-  })
-*/
-  
+    console.log("delete");
+    console.log(req.params.id);
+    MongoClient.connect(url, function(err, db) {
+        assert.equal(null, err);
+        db.collection(collectionName).deleteOne({ _id: req.params.id });
+        var obj = { _id: req.params.id }
+        res.send(obj);
+        db.close();
+    });
+})
+
 app.listen(8000, () => {
     console.log('HTTP REST API Server running at http://localhost:8000')
 })

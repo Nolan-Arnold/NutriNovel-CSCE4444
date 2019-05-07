@@ -30,6 +30,7 @@ import { ExpansionComponent} from './expansion/expansion.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
+import { MatPasswordStrengthModule } from '@angular-material-extensions/password-strength';
 
 @NgModule({
   declarations: [
@@ -68,7 +69,8 @@ import { AdminComponent } from './admin/admin.component';
     MatTooltipModule,
     MatGridListModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatPasswordStrengthModule
 
 
   ],

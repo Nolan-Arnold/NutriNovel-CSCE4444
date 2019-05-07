@@ -4,6 +4,7 @@ import { MatSort, MatPaginator } from '@angular/material';
 import { debounceTime, distinctUntilChanged, tap } from 'rxjs/operators';
 import { merge, fromEvent } from 'rxjs';
 
+import { InputfoodService } from '../inputfood.service';
 import { FoodService } from '../food.service';
 import { FoodDataSource } from '../food-data-source';
 import { Food } from '../food';
@@ -29,6 +30,9 @@ export class SearchComponent implements OnInit, AfterViewInit {
    */
 
   compareDisabled = true; // used to turn the compare button on or off
+  updateDisabled = true;
+  deleteDisabled = true;
+  adminActive: boolean;
   dataSource: FoodDataSource; // retrieves and stores data that the table displays
   elementCount: number; // stores the total number of elements matching the filtered query
   selection = new SelectionModel<Food>(true, []); // tracks what elements the users has selected
@@ -36,9 +40,10 @@ export class SearchComponent implements OnInit, AfterViewInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild('input') input: ElementRef;
 
-  constructor(private foodService: FoodService, private plateFoodService: PlateFoodService) { }
+  constructor(private foodService: FoodService, private plateFoodService: PlateFoodService, private inputService: InputfoodService) { }
 
   ngOnInit() {
+    this.checkAdminMode();
     this.dataSource = new FoodDataSource(this.foodService);
     this.getPageCount(); // ensure page count is updated for first page load
     this.dataSource.loadFoods('', 'restname', 'asc', 0, 15); // intialize the table with data from backend
@@ -73,6 +78,7 @@ export class SearchComponent implements OnInit, AfterViewInit {
 
   // updates the view based on user input (sort, paging, and searches)
   loadFoodsPage() {
+      this.checkAdminMode();
       this.dataSource.loadFoods(
           this.input.nativeElement.value,
           this.sort.active,
@@ -91,10 +97,12 @@ export class SearchComponent implements OnInit, AfterViewInit {
   isChecked(row: Food): boolean {
     const found = this.selection.selected.find(food => food._id === row._id);
     if ( found !== undefined ) {
-      this.activateCompare(1);
+      this.activateCompare(0);
+      this.activateAdminButtons(0);
       return true;
     }
     this.activateCompare(0);
+    this.activateAdminButtons(0);
     return false;
   }
 
@@ -108,6 +116,52 @@ export class SearchComponent implements OnInit, AfterViewInit {
     }
   }
 
+  checkAdminMode(): void {
+    this.plateFoodService.userMode$.subscribe((state) => {
+      this.adminActive = state;
+    })
+  }
+
+  // Toggles the admin buttons on and off based on if the user has exactly 1 food items selected.
+  activateAdminButtons(num: number): void {
+    if (this.selection.selected.length + num === 1) {
+      this.updateDisabled = false;
+    } else {
+      this.updateDisabled = true;
+    }
+    if (this.selection.selected.length !== 0) {
+      this.deleteDisabled = false;
+    } else {
+      this.deleteDisabled = true;
+    }
+  }
+
+  onDelete(): void {
+    let deleted: string;
+    for (const food of this.selection.selected) {
+      this.foodService.deleteFood(food).subscribe((removed) => {
+        deleted.concat(removed._id + ', ');
+      });
+    }
+    debounceTime(200);
+    this.selection.clear();
+    this.loadFoodsPage();
+    deleted = deleted.slice(0, deleted.length - 1);
+    alert('Deleted: ' + deleted);
+  }
+
+  onUpdate(): void {
+    // this.foodService.updateFood(this.selection.selected[0]);
+    this.inputService.form.reset();
+    this.inputService.form.setValue(this.selection.selected[0]);
+    this.selection.clear();
+    this.loadFoodsPage();
+  }
+
+  onLogout(): void {
+    this.plateFoodService.setUserMode(false);
+  }
+
   // Toggles the compare button on and off based on if the user has exactly 2 food items selected.
   activateCompare(num: number): void {
     if (this.selection.selected.length + num === 2) {
@@ -119,13 +173,15 @@ export class SearchComponent implements OnInit, AfterViewInit {
 
   // this method will load the currently select food objects into the array platelist
   // access platelist from the plateFoodService to get the users slections
-  loadPlate( event: any ): void {
+  loadPlate(): void {
     this.plateFoodService.platelist = this.plateFoodService.platelist.concat(this.selection.selected);
+    this.selection.clear();
+    this.activateCompare(0);
   }
 
   // this method will load the currently select food objects into the array comparelist
   // access comparelist from the plateFoodService to get the users slections
-  loadCompare( event: any ): void {
+  loadCompare(): void {
     if ( this.selection.selected.length === 2 ) {
       this.plateFoodService.comparelist = this.selection.selected;
     } else

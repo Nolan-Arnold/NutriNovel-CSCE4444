@@ -17,12 +17,14 @@ const httpOptions = {
 })
 export class FoodService {
 
-  // URL to web api
-  private foodsUrl = 'http://localhost:8000/api/foods';
-
   constructor(
     private http: HttpClient,
     private messageService: MessageService) { }
+
+  // URL to web api
+  private foodsUrl = 'http://localhost:8000/api/foods';
+
+  blankFood: Food;
 
   /** Log a FoodService message with the MessageService */
   private log(message: string) {
@@ -67,55 +69,30 @@ export class FoodService {
       );
   }
 
-  /*
-  // Get all foods from the server
-  getFoods(): Observable<Food[]> {
-    return this.http.get<Food[]>(this.foodsUrl)
+  //////// Save methods //////////
+
+  // POST: add a new food to the server
+  addFood(food: Food): Observable<any> {
+    // this.log(food.item);
+    return this.http.post<any>(this.foodsUrl, food)
       .pipe(
-        catchError(this.handleError('getFoods', []))
+        catchError(this.handleError<any>('addFood', ''))
       );
   }
 
-  // GET foods whose name contains search term
-  searchFoods(term: string): Observable<Food[]> {
-    if (!term.trim()) {
-      // if not search term, return empty food array.
-      return of([]);
-    }
-    return this.http.get<Food[]>(`${this.foodsUrl}/?name=${term}`).pipe(
-      tap(_ => this.log(`found foods matching "${term}"`)),
-      catchError(this.handleError<Food[]>('searchFoods', []))
-    );
-  }
-  */
-  //////// Save methods //////////
-  /*
-  // POST: add a new food to the server
-  addFood (food: Food): Observable<Food> {
-    return this.http.post<Food>(this.foodsUrl, food, httpOptions).pipe(
-      tap((newFood: Food) => this.log(`added food w/ id=${newfood.id}`)),
-      catchError(this.handleError<Food>('addFood'))
-    );
-  }
-  */
-  /*
   // DELETE: delete the food from the server
-  deleteFood (food: Food | number): Observable<Food> {
-    const id = typeof food === 'number' ? food : food.id;
-    const url = `${this.foodsUrl}/${id}`;
+  deleteFood(food: Food): Observable<any> {
+    // this.log(food._id);
 
-    return this.http.delete<Food>(url, httpOptions).pipe(
-      tap(_ => this.log(`deleted food id=${id}`)),
-      catchError(this.handleError<Food>('deleteFood'))
+    return this.http.delete<any>(this.foodsUrl + '/' + food._id).pipe(
+      catchError(this.handleError<any>('deleteFood', ''))
     );
   }
-  */
- /*
+  /*
   // PUT: update the food on the server
-  updateFood (food: Food): Observable<any> {
-    return this.http.put(this.foodsUrl, food, httpOptions).pipe(
-      tap(_ => this.log(`updated food id=${food.id}`)),
-      catchError(this.handleError<any>('updateFood'))
+  updateFood(food: Food): Observable<Food> {
+    return this.http.put<any>(this.foodsUrl, { body: food }, httpOptions).pipe(
+      catchError(this.handleError<any>('updateFood', this.blankFood))
     );
   }
   */
